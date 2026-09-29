@@ -134,5 +134,5 @@ Dado que todas las dependencias se importan a través de CDNs públicas con sopo
 
 **Arturo Reyes Germán**  
 *Ingeniero en Desarrollo de Software en LunTech*  
-- **Email:** [arturo.reyes.dev@gmail.com](mailto:arturo.reyes.dev@gmail.com)  
+- **Email:** [arturoreyesgerman@gmail.com](mailto:arturoreyesgerman@gmail.com)  
 - **Disponibilidad:** Proyectos comerciales, consultoría técnica y arquitecturas escalables.
