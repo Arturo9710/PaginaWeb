@@ -89,7 +89,7 @@
         </span>
       </a>
 
-      <!-- Minimalist Navigation with Tracking & Editorial Elevate -->
+      <!-- Minimalist Navigation with Tracking & Editorial Elevate (Desktop) -->
       <nav
         class="hidden lg:flex items-center gap-7 font-mono text-xs uppercase tracking-tight-swiss text-slate-600">
         <a href="#experiencia" class="menu-item-editorial hover:text-slate-950 transition-colors">01. Experiencia</a>
@@ -100,14 +100,65 @@
         <a href="#contacto" class="menu-item-editorial hover:text-slate-950 transition-colors">06. Contacto</a>
       </nav>
 
-      <!-- Actions -->
-      <div class="flex items-center gap-3">
+      <!-- Actions & Mobile Trigger -->
+      <div class="flex items-center gap-2 sm:gap-3">
         <!-- CTA Directo -->
-        <a href="mailto:arturo.reyes.dev@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
-          class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-tight-swiss px-5 py-2.5 bg-slate-950 text-white hover:bg-[#ff5500] transition-colors shadow-sm">
+        <a href="mailto:arturoreyesgerman@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
+          class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-tight-swiss px-3.5 py-2 sm:px-5 sm:py-2.5 bg-slate-950 text-white hover:bg-[#ff5500] transition-colors shadow-sm">
           <span>Iniciar Proyecto</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
+
+        <!-- Botón Menú Hamburguesa Suizo (Móvil) -->
+        <button id="mobile-menu-btn" type="button" aria-label="Abrir menú"
+          class="lg:hidden p-2.5 border border-swiss text-slate-950 hover:bg-[#f8fafc] hover:border-[#ff5500] transition-colors flex items-center justify-center">
+          <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5"></i>
+          <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden text-[#ff5500]"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Móvil Suizo Fullscreen / Drawer -->
+    <div id="mobile-menu-drawer"
+      class="lg:hidden fixed inset-x-0 top-20 bg-white/98 backdrop-blur-xl border-b border-swiss shadow-2xl transition-all duration-300 -translate-y-[120%] opacity-0 pointer-events-none z-40 overflow-y-auto max-h-[calc(100vh-5rem)]">
+      <div class="px-6 py-8 flex flex-col space-y-6 font-mono text-sm uppercase tracking-tight-swiss">
+        <div class="text-[11px] text-[#ff5500] font-bold border-b border-swiss pb-2">
+          // NAVEGACIÓN PRINCIPAL
+        </div>
+        <a href="#experiencia" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>01. Experiencia</span>
+          <span class="text-xs text-slate-400 font-normal">LunTech</span>
+        </a>
+        <a href="#stack" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>02. Stack</span>
+          <span class="text-xs text-slate-400 font-normal">Arsenal</span>
+        </a>
+        <a href="#servicios" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>03. Servicios</span>
+          <span class="text-xs text-slate-400 font-normal">Capacidades</span>
+        </a>
+        <a href="#proyectos" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>04. Casos de Estudio</span>
+          <span class="text-xs text-slate-400 font-normal">ROI</span>
+        </a>
+        <a href="#proceso" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>05. Metodología</span>
+          <span class="text-xs text-slate-400 font-normal">4 Fases</span>
+        </a>
+        <a href="#contacto" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+          <span>06. Contacto</span>
+          <span class="text-xs text-[#ff5500] font-semibold">Directo &rarr;</span>
+        </a>
+
+        <!-- Redes y Contacto Rápido en Móvil -->
+        <div class="pt-6 border-t border-swiss flex flex-col gap-3 font-mono text-xs">
+          <a href="https://wa.me/?text=Hola%20Arturo,%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta."
+            target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 py-3 bg-[#f8fafc] border border-swiss text-slate-950 font-bold hover:border-[#ff5500]">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
+            <span>WhatsApp Directo</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -118,7 +169,7 @@
 
       <!-- Top Meta Bar del Canvas -->
       <div
-        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-10 border-b border-swiss text-xs font-mono text-slate-500">
+        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 sm:pb-10 border-b border-swiss text-xs font-mono text-slate-500">
         <div class="flex items-center gap-3">
           <span class="text-[#ff5500] font-bold">[ 001 // SPATIAL CANVAS 3D ]</span>
           <span class="hidden md:inline text-slate-300">|</span>
@@ -126,15 +177,15 @@
         </div>
         <div class="flex items-center gap-2 text-slate-700">
           <i data-lucide="compass" class="w-3.5 h-3.5 text-[#ff5500] animate-spin"></i>
-          <span class="font-semibold text-xs">Mueve el mouse: las capas flotan en 3D</span>
+          <span class="font-semibold text-xs">Interactúa con el mouse o desliza en móvil</span>
         </div>
       </div>
 
       <!-- Monumental Typography Layer con Profundidad 3D -->
-      <div class="hero-parallax-layer py-12 md:py-16 overflow-visible" data-depth="40">
+      <div class="hero-parallax-layer py-10 sm:py-12 md:py-16 overflow-visible" data-depth="40">
         <div class="interactive-char-block w-full">
           <h1 id="hero-wave-heading"
-            class="font-display font-black text-6xl sm:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.88] text-slate-950 uppercase">
+            class="font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
             Tecnología<br>
             <span class="text-slate-400">Sin Fricción</span><br>
             Para Escalar.

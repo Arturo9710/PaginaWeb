@@ -1,7 +1,7 @@
 /**
  * ==========================================================================
  * ARTURO REYES GERMÁN — PORTAFOLIO PROFESIONAL
- * Script Principal: Animaciones, Físicas 3D & Motor Interactivo
+ * Script Principal: Animaciones, Físicas 3D & Motor Interactivo Móvil/Desktop
  * ==========================================================================
  */
 
@@ -32,20 +32,48 @@ gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  // ==================== MENÚ HAMBURGUESA MÓVIL (SUIZO) ====================
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileDrawer = document.getElementById('mobile-menu-drawer');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  if (mobileMenuBtn && mobileDrawer) {
+    const toggleMenu = (open) => {
+      const isOpen = open !== undefined ? open : !mobileDrawer.classList.contains('is-open');
+      if (isOpen) {
+        mobileDrawer.classList.add('is-open');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        mobileDrawer.classList.remove('is-open');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    };
+
+    mobileMenuBtn.addEventListener('click', () => toggleMenu());
+
+    mobileNavLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        toggleMenu(false);
+      });
+    });
+  }
+
   // ==================== BOLITA NARANJA SEGUIDORA DEL MOUSE ====================
   const cursorBall = document.getElementById("cursor-ball");
 
   if (cursorBall && window.matchMedia("(pointer: fine)").matches) {
-    // Fijar anclaje al centro exacto con GSAP
     gsap.set(cursorBall, {
       xPercent: -50,
       yPercent: -50,
       force3D: true
     });
 
-    // Compensación ergonómica del cursor de Windows:
-    // La punta activa del cursor está en (0, 0), pero el cuerpo visible de la flecha desciende hacia (+6px, +10px).
-    // Este offset sitúa la bolita centrada respecto a la flecha visual sin quedar flotando arriba.
     const pointerVisualOffsetX = 6;
     const pointerVisualOffsetY = 10;
 
@@ -70,7 +98,6 @@ window.addEventListener('DOMContentLoaded', () => {
       isVisible = false;
     });
 
-    // Suave seguimiento orgánico con GSAP Ticker
     gsap.ticker.add(() => {
       ballX += (mouseX - ballX) * 0.25;
       ballY += (mouseY - ballY) * 0.25;
@@ -82,7 +109,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Expansión fluida al interactuar con elementos
     const interactives = document.querySelectorAll(
       "a, button, [role='button'], input, textarea, .spatial-card, .menu-item-editorial, .tech-pill"
     );
@@ -92,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==================== ONDA MAGNÉTICA FLUIDA POR CARACTERES (GSAP) ====================
+  // ==================== ONDA MAGNÉTICA FLUIDA (MOUSE + TOUCH) ====================
   const heroHeading = document.getElementById("hero-wave-heading");
   if (heroHeading) {
     function splitTextIntoChars(element) {
@@ -125,7 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
     splitTextIntoChars(heroHeading);
 
     const allChars = heroHeading.querySelectorAll(".char-node");
-    const radius = 220;
+    const radius = window.innerWidth < 768 ? 140 : 220;
 
     let charCoords = [];
     function calculateCharPositions() {
@@ -144,23 +170,20 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener("resize", calculateCharPositions);
     window.addEventListener("scroll", calculateCharPositions);
 
-    heroHeading.addEventListener("mousemove", (e) => {
-      const mouseX = e.clientX;
-      const mouseY = e.clientY;
-
+    function applyWave(clientX, clientY) {
       charCoords.forEach((item) => {
-        const dx = mouseX - item.cx;
-        const dy = mouseY - item.cy;
+        const dx = clientX - item.cx;
+        const dy = clientY - item.cy;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < radius) {
           const factor = Math.cos((distance / radius) * (Math.PI / 2));
-          const pushX = -(dx / distance) * 26 * factor;
-          const pushY = -(dy / distance) * 26 * factor;
-          const scale = 1 + (0.45 * factor);
+          const pushX = -(dx / distance) * (window.innerWidth < 768 ? 16 : 26) * factor;
+          const pushY = -(dy / distance) * (window.innerWidth < 768 ? 16 : 26) * factor;
+          const scale = 1 + (0.35 * factor);
 
           const textShadow = factor > 0.25 
-            ? `0 ${Math.round(14 * factor)}px ${Math.round(20 * factor)}px rgba(0, 0, 0, 0.18), 0 2px 4px rgba(255, 85, 0, 0.25)` 
+            ? `0 ${Math.round(12 * factor)}px ${Math.round(16 * factor)}px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(255, 85, 0, 0.25)` 
             : "none";
 
           gsap.to(item.el, {
@@ -168,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
             y: pushY,
             scale: scale,
             textShadow: textShadow,
-            color: factor > 0.4 ? "#ff5500" : "",
+            color: factor > 0.35 ? "#ff5500" : "",
             duration: 0.12,
             ease: "power2.out",
             overwrite: "auto"
@@ -186,9 +209,9 @@ window.addEventListener('DOMContentLoaded', () => {
           });
         }
       });
-    });
+    }
 
-    heroHeading.addEventListener("mouseleave", () => {
+    function resetWave() {
       allChars.forEach((char) => {
         gsap.to(char, {
           x: 0,
@@ -201,17 +224,32 @@ window.addEventListener('DOMContentLoaded', () => {
           overwrite: "auto"
         });
       });
+    }
+
+    // Interacción Mouse
+    heroHeading.addEventListener("mousemove", (e) => {
+      applyWave(e.clientX, e.clientY);
     });
+    heroHeading.addEventListener("mouseleave", resetWave);
+
+    // Interacción Táctil en Móvil (Touch Events)
+    heroHeading.addEventListener("touchmove", (e) => {
+      if (e.touches && e.touches[0]) {
+        applyWave(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    heroHeading.addEventListener("touchend", resetWave);
   }
 
-  // ==================== PARALLAX ESPACIAL 3D DEL HERO ====================
+  // ==================== PARALLAX ESPACIAL 3D (MOUSE + TOUCH) ====================
   const heroContainer = document.querySelector(".hero-spatial-container");
   const heroLayers = document.querySelectorAll(".hero-parallax-layer");
   if (heroContainer && heroLayers.length > 0) {
-    heroContainer.addEventListener("mousemove", (e) => {
+    function applyHeroParallax(clientX, clientY) {
       const rect = heroContainer.getBoundingClientRect();
-      const xRel = (e.clientX - rect.left) / rect.width - 0.5;
-      const yRel = (e.clientY - rect.top) / rect.height - 0.5;
+      const xRel = (clientX - rect.left) / rect.width - 0.5;
+      const yRel = (clientY - rect.top) / rect.height - 0.5;
 
       heroLayers.forEach((layer) => {
         const depth = parseFloat(layer.getAttribute("data-depth")) || 25;
@@ -225,9 +263,9 @@ window.addEventListener('DOMContentLoaded', () => {
           overwrite: "auto"
         });
       });
-    });
+    }
 
-    heroContainer.addEventListener("mouseleave", () => {
+    function resetHeroParallax() {
       heroLayers.forEach((layer) => {
         gsap.to(layer, {
           x: 0,
@@ -239,39 +277,50 @@ window.addEventListener('DOMContentLoaded', () => {
           overwrite: "auto"
         });
       });
+    }
+
+    heroContainer.addEventListener("mousemove", (e) => {
+      applyHeroParallax(e.clientX, e.clientY);
     });
+    heroContainer.addEventListener("mouseleave", resetHeroParallax);
+
+    // Soporte táctil en Hero
+    heroContainer.addEventListener("touchmove", (e) => {
+      if (e.touches && e.touches[0]) {
+        applyHeroParallax(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+    heroContainer.addEventListener("touchend", resetHeroParallax);
   }
 
-  // ==================== 3D TILT TÁCTIL, SOMBRA DINÁMICA & GLARE (EFECTO EXTENDIDO) ====================
+  // ==================== 3D TILT TÁCTIL, SOMBRA DINÁMICA & GLARE ====================
   const spatialCards = document.querySelectorAll(".spatial-card");
   spatialCards.forEach((card) => {
     const glare = card.querySelector(".card-glare");
 
-    card.addEventListener("mousemove", (e) => {
+    function applyCardTilt(clientX, clientY) {
       const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      // Inclinación más amplia y prolongada (14 grados)
-      const rotateX = -((y - centerY) / centerY) * 14;
-      const rotateY = ((x - centerX) / centerX) * 14;
+      const rotateX = -((y - centerY) / centerY) * 12;
+      const rotateY = ((x - centerX) / centerX) * 12;
 
-      // Sombra física proyectada con más recorrido
-      const shadowX = -((x - centerX) / centerX) * 22;
-      const shadowY = Math.max(16, ((y - centerY) / centerY) * 20 + 32);
+      const shadowX = -((x - centerX) / centerX) * 18;
+      const shadowY = Math.max(12, ((y - centerY) / centerY) * 16 + 24);
       const isDark = card.classList.contains("spatial-card-dark");
-      const shadowColor = isDark ? "rgba(0, 0, 0, 0.8)" : "rgba(15, 23, 42, 0.18)";
-      const glowColor = isDark ? "rgba(255, 85, 0, 0.4)" : "rgba(255, 85, 0, 0.25)";
+      const shadowColor = isDark ? "rgba(0, 0, 0, 0.8)" : "rgba(15, 23, 42, 0.16)";
+      const glowColor = isDark ? "rgba(255, 85, 0, 0.35)" : "rgba(255, 85, 0, 0.22)";
 
       gsap.to(card, {
         rotateX: rotateX,
         rotateY: rotateY,
-        scale: 1.025,
-        z: 22,
-        boxShadow: `${shadowX}px ${shadowY}px 65px -12px ${shadowColor}, 0 16px 36px -8px ${glowColor}`,
-        duration: 0.28,
+        scale: 1.02,
+        z: 18,
+        boxShadow: `${shadowX}px ${shadowY}px 50px -10px ${shadowColor}, 0 12px 28px -6px ${glowColor}`,
+        duration: 0.24,
         ease: "power2.out",
         transformPerspective: 1000,
         overwrite: "auto"
@@ -279,18 +328,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if (glare) {
         glare.style.opacity = "1";
-        glare.style.background = `radial-gradient(circle 320px at ${x}px ${y}px, rgba(255, 85, 0, 0.2), transparent 70%)`;
+        glare.style.background = `radial-gradient(circle 260px at ${x}px ${y}px, rgba(255, 85, 0, 0.2), transparent 70%)`;
       }
-    });
+    }
 
-    card.addEventListener("mouseleave", () => {
+    function resetCardTilt() {
       gsap.to(card, {
         rotateX: 0,
         rotateY: 0,
         scale: 1,
         z: 0,
         boxShadow: "",
-        duration: 0.85,
+        duration: 0.65,
         ease: "power3.out",
         overwrite: "auto"
       });
@@ -298,7 +347,48 @@ window.addEventListener('DOMContentLoaded', () => {
       if (glare) {
         glare.style.opacity = "0";
       }
-    });
+    }
+
+    // Interacción Mouse
+    card.addEventListener("mousemove", (e) => applyCardTilt(e.clientX, e.clientY));
+    card.addEventListener("mouseleave", resetCardTilt);
+
+    // Interacción Touch en Móvil
+    card.addEventListener("touchstart", (e) => {
+      if (e.touches && e.touches[0]) {
+        applyCardTilt(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    card.addEventListener("touchend", resetCardTilt);
+  });
+
+  // ==================== ANIMACIONES EN CASCADA AL HACER SCROLL (GSAP + SCROLLTRIGGER) ====================
+  // Regla obligatoria de DESIGN_SYSTEM.md: Stagger y Fade Up a 60fps en móvil y escritorio
+  const animateSections = [
+    { target: "#stack .grid > div, #stack article", stagger: 0.1 },
+    { target: "#servicios .spatial-card-wrapper", stagger: 0.12 },
+    { target: "#proyectos .spatial-card-wrapper", stagger: 0.15 },
+    { target: "#proceso .spatial-card-wrapper", stagger: 0.1 }
+  ];
+
+  animateSections.forEach(({ target, stagger }) => {
+    const elements = document.querySelectorAll(target);
+    if (elements.length > 0) {
+      gsap.from(elements, {
+        scrollTrigger: {
+          trigger: elements[0],
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 35,
+        opacity: 0,
+        duration: 0.75,
+        stagger: stagger,
+        ease: "power2.out",
+        clearProps: "all"
+      });
+    }
   });
 
 });

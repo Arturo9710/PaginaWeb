@@ -218,4 +218,24 @@ body {
   .cursor-ball {
     display: none !important;
   }
+
+  /* Micro-interacciones táctiles vivas para tarjetas en móvil */
+  .spatial-card:active {
+    transform: scale(0.985);
+    border-color: #ff5500;
+  }
+
+  .tech-pill:active {
+    transform: scale(0.95);
+    border-color: #ff5500;
+    color: #ff5500;
+  }
 }
+
+/* 13. Animaciones para Menú Drawer Móvil */
+#mobile-menu-drawer.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
