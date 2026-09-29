@@ -19,10 +19,11 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS CDN con Soporte de Modo Oscuro por Clase -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -37,6 +38,13 @@
           }
         }
       }
+    };
+
+    // Inicialización preventiva de tema para evitar parpadeo blanco
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
   </script>
 
@@ -100,8 +108,16 @@
         <a href="#contacto" class="menu-item-editorial hover:text-slate-950 transition-colors">06. Contacto</a>
       </nav>
 
-      <!-- Actions & Mobile Trigger -->
+      <!-- Actions & Theme Toggle & Mobile Trigger -->
       <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Botón Cambio de Tema (Light / Dark) -->
+        <button id="theme-toggle-btn" type="button" aria-label="Cambiar tema de color"
+          class="p-2 sm:px-3 sm:py-2 border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-colors flex items-center gap-1.5 font-mono text-xs">
+          <i data-lucide="sun" id="theme-icon-sun" class="w-4 h-4 hidden text-amber-500"></i>
+          <i data-lucide="moon" id="theme-icon-moon" class="w-4 h-4 text-slate-700"></i>
+          <span class="hidden md:inline uppercase text-[11px] font-semibold" id="theme-text">Modo</span>
+        </button>
+
         <!-- CTA Directo -->
         <a href="mailto:arturoreyesgerman@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
           class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-tight-swiss px-3.5 py-2 sm:px-5 sm:py-2.5 bg-slate-950 text-white hover:bg-[#ff5500] transition-colors shadow-sm">
@@ -118,11 +134,23 @@
       </div>
     </div>
 
-    <!-- Menú Desplegable Móvil Suizo Fullscreen / Drawer -->
+    <!-- Menú Desplegable Móvil Suizo Fullscreen / Drawer (100% Opaco y Hermético) -->
     <div id="mobile-menu-drawer"
-      class="lg:hidden fixed inset-x-0 top-20 bg-white/98 backdrop-blur-xl border-b border-swiss shadow-2xl transition-all duration-300 -translate-y-[120%] opacity-0 pointer-events-none z-40 overflow-y-auto max-h-[calc(100vh-5rem)]">
+      class="lg:hidden fixed inset-x-0 top-20 bg-white border-b border-swiss shadow-2xl transition-all duration-300 -translate-y-[120%] opacity-0 pointer-events-none z-40 overflow-y-auto max-h-[calc(100vh-5rem)]">
       <div class="px-6 py-8 flex flex-col space-y-6 font-mono text-sm uppercase tracking-tight-swiss">
-        <div class="text-[11px] text-[#ff5500] font-bold border-b border-swiss pb-2">
+        
+        <!-- Toggle Tema en Móvil -->
+        <div class="flex items-center justify-between pb-4 border-b border-swiss">
+          <span class="text-xs text-slate-500 font-bold uppercase">// APARIENCIA</span>
+          <button id="mobile-theme-toggle-btn" type="button"
+            class="inline-flex items-center gap-2 px-3 py-1.5 border border-swiss text-xs font-semibold text-slate-800 hover:border-[#ff5500]">
+            <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden text-amber-500"></i>
+            <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4 text-slate-700"></i>
+            <span id="mobile-theme-text">Modo Noche</span>
+          </button>
+        </div>
+
+        <div class="text-[11px] text-[#ff5500] font-bold pb-1">
           // NAVEGACIÓN PRINCIPAL
         </div>
         <a href="#experiencia" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">

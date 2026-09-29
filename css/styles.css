@@ -21,7 +21,7 @@ html.lenis body {
   overflow: hidden;
 }
 
-/* 2. Fondo Blanco Editorial Suizo Puro con Profundidad 3D */
+/* 2. Fondos Editorial Suizo con Profundidad 3D (Light & Dark) */
 body {
   background-color: #ffffff;
   color: #0f172a;
@@ -29,11 +29,79 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 3. Bordes Tajantes de Precisión Suiza */
+html.dark body {
+  background-color: #090d16;
+  color: #f1f5f9;
+}
+
+/* 3. Bordes Tajantes de Precisión Suiza (Light & Dark) */
 .border-swiss {
   border-color: #e2e8f0;
+  transition: border-color 0.3s ease;
+}
+
+html.dark .border-swiss {
+  border-color: #1e293b;
+}
+
+/* Soporte Dark Mode para Header, Aside, Cards & Drawer */
+html.dark header {
+  background-color: rgba(9, 13, 22, 0.98) !important;
+}
+
+html.dark aside {
+  background-color: #0b111e !important;
+  color: #94a3b8 !important;
+}
+
+html.dark aside .text-slate-900,
+html.dark aside .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .bg-\[\#f8fafc\] {
+  background-color: #0d1526 !important;
+}
+
+html.dark .text-slate-950 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #64748b !important;
+}
+
+html.dark .spatial-card {
+  background-color: #0c1322;
+  border-color: #1e293b;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+html.dark .spatial-card:hover {
+  border-color: #ff5500;
+  box-shadow: 0 25px 50px -12px rgba(255, 85, 0, 0.25), 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+}
+
+html.dark .tech-pill {
+  background-color: #0d1526;
+  border-color: #1e293b;
+  color: #e2e8f0;
+}
+
+html.dark footer {
+  background-color: #090d16 !important;
 }
 
 /* 4. Canvas del Hero con Perspectiva 3D */
@@ -232,10 +300,30 @@ body {
   }
 }
 
-/* 13. Animaciones para Menú Drawer Móvil */
+/* 13. Animaciones & Estilos para Menú Drawer Móvil (100% Opaco) */
+#mobile-menu-drawer {
+  background-color: #ffffff !important;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+}
+
+html.dark #mobile-menu-drawer {
+  background-color: #0b111e !important;
+  border-color: #1e293b !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+html.dark #mobile-menu-drawer .mobile-nav-link {
+  color: #f8fafc !important;
+}
+
+html.dark #mobile-menu-drawer .mobile-nav-link:hover {
+  color: #ff5500 !important;
+}
+
 #mobile-menu-drawer.is-open {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
 }
+
 

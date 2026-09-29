@@ -32,6 +32,48 @@ gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  // ==================== CONTROLADOR DE MODO OSCURO / NOCHE ====================
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle-btn');
+  const sunIcon = document.getElementById('theme-icon-sun');
+  const moonIcon = document.getElementById('theme-icon-moon');
+  const mobileSunIcon = document.getElementById('mobile-theme-icon-sun');
+  const mobileMoonIcon = document.getElementById('mobile-theme-icon-moon');
+  const themeText = document.getElementById('theme-text');
+  const mobileThemeText = document.getElementById('mobile-theme-text');
+
+  function updateThemeUI(isDark) {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      if (sunIcon) sunIcon.classList.remove('hidden');
+      if (moonIcon) moonIcon.classList.add('hidden');
+      if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+      if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+      if (themeText) themeText.textContent = 'Día';
+      if (mobileThemeText) mobileThemeText.textContent = 'Modo Día';
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+      if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+      if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+      if (themeText) themeText.textContent = 'Noche';
+      if (mobileThemeText) mobileThemeText.textContent = 'Modo Noche';
+    }
+  }
+
+  // Inicializar estado de iconos
+  updateThemeUI(document.documentElement.classList.contains('dark'));
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateThemeUI(isDark);
+  }
+
+  if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+  if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
   // ==================== MENÚ HAMBURGUESA MÓVIL (SUIZO) ====================
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileDrawer = document.getElementById('mobile-menu-drawer');
