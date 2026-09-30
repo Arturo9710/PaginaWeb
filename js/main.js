@@ -676,22 +676,32 @@ window.addEventListener('DOMContentLoaded', () => {
   const cardZoomContainer = document.getElementById("card-zoom-modal-container");
   const cardZoomContent = document.getElementById("card-zoom-content");
   const cardZoomCloseBtn = document.getElementById("card-zoom-close-btn");
-  const zoomableCards = document.querySelectorAll("#stack .spatial-card, #servicios .spatial-card");
+  const zoomableCards = document.querySelectorAll("#stack .spatial-card, #servicios .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper");
 
   function openCardZoom(sourceCard) {
-    if (!cardZoomContainer || !cardZoomBackdrop || !cardZoomContent) return;
+    if (!cardZoomContainer || !cardZoomBackdrop || !cardZoomContent || !sourceCard) return;
+
+    // Si pasaron el wrapper, localizar la tarjeta interna
+    const card = sourceCard.classList.contains("spatial-card") ? sourceCard : (sourceCard.querySelector(".spatial-card") || sourceCard);
 
     // 1. Obtener contenido enriquecido para pantalla grande si existe en <template>, o clonar tarjeta
     cardZoomContent.innerHTML = "";
-    const richTemplate = sourceCard.querySelector("template.modal-rich-data");
+    const richTemplate = card.querySelector("template.modal-rich-data");
     
     if (richTemplate) {
       const contentFragment = richTemplate.content.cloneNode(true);
       cardZoomContent.appendChild(contentFragment);
     } else {
-      const elevatedContent = sourceCard.querySelector(".card-elevated-content");
-      if (elevatedContent) {
-        const cloned = elevatedContent.cloneNode(true);
+      const elevatedElements = card.querySelectorAll(".card-elevated-content");
+      if (elevatedElements.length > 0) {
+        elevatedElements.forEach((el) => {
+          const cloned = el.cloneNode(true);
+          cloned.style.transform = "none";
+          // Remover enlaces duplicados si es necesario o preservarlos
+          cardZoomContent.appendChild(cloned);
+        });
+      } else {
+        const cloned = card.cloneNode(true);
         cloned.style.transform = "none";
         cardZoomContent.appendChild(cloned);
       }
@@ -771,12 +781,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  zoomableCards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      // Evitar que abra si se hace clic en un enlace directo interno
-      if (e.target.closest("a")) return;
-      openCardZoom(card);
-    });
+  // Delegar apertura de modal de forma infalible sin bloquear clics de botones o enlaces de cotización
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest("#stack .spatial-card, #servicios .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper");
+    if (!trigger) return;
+
+    // Si el usuario hizo clic en un enlace (<a>), botón (<button>) o elemento interactivo, permitir acción natural
+    if (e.target.closest("a, button, input, select, textarea")) return;
+
+    const targetCard = trigger.classList.contains("spatial-card") ? trigger : trigger.querySelector(".spatial-card");
+    if (targetCard) {
+      openCardZoom(targetCard);
+    }
   });
 
   if (cardZoomCloseBtn) cardZoomCloseBtn.addEventListener("click", closeCardZoom);

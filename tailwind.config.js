@@ -12,6 +12,9 @@ module.exports = {
         display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
+      screens: {
+        'xs': '480px',
+      },
       letterSpacing: {
         'tighter-swiss': '-0.05em',
         'tight-swiss': '-0.03em',

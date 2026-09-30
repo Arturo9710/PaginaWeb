@@ -3,7 +3,19 @@
    Sistema de Estilos Suizo & Físicas 3D
    ========================================================================== */
 
-/* 1. Reset de Lenis Smooth Scroll Instantáneo */
+/* 1. Reset de Lenis Smooth Scroll Instantáneo & Prevención de Desbordamiento Móvil */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;
@@ -29,7 +41,8 @@ body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -457,10 +470,10 @@ html.dark .spatial-card-wrapper.is-hovered .spatial-card {
   box-shadow: 0 28px 70px -14px rgba(235, 96, 38, 0.44), 0 0 30px rgba(235, 96, 38, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.2) inset !important;
 }
 
-html.dark .spatial-card:hover *,
-html.dark .spatial-card.is-hovered *,
-html.dark .spatial-card-wrapper:hover .spatial-card *,
-html.dark .spatial-card-wrapper.is-hovered .spatial-card * {
+html.dark #stack .spatial-card:hover *,
+html.dark #stack .spatial-card.is-hovered *,
+html.dark #stack .spatial-card-wrapper:hover .spatial-card *,
+html.dark #stack .spatial-card-wrapper.is-hovered .spatial-card * {
   color: #ffffff !important;
 }
 
@@ -1345,7 +1358,7 @@ html.dark .spatial-card-wrapper.is-hovered .spatial-card.contact-hero-card {
 /* ==========================================================================
    15. PROTECCIÓN DE TARJETAS DE PAQUETES (#servicios)
    Evitar que la tarjeta se pinte de naranja sólido en hover para preservar
-   el contraste de las letras naranjas, precios y botones.
+   el contraste de las letras naranjas, textos, listas y botones.
    ========================================================================== */
 #servicios .spatial-card,
 #servicios .spatial-card:hover,
@@ -1355,6 +1368,7 @@ html.dark .spatial-card-wrapper.is-hovered .spatial-card.contact-hero-card {
   background-color: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06) !important;
+  cursor: pointer !important;
 }
 
 html.dark #servicios .spatial-card,
@@ -1380,35 +1394,156 @@ html.dark #servicios .spatial-card-wrapper.is-hovered .spatial-card {
 #servicios .spatial-card:hover .text-\[\#ff5500\],
 #servicios .spatial-card.is-hovered .text-\[\#ff5500\],
 #servicios .spatial-card-wrapper:hover .spatial-card .text-\[\#ff5500\],
-#servicios .spatial-card-wrapper.is-hovered .spatial-card .text-\[\#ff5500\] {
+#servicios .spatial-card-wrapper.is-hovered .spatial-card .text-\[\#ff5500\],
+#servicios .spatial-card-wrapper:hover .spatial-card [class*="text-[#ff5500]"],
+html.dark #servicios .spatial-card:hover .text-\[\#ff5500\],
+html.dark #servicios .spatial-card.is-hovered .text-\[\#ff5500\],
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .text-\[\#ff5500\],
+html.dark #servicios .spatial-card-wrapper.is-hovered .spatial-card .text-\[\#ff5500\] {
   color: #ff5500 !important;
 }
 
+/* Títulos principales de los planes */
 #servicios .spatial-card:hover h3,
 #servicios .spatial-card:hover h4,
 #servicios .spatial-card:hover .text-slate-950,
-#servicios .spatial-card.is-hovered .text-slate-950 {
+#servicios .spatial-card.is-hovered h3,
+#servicios .spatial-card.is-hovered h4,
+#servicios .spatial-card.is-hovered .text-slate-950,
+#servicios .spatial-card-wrapper:hover .spatial-card h3,
+#servicios .spatial-card-wrapper:hover .spatial-card h4,
+#servicios .spatial-card-wrapper:hover .spatial-card .text-slate-950 {
   color: #0f172a !important;
 }
 
 html.dark #servicios .spatial-card:hover h3,
 html.dark #servicios .spatial-card:hover h4,
 html.dark #servicios .spatial-card:hover .text-slate-950,
-html.dark #servicios .spatial-card.is-hovered .text-slate-950 {
+html.dark #servicios .spatial-card.is-hovered h3,
+html.dark #servicios .spatial-card.is-hovered h4,
+html.dark #servicios .spatial-card.is-hovered .text-slate-950,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card h3,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card h4,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .text-slate-950 {
   color: #ffffff !important;
 }
 
+/* Párrafos descriptivos */
 #servicios .spatial-card:hover p,
 #servicios .spatial-card:hover .text-slate-600,
-#servicios .spatial-card:hover .text-slate-700 {
+#servicios .spatial-card:hover .text-slate-700,
+#servicios .spatial-card.is-hovered p,
+#servicios .spatial-card.is-hovered .text-slate-600,
+#servicios .spatial-card.is-hovered .text-slate-700,
+#servicios .spatial-card-wrapper:hover .spatial-card p,
+#servicios .spatial-card-wrapper:hover .spatial-card .text-slate-600,
+#servicios .spatial-card-wrapper:hover .spatial-card .text-slate-700 {
   color: #475569 !important;
 }
 
 html.dark #servicios .spatial-card:hover p,
 html.dark #servicios .spatial-card:hover .text-slate-600,
-html.dark #servicios .spatial-card:hover .text-slate-700 {
+html.dark #servicios .spatial-card:hover .text-slate-700,
+html.dark #servicios .spatial-card.is-hovered p,
+html.dark #servicios .spatial-card.is-hovered .text-slate-600,
+html.dark #servicios .spatial-card.is-hovered .text-slate-700,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card p,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .text-slate-600,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .text-slate-700 {
   color: #cbd5e1 !important;
 }
+
+/* Etiquetas monospaciadas y tags de planes (PLAN 01, CATÁLOGO, etc.) */
+#servicios .spatial-card:hover .font-mono.text-slate-400,
+#servicios .spatial-card.is-hovered .font-mono.text-slate-400,
+#servicios .spatial-card-wrapper:hover .spatial-card .font-mono.text-slate-400 {
+  color: #64748b !important;
+}
+
+html.dark #servicios .spatial-card:hover .font-mono.text-slate-400,
+html.dark #servicios .spatial-card.is-hovered .font-mono.text-slate-400,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .font-mono.text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+#servicios .spatial-card:hover .font-mono.text-slate-500,
+#servicios .spatial-card.is-hovered .font-mono.text-slate-500,
+#servicios .spatial-card-wrapper:hover .spatial-card .font-mono.text-slate-500 {
+  color: #64748b !important;
+}
+
+html.dark #servicios .spatial-card:hover .font-mono.text-slate-500,
+html.dark #servicios .spatial-card.is-hovered .font-mono.text-slate-500,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .font-mono.text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Badges de planes internos */
+#servicios .spatial-card:hover [class*="bg-[#f8fafc]"],
+#servicios .spatial-card.is-hovered [class*="bg-[#f8fafc]"],
+#servicios .spatial-card-wrapper:hover .spatial-card [class*="bg-[#f8fafc]"] {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.dark #servicios .spatial-card:hover [class*="bg-[#f8fafc]"],
+html.dark #servicios .spatial-card.is-hovered [class*="bg-[#f8fafc]"],
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card [class*="bg-[#f8fafc]"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #cbd5e1 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Listas de verificación / checkmarks y textos interiores */
+#servicios .spatial-card:hover .text-slate-700,
+#servicios .spatial-card.is-hovered .text-slate-700,
+#servicios .spatial-card-wrapper:hover .spatial-card .text-slate-700 {
+  color: #334155 !important;
+}
+
+html.dark #servicios .spatial-card:hover .text-slate-700,
+html.dark #servicios .spatial-card.is-hovered .text-slate-700,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+#servicios .spatial-card:hover .border-t,
+#servicios .spatial-card.is-hovered .border-t,
+#servicios .spatial-card-wrapper:hover .spatial-card .border-t {
+  border-color: #e2e8f0 !important;
+}
+
+html.dark #servicios .spatial-card:hover .border-t,
+html.dark #servicios .spatial-card.is-hovered .border-t,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .border-t {
+  border-color: #1e1e26 !important;
+}
+
+#servicios .spatial-card:hover .border-swiss,
+#servicios .spatial-card.is-hovered .border-swiss,
+#servicios .spatial-card-wrapper:hover .spatial-card .border-swiss {
+  border-color: #e2e8f0 !important;
+}
+
+html.dark #servicios .spatial-card:hover .border-swiss,
+html.dark #servicios .spatial-card.is-hovered .border-swiss,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card .border-swiss {
+  border-color: #1e1e26 !important;
+}
+
+/* Evitar que los spans genéricos dentro de #servicios se vuelvan blancos en hover en modo claro */
+#servicios .spatial-card:hover span:not(.text-white):not([class*="text-[#ff5500]"]):not(.text-emerald-500),
+#servicios .spatial-card.is-hovered span:not(.text-white):not([class*="text-[#ff5500]"]):not(.text-emerald-500),
+#servicios .spatial-card-wrapper:hover .spatial-card span:not(.text-white):not([class*="text-[#ff5500]"]):not(.text-emerald-500) {
+  color: inherit;
+}
+
+/* Botones de acción dentro de las cards de servicios */
+#servicios .spatial-card a {
+  pointer-events: auto !important;
+}
+
 
 
 

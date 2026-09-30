@@ -96,25 +96,25 @@
 
   <!-- ==================== TOP TICKER / BARRA EDITORIAL DUAL ==================== -->
   <aside aria-label="Aviso de disponibilidad"
-    class="border-b border-swiss bg-[#f8fafc] dark:bg-[#08080c] py-2 px-4 sm:px-8 text-xs font-mono flex items-center justify-between gap-3 text-slate-500 relative z-30">
-    <div class="flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
+    class="border-b border-swiss bg-[#f8fafc] dark:bg-[#08080c] py-2 px-3 sm:px-8 text-xs font-mono flex items-center justify-between gap-2 sm:gap-3 text-slate-500 relative z-30 max-w-full overflow-hidden">
+    <div class="flex items-center gap-2 sm:gap-3 overflow-hidden text-ellipsis whitespace-nowrap min-w-0">
       <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
       <span
-        class="view-negocios tracking-snug-swiss uppercase font-bold text-slate-900 dark:text-slate-200 text-[11px] sm:text-xs">
+        class="view-negocios tracking-snug-swiss uppercase font-bold text-slate-900 dark:text-slate-200 text-[10px] sm:text-xs truncate">
         🏪 Creación de Páginas Web
       </span>
       <span
-        class="view-tech tracking-snug-swiss uppercase font-medium text-slate-700 dark:text-slate-300 text-[11px] sm:text-xs">
-        💻 Arturo Reyes Germán &bull; Software Engineer &bull; Full Stack Laravel &amp; Livewire
+        class="view-tech tracking-snug-swiss uppercase font-medium text-slate-700 dark:text-slate-300 text-[10px] sm:text-xs truncate">
+        💻 Arturo Reyes Germán &bull; Software Engineer
       </span>
     </div>
 
-    <div class="flex items-center gap-4 shrink-0 text-[11px] font-semibold text-slate-700 dark:text-slate-300">
+    <div class="flex items-center gap-2 sm:gap-4 shrink-0 text-[10px] sm:text-[11px] font-semibold text-slate-700 dark:text-slate-300">
       <span class="hidden sm:inline text-[#ff5500] dark:text-emerald-400 font-bold">&bull; Disponible para
         Proyectos</span>
       <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20un%20proyecto." target="_blank"
         rel="noopener noreferrer"
-        class="hover:text-[#ff5500] transition-colors border-l border-swiss dark:border-white/10 pl-3 sm:pl-4">
+        class="hover:text-[#ff5500] transition-colors border-l border-swiss dark:border-white/10 pl-2 sm:pl-4">
         WhatsApp: 722 449 5978
       </a>
     </div>
@@ -126,20 +126,20 @@
       class="navbar-3d-island max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between pointer-events-auto">
 
       <!-- Brand Typography (Swiss 3D Style) -->
-      <a href="#hero" class="flex items-center gap-3 group shrink-0">
+      <a href="#hero" class="flex items-center gap-2 sm:gap-3 group shrink min-w-0">
         <div
-          class="brand-badge-3d flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-950 text-white font-display font-black text-xs sm:text-sm shadow-md group-hover:bg-[#ff5500] group-hover:shadow-[0_0_16px_rgba(255,85,0,0.5)] transition-all">
+          class="brand-badge-3d flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-950 text-white font-display font-black text-xs sm:text-sm shadow-md group-hover:bg-[#ff5500] group-hover:shadow-[0_0_16px_rgba(255,85,0,0.5)] transition-all shrink-0">
           AR
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col min-w-0">
           <span
-            class="font-display font-black text-base sm:text-xl tracking-tighter-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors leading-none">
+            class="font-display font-black text-sm sm:text-base md:text-xl tracking-tighter-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors leading-none truncate">
             ARTURO REYES
           </span>
-          <span class="view-negocios font-mono text-[9px] uppercase tracking-wider text-[#ff5500] font-bold mt-0.5">
+          <span class="view-negocios font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-[#ff5500] font-bold mt-0.5 truncate">
             Páginas Web &bull; Soluciones Digitales
           </span>
-          <span class="view-tech font-mono text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-0.5">
+          <span class="view-tech font-mono text-[8px] sm:text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-0.5 truncate">
             Full Stack Dev &bull; Software Eng.
           </span>
         </div>
@@ -170,8 +170,8 @@
         </div>
       </nav>
 
-      <!-- Actions &amp; Theme Toggle &amp; Mobile Trigger -->
-      <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+      <!-- Actions & Theme Toggle & Mobile Trigger -->
+      <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
         <!-- Switch Dual en Header para acceso rápido -->
         <div class="hidden md:inline-flex dual-switch-container">
           <button type="button" class="dual-switch-btn is-active text-[10px] lg:text-[11px] py-1 px-2.5"
@@ -186,7 +186,7 @@
 
         <!-- Botón Cambio de Tema (Light / Dark) 3D -->
         <button id="theme-toggle-btn" type="button" aria-label="Cambiar tema de color"
-          class="theme-btn-3d p-2 sm:px-2.5 sm:py-1.5 rounded-full border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-all flex items-center gap-1 font-mono text-xs shadow-sm">
+          class="theme-btn-3d p-1.5 sm:px-2.5 sm:py-1.5 rounded-full border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-all flex items-center gap-1 font-mono text-xs shadow-sm">
           <i data-lucide="sun" id="theme-icon-sun" class="w-3.5 h-3.5 hidden text-amber-500"></i>
           <i data-lucide="moon" id="theme-icon-moon" class="w-3.5 h-3.5 text-slate-700"></i>
           <span class="hidden lg:inline uppercase text-[10px] font-semibold" id="theme-text">Modo</span>
@@ -195,15 +195,15 @@
         <!-- CTA Directo 3D -->
         <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20cotizar%20un%20sitio%20web%20para%20mi%20negocio."
           target="_blank" rel="noopener noreferrer"
-          class="cta-btn-3d inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-tight-swiss px-3.5 py-2 sm:px-4 sm:py-2 rounded-full bg-slate-950 text-white hover:bg-[#ff5500] transition-all shadow-md font-bold">
+          class="cta-btn-3d inline-flex items-center gap-1 text-[11px] sm:text-xs font-mono uppercase tracking-tight-swiss px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-950 text-white hover:bg-[#ff5500] transition-all shadow-md font-bold">
           <span class="view-negocios">Cotizar</span>
           <span class="view-tech">Contacto</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          <i data-lucide="arrow-right" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i>
         </a>
 
         <!-- Botón Menú Hamburguesa Suizo (Móvil y Pantallas Medianas) -->
         <button id="mobile-menu-btn" type="button" aria-label="Abrir menú"
-          class="xl:hidden p-2 sm:p-2.5 rounded-xl border border-swiss text-slate-950 hover:bg-[#f8fafc] hover:border-[#ff5500] transition-colors flex items-center justify-center shadow-sm">
+          class="xl:hidden p-1.5 sm:p-2.5 rounded-xl border border-swiss text-slate-950 hover:bg-[#f8fafc] hover:border-[#ff5500] transition-colors flex items-center justify-center shadow-sm">
           <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5"></i>
           <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden text-[#ff5500]"></i>
         </button>
@@ -530,7 +530,7 @@
         <div class="interactive-char-block w-full">
           <!-- Título Modo Negocios -->
           <h1
-            class="hero-wave-heading view-negocios font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
+            class="hero-wave-heading view-negocios font-display font-black text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.95] sm:leading-[0.88] text-slate-950 uppercase break-words">
             Páginas Web<br>
             <span class="text-[#ff5500]">Que Venden</span><br>
             &amp; Atraen Clientes
@@ -538,7 +538,7 @@
 
           <!-- Título Modo Tech -->
           <h1
-            class="hero-wave-heading view-tech font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
+            class="hero-wave-heading view-tech font-display font-black text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.95] sm:leading-[0.88] text-slate-950 uppercase break-words">
             Sistemas Web<br>
             <span class="text-slate-400">Robustos</span><br>
             &amp; Escalables.
@@ -636,10 +636,10 @@
         <div class="view-tech lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 relative z-30 pointer-events-auto">
           <a id="hero-tech-btn-mail"
             href="mailto:arturoreyesgerman@gmail.com?subject=Contacto%20Profesional%20-%20Arturo%20Reyes&body=Hola%20Arturo,%0A%0AQuiero%20platicar%20sobre%20una%20oportunidad%20o%20proyecto:%0A-%20Nombre:%0A-%20Empresa/Organizaci%C3%B3n:%0A-%20Detalles:"
-            class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-[#ff5500] transition-colors shadow-sm text-center rounded-xl cursor-pointer">
-            <i data-lucide="mail" class="w-4 h-4"></i>
+            class="inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-[#ff5500] transition-colors shadow-sm text-center rounded-xl cursor-pointer max-w-full">
+            <i data-lucide="mail" class="w-4 h-4 shrink-0"></i>
             <span class="truncate">arturoreyesgerman@gmail.com</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 shrink-0"></i>
           </a>
 
           <a id="hero-tech-btn-wa"
@@ -1283,8 +1283,8 @@
 
         <!-- Paquete 1: Landing Page Comercial -->
         <div class="spatial-card-wrapper">
-          <article data-cursor-text="Cotizar ↗"
-            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Ver paquete ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden group">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <div class="flex items-center justify-between">
@@ -1294,7 +1294,7 @@
                   POPULAR</span>
               </div>
               <div>
-                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
                   Landing Page de Alta Conversión
                 </h3>
                 <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para negocios, consultorios y
@@ -1314,7 +1314,11 @@
                 </div>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss space-y-3">
+              <div class="flex items-center justify-between font-mono text-xs text-slate-500">
+                <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver desglose completo &rarr;</span>
+                <span class="font-bold text-slate-400">[ DETALLES ]</span>
+              </div>
               <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20me%20interesa%20el%20Plan%20Landing%20Page%20para%20mi%20negocio.%20%C2%BFMe%20das%20m%C3%A1s%20detalles?"
                 target="_blank" rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#ff5500] text-white font-mono text-xs uppercase tracking-tight-swiss font-bold hover:bg-slate-950 transition-colors shadow-md">
@@ -1322,13 +1326,70 @@
                 <span>Cotizar Landing Page</span>
               </a>
             </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ PLAN 01 // LANDING PAGE COMERCIAL ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">ENTREGA EXPRESS 3-5 DÍAS</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Landing Page de Alta Conversión
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Diseñada para profesionales independientes, médicos, talleres, abogados y negocios que necesitan una presencia digital impecable, clara y enfocada en generar prospectos directos por WhatsApp y llamadas sin perder tiempo.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// CONVERSIÓN INMEDIATA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Botón Flotante a WhatsApp</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Configuración de mensaje automático con el servicio de interés para que contestes de inmediato a tus clientes potenciales.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MÓVIL FIRST REAL</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">100% Adaptada a Celulares</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Tipografía legible, tiempos de carga inferiores a 1 segundo y botones táctiles cómodos diseñados para el pulgar.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// LOCALIZACIÓN &amp; SEO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Google Maps y Horarios</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Integración del mapa interactivo de tu negocio, horarios de atención, teléfonos y enlaces a tus redes sociales oficiales.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss bg-white dark:bg-black/40 rounded-2xl space-y-3">
+                  <h4 class="font-display font-bold text-sm text-slate-950 uppercase tracking-tight-swiss">// ¿QUÉ INCLUYE ESTE PAQUETE?</h4>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Maquetación moderna de 1 sección fluida (One Page)</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Optimización extrema para carga rápida en 4G/5G</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Botón WhatsApp flotante con mensaje inteligente</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Asesoría opcional para dominio .com y hosting</li>
+                  </ul>
+                </div>
+              </div>
+            </template>
           </article>
         </div>
 
         <!-- Paquete 2: Sitio Corporativo / Menú Digital -->
         <div class="spatial-card-wrapper">
-          <article data-cursor-text="Cotizar ↗"
-            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Ver paquete ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden group">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <div class="flex items-center justify-between">
@@ -1338,7 +1399,7 @@
                   / RESTAURANTE</span>
               </div>
               <div>
-                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
                   Sitio Web Catálogo / Menú Digital
                 </h3>
                 <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para restaurantes, cafeterías, tiendas y
@@ -1358,7 +1419,11 @@
                 <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Sección de ubicación y datos de contacto</div>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss space-y-3">
+              <div class="flex items-center justify-between font-mono text-xs text-slate-500">
+                <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver desglose completo &rarr;</span>
+                <span class="font-bold text-slate-400">[ DETALLES ]</span>
+              </div>
               <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20me%20interesa%20el%20Plan%20Cat%C3%A1logo%20/%20Men%C3%BA%20Digital.%20%C2%BFMe%20das%20informaci%C3%B3n?"
                 target="_blank" rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center gap-2 py-3 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss font-bold hover:bg-[#ff5500] transition-colors shadow-md">
@@ -1366,13 +1431,70 @@
                 <span>Cotizar Catálogo / Menú</span>
               </a>
             </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ PLAN 02 // CATÁLOGO O MENÚ DIGITAL ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">MULTISECCIÓN &amp; CÓDIGO QR</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Sitio Web Catálogo / Menú Digital
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Ideal para restaurantes, cafeterías, boutiques, distribuidoras y marcas que desean mostrar su oferta con fotografía atractiva, categorización clara por platillos o productos y pedidos directos por WhatsApp.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// CÓDIGO QR INCLUIDO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Acceso Inmediato en Mesas</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Generamos tu código QR vectorial listo para imprimir en acrílicos de mesa, manteletas o volantes publicitarios.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MULTI-PÁGINA O TABS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Categorías Organizadas</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Separación clara por categorías (entradas, especialidades, bebidas, postres) para que los comensales encuentren todo al instante.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// PEDIDOS DIRECTOS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Sin Comisiones de Apps</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Los clientes hacen clic en el producto y envían su orden directamente a tu WhatsApp, ahorrándote comisiones de terceros.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss bg-white dark:bg-black/40 rounded-2xl space-y-3">
+                  <h4 class="font-display font-bold text-sm text-slate-950 uppercase tracking-tight-swiss">// CARACTERÍSTICAS TÉCNICAS DESTACADAS</h4>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Hasta 5 secciones o páginas independientes</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Galería fotográfica con zoom de alta definición</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Código QR personalizado con branding propio</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Enlace a Google Maps con botón para iniciar ruta</li>
+                  </ul>
+                </div>
+              </div>
+            </template>
           </article>
         </div>
 
         <!-- Paquete 3: Sistema Web / Cotizador a Medida -->
         <div class="spatial-card-wrapper">
-          <article data-cursor-text="Cotizar ↗"
-            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Ver paquete ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden group">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <div class="flex items-center justify-between">
@@ -1382,7 +1504,7 @@
                   MEDIDA</span>
               </div>
               <div>
-                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
                   Sistema Web Pro / Automatización
                 </h3>
                 <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para clínicas, inventarios, cobros y
@@ -1403,7 +1525,11 @@
                   incluida</div>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss space-y-3">
+              <div class="flex items-center justify-between font-mono text-xs text-slate-500">
+                <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver desglose completo &rarr;</span>
+                <span class="font-bold text-slate-400">[ DETALLES ]</span>
+              </div>
               <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20necesito%20un%20Sistema%20Web%20o%20Plataforma%20a%20medida%20para%20mi%20empresa."
                 target="_blank" rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center gap-2 py-3 border border-swiss text-slate-900 font-mono text-xs uppercase tracking-tight-swiss font-bold hover:border-[#ff5500] hover:text-[#ff5500] transition-colors">
@@ -1411,6 +1537,63 @@
                 <span>Cotizar Sistema a Medida</span>
               </a>
             </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ PLAN 03 // SISTEMA A MEDIDA &amp; AUTOMATIZACIÓN ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">ARQUITECTURA LARAVEL &amp; MYSQL</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Sistema Web Pro / Automatización Empresarial
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Desarrollo de software completo en la nube para empresas que necesitan digitalizar sus operaciones: control de inventarios, agenda de citas para clínicas o spas, cotizadores en línea y reportes en tiempo real.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// PANEL PRIVADO SEGURO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Control de Usuarios y Roles</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Autenticación reforzada con contraseñas encriptadas y permisos diferenciados para administradores, empleados y clientes.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// BASE DE DATOS ROBUSTA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">MySQL + Laravel Eloquent</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Arquitectura estructurada que previene pérdidas de datos, soporta miles de registros y garantiza auditoría total.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// EXPORTACIÓN INTELIGENTE</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Reportes PDF y Excel</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Descarga balances, historiales de ventas, reportes médicos o listados de existencias con un solo clic.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss bg-white dark:bg-black/40 rounded-2xl space-y-3">
+                  <h4 class="font-display font-bold text-sm text-slate-950 uppercase tracking-tight-swiss">// ALCANCE Y GARANTÍA PROFESIONAL</h4>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-slate-700 dark:text-slate-300">
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Panel administrativo con métricas e indicadores clave</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Módulos específicos adaptados a la operación de tu negocio</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Capacitación personalizada para el uso del sistema</li>
+                    <li class="flex items-center gap-2"><span class="text-[#ff5500] font-bold">&check;</span> Código limpio, seguro y escalable para futuras funciones</li>
+                  </ul>
+                </div>
+              </div>
+            </template>
           </article>
         </div>
 
@@ -2333,7 +2516,7 @@
         <span>© <span id="current-year"></span></span>
       </div>
 
-      <div class="flex flex-wrap items-center gap-6 uppercase tracking-tight-swiss">
+      <div class="flex flex-wrap items-center gap-3.5 sm:gap-6 uppercase tracking-tight-swiss">
         <a href="mailto:arturoreyesgerman@gmail.com"
           class="hover:text-[#ff5500] transition-colors flex items-center gap-1.5">
           <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
@@ -2362,7 +2545,7 @@
           </svg>
           <span>Facebook</span>
         </a>
-        <a href="#hero" class="hover:text-[#ff5500] transition-colors flex items-center gap-1 ml-2">
+        <a href="#hero" class="hover:text-[#ff5500] transition-colors flex items-center gap-1">
           <span>Subir</span> &uarr;
         </a>
       </div>
