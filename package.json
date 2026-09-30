@@ -1,0 +1,21 @@
+{
+  "name": "paginaweb",
+  "version": "1.0.0",
+  "description": "> **Ingeniero en Desarrollo y Gestión de Software | Desarrollador Web Full Stack**   > Single Page Application (SPA) interactiva de alto impacto, diseñada bajo estándares editoriales suizos (*Swiss Style*) con físicas espaciales 3D y optimización de conversión.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:Arturo9710/PaginaWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

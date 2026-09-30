@@ -1,1 +1,12 @@
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configuraciones y cachés del agente y entorno
 /.agent
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

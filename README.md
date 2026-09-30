@@ -1,7 +1,7 @@
 # Arturo Reyes Germán — Portafolio Profesional
 
-> **Ingeniero en Desarrollo de Software **  
-> Single Page Application (SPA) comercial de alto impacto y conversión, diseñada bajo estándares editoriales suizos (*Swiss Style*) y directrices visuales de Silicon Valley.
+> **Ingeniero en Desarrollo y Gestión de Software | Desarrollador Web Full Stack**  
+> Single Page Application (SPA) interactiva de alto impacto, diseñada bajo estándares editoriales suizos (*Swiss Style*) con físicas espaciales 3D y optimización de conversión.
 
 ---
 
@@ -19,7 +19,7 @@
 
 ## 🚀 Descripción General
 
-Este proyecto es la plataforma web personal y comercial de **Arturo Reyes Germán**. Combina una estética editorial suiza en **fondo blanco puro (`#ffffff`)** con una arquitectura de físicas tridimensionales en tiempo real, micro-interacciones de alta fidelidad y un flujo de conversión sin fricción orientado a clientes empresariales y oportunidades de consultoría técnica.
+Este proyecto es la plataforma web personal y profesional de **Arturo Reyes Germán**, Ingeniero en Desarrollo y Gestión de Software (Lerma, Estado de México). Presenta su perfil profesional real, competencias técnicas en Laravel, PHP, Livewire, Tailwind CSS, bases de datos relacionales (MySQL, MariaDB, SQL Server) y experiencia comprobada en startups, sector salud y consultoría independiente.
 
 ---
 
@@ -77,16 +77,16 @@ El portafolio está construido con una arquitectura ligera de **cero dependencia
 ## 📐 Estructura del Portafolio
 
 ```text
-├── Top Ticker          -> Aviso editorial de disponibilidad en tiempo real (2026 / LunTech)
-├── Header              -> Marca con tracking suizo, navegación minimalista y CTA directo
-├── 001. Hero           -> Titular monumental interactivo, propuesta de valor y métricas de impacto
-├── 01. Trayectoria     -> Experiencia activa en producción como Ingeniero de Software en LunTech
-├── 02. Stack & Arq.    -> Matriz tecnológica: Frontend, Backend, Infraestructura y Buenas Prácticas
-├── 03. Servicios       -> Capacidades comerciales (Web Apps, Software a Medida, Rediseño UI/UX)
-├── 04. Casos Modelo    -> Soluciones implementadas con métricas cuantificadas de ROI y retorno
-├── 05. Metodología     -> Proceso predecible en 4 fases (Diagnóstico, Diseño, Ingeniería, Despliegue)
-├── 06. Contacto        -> Tarjeta final de alta conversión con accesos directos a Email y WhatsApp
-└── Footer              -> Información legal, año dinámico y accesos a perfiles profesionales
+├── Top Ticker          -> Disponibilidad, perfil de Ingeniero de Software, Lerma y WhatsApp
+├── Header              -> Marca con tracking suizo, navegación directa desktop/móvil y CTA
+├── 001. Hero           -> Titular interactivo, especialidad en Laravel/Tailwind y contacto rápido
+├── [ 00. Sobre Mí ]    -> Modal con perfil profesional, educación (UTVT), certificaciones y aptitudes
+├── 01. Stack & Arq.    -> Matriz 3D: Backend & Lenguajes, Estilos & Diseño, Bases de Datos, DevOps
+├── 02. Servicios       -> Sistemas a Medida con Laravel, Interfaces Reactivas y Mantenimiento/Seguridad
+├── 03. Experiencia     -> Startup Tecnológica, Hospital de Xonacatlán, Consultoría, Clon Instagram, Portal Empleo
+├── 04. Metodología     -> 4 fases: Planificación, Modelado, Desarrollo Ágil y Despliegue/Soporte
+├── 05. Contacto        -> Enlaces directos a arturoreyesgerman@gmail.com y WhatsApp (722 449 5978)
+└── Footer              -> Datos de contacto, ubicación, redes y año dinámico
 ```
 
 ---
@@ -133,6 +133,6 @@ Dado que todas las dependencias se importan a través de CDNs públicas con sopo
 ## 👤 Autor
 
 **Arturo Reyes Germán**  
-*Ingeniero en Desarrollo de Software en LunTech*  
+*Desarrollador Web Independiente & Especialista en Conversión*  
 - **Email:** [arturoreyesgerman@gmail.com](mailto:arturoreyesgerman@gmail.com)  
-- **Disponibilidad:** Proyectos comerciales, consultoría técnica y arquitecturas escalables.
+- **Disponibilidad:** Sitios web comerciales, landing pages de alta conversión y embudos de venta.

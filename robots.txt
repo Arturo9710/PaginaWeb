@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Desactivar rastreo de archivos técnicos internos
+Disallow: /node_modules/
+Disallow: /scratch/
+Disallow: /css/input.css
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tailwind.config.js
+Disallow: /vercel.json
+
+# Bloqueo a bots de scraping abusivo y recolectores de spam
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+# Sitemap oficial (cuando configures tu dominio)
+# Sitemap: https://tudominio.com/sitemap.xml

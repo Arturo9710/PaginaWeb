@@ -4,42 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arturo Reyes Germán — Software Engineer</title>
+  <title>Arturo Reyes Germán — Desarrollador Web &amp; Software Engineer</title>
   <meta name="description"
-    content="Ingeniero en Desarrollo de Software. Soluciones digitales de alto impacto, arquitectura limpia y diseño interactivo. LunTech.">
+    content="Ingeniero en Desarrollo y Gestión de Software con sólida experiencia en Laravel, PHP, Livewire, Tailwind CSS, bases de datos relacionales y APIs RESTful.">
+
+  <!-- Open Graph &amp; Twitter Card Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arturo Reyes Germán — Creación de Páginas Web &amp; Desarrollador Full Stack">
+  <meta property="og:description" content="Páginas web de alta conversión, catálogos digitales y desarrollo web profesional en Lerma, Toluca y Metepec.">
+  <meta property="og:locale" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Arturo Reyes Germán — Desarrollador Web",
+    "description": "Servicios profesionales de diseño y desarrollo de páginas web de alta conversión, catálogos digitales y sistemas a medida.",
+    "telephone": "+527224495978",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lerma",
+      "addressRegion": "Estado de México",
+      "addressCountry": "MX"
+    },
+    "areaServed": ["Lerma", "Toluca", "Metepec", "San Mateo Atenco"],
+    "knowsAbout": ["Web Development", "Laravel", "PHP", "Tailwind CSS", "JavaScript", "Responsive Web Design"]
+  }
+  </script>
 
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23000'/><text x='50%' y='60%' dominant-baseline='middle' text-anchor='middle' fill='%23ff5500' font-size='48' font-family='sans-serif' font-weight='900'>AR</text></svg>">
 
-  <!-- Google Fonts: Plus Jakarta Sans (Monumental Display), Inter & JetBrains Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <!-- Preload de Fuentes Críticas Locales Above-the-Fold (Elimina CLS al 100%) -->
+  <link rel="preload" href="fonts/font-66-LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yw.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/font-34-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/font-40-tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/font-52-tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/font-58-tDbv2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKwBNntkaToggR7BYRbKPxDcwg.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Tailwind CSS CDN con Soporte de Modo Oscuro por Clase -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Fuentes Tipográficas Locales de Alto Rendimiento (Cero Solicitudes Externas) -->
+  <link rel="stylesheet" href="fonts/fonts.css">
+
+  <!-- Tailwind CSS Compilado Estático de Producción (Ultra Rápido: Cero JS en Head, 25 KiB) -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          },
-          letterSpacing: {
-            'tighter-swiss': '-0.05em',
-            'tight-swiss': '-0.03em',
-            'snug-swiss': '-0.015em',
-          }
-        }
-      }
-    };
-
     // Inicialización preventiva de tema para evitar parpadeo blanco
     if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -49,14 +60,14 @@
   </script>
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
   <!-- Lenis Smooth Scroll CDN -->
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
 
-  <!-- GSAP & ScrollTrigger CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- GSAP &amp; ScrollTrigger CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 
   <!-- Estilos Modulares Personalizados -->
   <link rel="stylesheet" href="css/styles.css">
@@ -64,498 +75,1172 @@
 
 <body class="selection:bg-[#ff5500] selection:text-white relative">
 
-  <!-- ==================== BOLITA SEGUIDORA DEL MOUSE ==================== -->
-  <div id="cursor-ball" class="cursor-ball" aria-hidden="true"></div>
-
-  <!-- ==================== TOP TICKER / BARRA EDITORIAL ==================== -->
-  <aside aria-label="Aviso de disponibilidad"
-    class="border-b border-swiss bg-[#f8fafc] py-2.5 px-5 sm:px-8 text-xs font-mono flex items-center justify-between text-slate-500">
-    <div class="flex items-center gap-3">
-      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      <span class="tracking-snug-swiss uppercase font-medium text-slate-700">DISPONIBLE PARA PROYECTOS & CONSULTORÍA 2026</span>
+  <!-- ==================== AURORAS DE LUZ CINEMÁTICA AMBIENTAL (OPCIÓN 3) ==================== -->
+  <div class="ambient-glow-container" aria-hidden="true">
+    <div class="ambient-glow-orb-wrapper ambient-glow-wrapper-1">
+      <div class="ambient-glow-orb ambient-glow-orb-1"></div>
     </div>
-    <div class="hidden sm:flex items-center gap-6">
-      <span>INGENIERO EN LUNTECH</span>
-      <span>MÉXICO / REMOTO</span>
-      <span class="text-slate-900 font-semibold">ESTÁNDAR SUIZO BLANCO</span>
+    <div class="ambient-glow-orb-wrapper ambient-glow-wrapper-2">
+      <div class="ambient-glow-orb ambient-glow-orb-2"></div>
+    </div>
+    <div class="ambient-glow-orb-wrapper ambient-glow-wrapper-3">
+      <div class="ambient-glow-orb ambient-glow-orb-3"></div>
+    </div>
+  </div>
+  <div class="cinematic-vignette" aria-hidden="true"></div>
+
+  <!-- ==================== BOLITA &amp; PÍLDORA SEGUIDORA DEL MOUSE ==================== -->
+  <div id="cursor-ball" class="cursor-ball" aria-hidden="true">
+    <span id="cursor-ball-text" class="cursor-ball-text"></span>
+  </div>
+
+  <!-- ==================== TOP TICKER / BARRA EDITORIAL DUAL ==================== -->
+  <aside aria-label="Aviso de disponibilidad"
+    class="border-b border-swiss bg-[#f8fafc] dark:bg-[#08080c] py-2 px-4 sm:px-8 text-xs font-mono flex items-center justify-between gap-3 text-slate-500 relative z-30">
+    <div class="flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
+      <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+      <span
+        class="view-negocios tracking-snug-swiss uppercase font-bold text-slate-900 dark:text-slate-200 text-[11px] sm:text-xs">
+        🏪 Creación de Páginas Web
+      </span>
+      <span
+        class="view-tech tracking-snug-swiss uppercase font-medium text-slate-700 dark:text-slate-300 text-[11px] sm:text-xs">
+        💻 Arturo Reyes Germán &bull; Software Engineer &bull; Full Stack Laravel &amp; Livewire
+      </span>
+    </div>
+
+    <div class="flex items-center gap-4 shrink-0 text-[11px] font-semibold text-slate-700 dark:text-slate-300">
+      <span class="hidden sm:inline text-[#ff5500] dark:text-emerald-400 font-bold">&bull; Disponible para
+        Proyectos</span>
+      <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20un%20proyecto." target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-[#ff5500] transition-colors border-l border-swiss dark:border-white/10 pl-3 sm:pl-4">
+        WhatsApp: 722 449 5978
+      </a>
     </div>
   </aside>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/95 border-b border-swiss">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
+  <!-- ==================== HEADER 3D FLOATING ISLAND (CAPSULE GLASS) ==================== -->
+  <header class="sticky top-4 sm:top-5 inset-x-0 z-50 px-3 sm:px-6 pointer-events-none mb-4">
+    <div
+      class="navbar-3d-island max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-18 flex items-center justify-between pointer-events-auto">
 
-      <!-- Brand Typography (Swiss Style) -->
-      <a href="#hero" class="flex items-center gap-4 group">
-        <span
-          class="font-display font-black text-2xl tracking-tighter-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
-          ARTURO REYES
-        </span>
-        <span
-          class="hidden md:inline-block font-mono text-[11px] px-2 py-0.5 border border-swiss uppercase tracking-wider text-slate-500 bg-[#f8fafc]">
-          SWE / DEV
-        </span>
+      <!-- Brand Typography (Swiss 3D Style) -->
+      <a href="#hero" class="flex items-center gap-3 group shrink-0">
+        <div
+          class="brand-badge-3d flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-950 text-white font-display font-black text-xs sm:text-sm shadow-md group-hover:bg-[#ff5500] group-hover:shadow-[0_0_16px_rgba(255,85,0,0.5)] transition-all">
+          AR
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-display font-black text-base sm:text-xl tracking-tighter-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors leading-none">
+            ARTURO REYES
+          </span>
+          <span class="view-negocios font-mono text-[9px] uppercase tracking-wider text-[#ff5500] font-bold mt-0.5">
+            Páginas Web &bull; Soluciones Digitales
+          </span>
+          <span class="view-tech font-mono text-[9px] uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-0.5">
+            Full Stack Dev &bull; Software Eng.
+          </span>
+        </div>
       </a>
 
-      <!-- Minimalist Navigation with Tracking & Editorial Elevate (Desktop) -->
+      <!-- 3D Segmented Floating Navigation Capsule (Dual Adapting) -->
       <nav
-        class="hidden lg:flex items-center gap-7 font-mono text-xs uppercase tracking-tight-swiss text-slate-600">
-        <a href="#experiencia" class="menu-item-editorial hover:text-slate-950 transition-colors">01. Experiencia</a>
-        <a href="#stack" class="menu-item-editorial hover:text-slate-950 transition-colors">02. Stack</a>
-        <a href="#servicios" class="menu-item-editorial hover:text-slate-950 transition-colors">03. Servicios</a>
-        <a href="#proyectos" class="menu-item-editorial hover:text-slate-950 transition-colors">04. Casos de Estudio</a>
-        <a href="#proceso" class="menu-item-editorial hover:text-slate-950 transition-colors">05. Metodología</a>
-        <a href="#contacto" class="menu-item-editorial hover:text-slate-950 transition-colors">06. Contacto</a>
+        class="hidden xl:flex items-center gap-1 p-1 mx-2 bg-slate-100/80 dark:bg-black/40 border border-slate-200/60 dark:border-white/5 rounded-full backdrop-blur-md shadow-[0_2px_8px_rgba(0,0,0,0.04)_inset] shrink-0">
+        <!-- Links Modo Negocios -->
+        <div class="view-negocios flex items-center gap-0.5">
+          <a href="#stack" class="nav-item-3d font-bold text-[#ff5500]">01. Incluye</a>
+          <a href="#servicios" class="nav-item-3d">02. Paquetes</a>
+          <a href="#proyectos" class="nav-item-3d">03. Demos</a>
+          <a href="#proceso" class="nav-item-3d">04. Proceso</a>
+          <a href="#contacto" class="nav-item-3d">05. Cotizar</a>
+        </div>
+
+        <!-- Links Modo Tech -->
+        <div class="view-tech flex items-center gap-0.5">
+          <button type="button" id="open-about-btn" aria-label="Abrir perfil del desarrollador" class="nav-item-3d font-bold text-[#ff5500]">
+            <span>00. Perfil</span>
+          </button>
+          <a href="#stack" class="nav-item-3d">01. Stack</a>
+          <a href="#servicios" class="nav-item-3d">02. Servicios</a>
+          <a href="#proyectos" class="nav-item-3d">03. Demos</a>
+          <a href="#proceso" class="nav-item-3d">04. Proceso</a>
+          <a href="#contacto" class="nav-item-3d">05. Contacto</a>
+        </div>
       </nav>
 
-      <!-- Actions & Theme Toggle & Mobile Trigger -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Botón Cambio de Tema (Light / Dark) -->
+      <!-- Actions &amp; Theme Toggle &amp; Mobile Trigger -->
+      <div class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <!-- Switch Dual en Header para acceso rápido -->
+        <div class="hidden md:inline-flex dual-switch-container">
+          <button type="button" class="dual-switch-btn is-active text-[10px] lg:text-[11px] py-1 px-2.5"
+            data-view-btn="negocios" aria-label="Ver modo Negocios">
+            <span>🏪 Negocios</span>
+          </button>
+          <button type="button" class="dual-switch-btn text-[10px] lg:text-[11px] py-1 px-2.5" data-view-btn="tech"
+            aria-label="Ver modo Tecnológico">
+            <span>💻 Tech</span>
+          </button>
+        </div>
+
+        <!-- Botón Cambio de Tema (Light / Dark) 3D -->
         <button id="theme-toggle-btn" type="button" aria-label="Cambiar tema de color"
-          class="p-2 sm:px-3 sm:py-2 border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-colors flex items-center gap-1.5 font-mono text-xs">
-          <i data-lucide="sun" id="theme-icon-sun" class="w-4 h-4 hidden text-amber-500"></i>
-          <i data-lucide="moon" id="theme-icon-moon" class="w-4 h-4 text-slate-700"></i>
-          <span class="hidden md:inline uppercase text-[11px] font-semibold" id="theme-text">Modo</span>
+          class="theme-btn-3d p-2 sm:px-2.5 sm:py-1.5 rounded-full border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-all flex items-center gap-1 font-mono text-xs shadow-sm">
+          <i data-lucide="sun" id="theme-icon-sun" class="w-3.5 h-3.5 hidden text-amber-500"></i>
+          <i data-lucide="moon" id="theme-icon-moon" class="w-3.5 h-3.5 text-slate-700"></i>
+          <span class="hidden lg:inline uppercase text-[10px] font-semibold" id="theme-text">Modo</span>
         </button>
 
-        <!-- CTA Directo -->
-        <a href="mailto:arturoreyesgerman@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
-          class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-tight-swiss px-3.5 py-2 sm:px-5 sm:py-2.5 bg-slate-950 text-white hover:bg-[#ff5500] transition-colors shadow-sm">
-          <span>Iniciar Proyecto</span>
+        <!-- CTA Directo 3D -->
+        <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20cotizar%20un%20sitio%20web%20para%20mi%20negocio."
+          target="_blank" rel="noopener noreferrer"
+          class="cta-btn-3d inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-tight-swiss px-3.5 py-2 sm:px-4 sm:py-2 rounded-full bg-slate-950 text-white hover:bg-[#ff5500] transition-all shadow-md font-bold">
+          <span class="view-negocios">Cotizar</span>
+          <span class="view-tech">Contacto</span>
           <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
         </a>
 
-        <!-- Botón Menú Hamburguesa Suizo (Móvil) -->
+        <!-- Botón Menú Hamburguesa Suizo (Móvil y Pantallas Medianas) -->
         <button id="mobile-menu-btn" type="button" aria-label="Abrir menú"
-          class="lg:hidden p-2.5 border border-swiss text-slate-950 hover:bg-[#f8fafc] hover:border-[#ff5500] transition-colors flex items-center justify-center">
+          class="xl:hidden p-2 sm:p-2.5 rounded-xl border border-swiss text-slate-950 hover:bg-[#f8fafc] hover:border-[#ff5500] transition-colors flex items-center justify-center shadow-sm">
           <i data-lucide="menu" id="menu-icon-open" class="w-5 h-5"></i>
           <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden text-[#ff5500]"></i>
         </button>
       </div>
     </div>
 
-    <!-- Menú Desplegable Móvil Suizo Fullscreen / Drawer (100% Opaco y Hermético) -->
+    <!-- Menú Desplegable Móvil Suizo 3D Floating Drawer -->
     <div id="mobile-menu-drawer"
-      class="lg:hidden fixed inset-x-0 top-20 bg-white border-b border-swiss shadow-2xl transition-all duration-300 -translate-y-[120%] opacity-0 pointer-events-none z-40 overflow-y-auto max-h-[calc(100vh-5rem)]">
-      <div class="px-6 py-8 flex flex-col space-y-6 font-mono text-sm uppercase tracking-tight-swiss">
-        
+      class="xl:hidden fixed inset-x-3 sm:inset-x-6 top-20 sm:top-24 max-w-xl mx-auto bg-white/95 dark:bg-[#070709]/95 border border-swiss rounded-3xl shadow-2xl backdrop-blur-2xl transition-all duration-300 -translate-y-[120%] opacity-0 pointer-events-none z-40 overflow-y-auto max-h-[calc(100vh-6.5rem)] pointer-events-auto">
+      <div class="px-6 py-8 flex flex-col space-y-6 font-mono text-base uppercase tracking-tight-swiss">
+
+        <!-- Selector de Modo en Móvil -->
+        <div class="flex items-center justify-between pb-4 border-b border-swiss">
+          <span class="text-xs text-slate-500 font-bold uppercase">// MODO DE VISTA</span>
+          <div class="dual-switch-container">
+            <button type="button" class="dual-switch-btn is-active text-xs py-1.5 px-3" data-view-btn="negocios" aria-label="Cambiar a vista de Negocios">
+              <span>🏪 Negocios</span>
+            </button>
+            <button type="button" class="dual-switch-btn text-xs py-1.5 px-3" data-view-btn="tech" aria-label="Cambiar a vista Tecnológica">
+              <span>💻 Tech</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Toggle Tema en Móvil -->
         <div class="flex items-center justify-between pb-4 border-b border-swiss">
           <span class="text-xs text-slate-500 font-bold uppercase">// APARIENCIA</span>
-          <button id="mobile-theme-toggle-btn" type="button"
-            class="inline-flex items-center gap-2 px-3 py-1.5 border border-swiss text-xs font-semibold text-slate-800 hover:border-[#ff5500]">
+          <button id="mobile-theme-toggle-btn" type="button" aria-label="Alternar modo día y noche"
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-swiss text-xs font-semibold text-slate-800 hover:border-[#ff5500]">
             <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden text-amber-500"></i>
             <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4 text-slate-700"></i>
             <span id="mobile-theme-text">Modo Noche</span>
           </button>
         </div>
 
-        <div class="text-[11px] text-[#ff5500] font-bold pb-1">
-          // NAVEGACIÓN PRINCIPAL
+        <!-- Links Móvil Modo Negocios -->
+        <div class="view-negocios flex flex-col space-y-4">
+          <div class="text-[11px] text-[#ff5500] font-bold pb-1">// SOLUCIONES COMERCIALES</div>
+          <a href="#stack"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>01. ¿Qué Incluye?</span>
+            <span class="text-xs text-[#ff5500] font-semibold">Beneficios &rarr;</span>
+          </a>
+          <a href="#servicios"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>02. Paquetes &amp; Precios</span>
+            <span class="text-xs text-slate-400 font-normal">Opciones</span>
+          </a>
+          <a href="#proyectos"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>03. Demos &amp; Casos</span>
+            <span class="text-xs text-slate-400 font-normal">Muestras</span>
+          </a>
+          <a href="#proceso"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>04. Proceso en 4 Pasos</span>
+            <span class="text-xs text-slate-400 font-normal">Fácil &amp; Rápido</span>
+          </a>
+          <a href="#contacto"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>05. Cotizar por WhatsApp</span>
+            <span class="text-xs text-emerald-500 font-semibold">Instantáneo &rarr;</span>
+          </a>
         </div>
-        <a href="#experiencia" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>01. Experiencia</span>
-          <span class="text-xs text-slate-400 font-normal">LunTech</span>
-        </a>
-        <a href="#stack" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>02. Stack</span>
-          <span class="text-xs text-slate-400 font-normal">Arsenal</span>
-        </a>
-        <a href="#servicios" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>03. Servicios</span>
-          <span class="text-xs text-slate-400 font-normal">Capacidades</span>
-        </a>
-        <a href="#proyectos" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>04. Casos de Estudio</span>
-          <span class="text-xs text-slate-400 font-normal">ROI</span>
-        </a>
-        <a href="#proceso" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>05. Metodología</span>
-          <span class="text-xs text-slate-400 font-normal">4 Fases</span>
-        </a>
-        <a href="#contacto" class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
-          <span>06. Contacto</span>
-          <span class="text-xs text-[#ff5500] font-semibold">Directo &rarr;</span>
-        </a>
+
+        <!-- Links Móvil Modo Tech -->
+        <div class="view-tech flex flex-col space-y-4">
+          <div class="text-[11px] text-[#ff5500] font-bold pb-1">// PERFIL DE INGENIERÍA</div>
+          <button type="button" id="mobile-open-about-btn" aria-label="Abrir información sobre el desarrollador"
+            class="text-left text-slate-950 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>00. Sobre Mí</span>
+            <span class="text-xs text-[#ff5500] font-semibold">Perfil &rarr;</span>
+          </button>
+          <a href="#stack"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>01. Stack Técnico</span>
+            <span class="text-xs text-slate-400 font-normal">Arsenal</span>
+          </a>
+          <a href="#servicios"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>02. Servicios Web</span>
+            <span class="text-xs text-slate-400 font-normal">Soluciones</span>
+          </a>
+          <a href="#proyectos"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>03. Experiencia &amp; Casos</span>
+            <span class="text-xs text-slate-400 font-normal">Trayectoria</span>
+          </a>
+          <a href="#proceso"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>04. Metodología</span>
+            <span class="text-xs text-slate-400 font-normal">Ingeniería</span>
+          </a>
+          <a href="#contacto"
+            class="mobile-nav-link text-slate-900 font-bold hover:text-[#ff5500] flex justify-between items-center py-1">
+            <span>05. Contacto Directo</span>
+            <span class="text-xs text-[#ff5500] font-semibold">Directo &rarr;</span>
+          </a>
+        </div>
 
         <!-- Redes y Contacto Rápido en Móvil -->
         <div class="pt-6 border-t border-swiss flex flex-col gap-3 font-mono text-xs">
-          <a href="https://wa.me/?text=Hola%20Arturo,%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta."
+          <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
             target="_blank" rel="noopener noreferrer"
-            class="flex items-center justify-center gap-2 py-3 bg-[#f8fafc] border border-swiss text-slate-950 font-bold hover:border-[#ff5500]">
+            class="flex items-center justify-center gap-2 py-3 bg-[#f8fafc] border border-swiss text-slate-950 font-bold rounded-2xl hover:border-[#ff5500]">
             <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
-            <span>WhatsApp Directo</span>
+            <span>WhatsApp Directo (722 449 5978)</span>
           </a>
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <a href="https://www.instagram.com/reyesarturo_o/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 py-2.5 border border-swiss text-slate-700 rounded-xl hover:text-[#ff5500]">
+              <svg class="w-4 h-4 text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/reyes.arturo.37128" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 py-2.5 border border-swiss text-slate-700 rounded-xl hover:text-[#ff5500]">
+              <svg class="w-4 h-4 text-blue-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- ==================== MODAL LATERAL EDITORIAL: SOBRE MÍ (ESTILO MONOLOG) ==================== -->
+  <div id="about-modal-backdrop" class="about-modal-backdrop" aria-hidden="true"></div>
+  <aside id="about-modal-panel" class="about-modal-panel" data-lenis-prevent
+    aria-label="Información sobre Arturo Reyes">
+    <div class="p-8 sm:p-12 flex flex-col justify-between min-h-full space-y-8 shrink-0" data-lenis-prevent>
+
+      <!-- Top Bar del Modal -->
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-swiss">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#ff5500]"></span>
+            <span class="font-mono text-xs font-bold uppercase tracking-wider text-[#ff5500]">[ 00 // SOBRE EL
+              DESARROLLADOR ]</span>
+          </div>
+          <button id="close-about-btn" type="button" aria-label="Cerrar modal"
+            class="p-2 border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-colors flex items-center justify-center">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Contenido Biográfico &amp; Perfil Profesional Real -->
+        <div class="pt-8 space-y-6">
+          <div>
+            <span class="font-mono text-xs text-[#ff5500] uppercase font-bold">// INGENIERO EN DESARROLLO Y GESTIÓN DE
+              SOFTWARE</span>
+            <h2 class="font-display font-black text-3xl sm:text-4xl text-slate-950 uppercase tracking-tight-swiss mt-1">
+              Arturo Reyes <span class="text-[#ff5500]">Germán</span>
+            </h2>
+            <p class="font-mono text-xs text-slate-500 mt-2 flex flex-wrap items-center gap-2">
+              <span class="inline-flex items-center gap-1"><i data-lucide="map-pin"
+                  class="w-3.5 h-3.5 text-[#ff5500]"></i> Lerma, Edo. Méx., México</span>
+              <span>&bull;</span>
+              <span class="inline-flex items-center gap-1"><i data-lucide="phone"
+                  class="w-3.5 h-3.5 text-emerald-500"></i> 722 449 5978</span>
+              <span>&bull;</span>
+              <span class="inline-flex items-center gap-1"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
+                arturoreyesgerman@gmail.com</span>
+            </p>
+          </div>
+
+          <div class="space-y-3">
+            <span class="font-mono text-xs text-slate-400 uppercase tracking-widest block font-bold">// PERFIL
+              PROFESIONAL</span>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Ingeniero en Desarrollo y Gestión de Software con sólida experiencia en la creación, optimización y
+              mantenimiento de <strong>sistemas web robustos</strong>. Destaco por mi enfoque analítico para la
+              resolución de problemas y la agilización de procesos operativos mediante tecnologías modernas de backend,
+              frontend y herramientas de desarrollo ágil.
+            </p>
+            <p class="text-sm text-slate-600 leading-relaxed font-sans">
+              Apasionado por la mejora continua, la arquitectura de software eficiente y la actualización tecnológica
+              constante en ecosistemas como <strong>PHP, Laravel, Livewire, Tailwind CSS y bases de datos
+                relacionales</strong>.
+            </p>
+          </div>
+
+          <!-- Educación y Formación Continua -->
+          <div class="pt-6 border-t border-swiss space-y-4">
+            <span class="font-mono text-xs text-slate-400 uppercase tracking-widest block font-bold">// EDUCACIÓN &amp;
+              CERTIFICACIONES</span>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div class="p-3.5 border border-swiss bg-[#f8fafc] rounded-xl">
+                <div class="flex justify-between items-start gap-2">
+                  <span class="font-bold text-slate-900">Ingeniería en Desarrollo y Gestión de Software</span>
+                  <span class="text-[#ff5500] font-semibold whitespace-nowrap">2019 – 2022</span>
+                </div>
+                <p class="text-slate-500 font-sans text-xs mt-1">Universidad Tecnológica del Valle de Toluca</p>
+              </div>
+
+              <div class="p-3.5 border border-swiss bg-[#f8fafc] rounded-xl">
+                <div class="flex justify-between items-start gap-2">
+                  <span class="font-bold text-slate-900">Formación Continua &amp; Especializaciones</span>
+                  <span class="text-[#ff5500] font-semibold whitespace-nowrap">Udemy | 2020 – Presente</span>
+                </div>
+                <p class="text-slate-500 font-sans text-xs mt-1">
+                  JavaScript Moderno, Desarrollo Web Completo, CSS Avanzado, Git y GitHub desde cero.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Aptitudes Profesionales -->
+          <div class="pt-6 border-t border-swiss space-y-3 font-mono text-xs">
+            <span class="text-slate-400 uppercase tracking-widest block font-bold">// APTITUDES &amp; COMPETENCIAS</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-700">
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">&check;</span>
+                <span>Resolución analítica de problemas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">&check;</span>
+                <span>Pensamiento estructurado y lógico</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">&check;</span>
+                <span>Trabajo en equipo y colaboración efectiva</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">&check;</span>
+                <span>Adaptabilidad a nuevos entornos</span>
+              </div>
+              <div class="flex items-center gap-2 col-span-1 sm:col-span-2">
+                <span class="text-emerald-500 font-bold">&check;</span>
+                <span>Planificación estratégica de tareas y requerimientos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer del Modal con Redes &amp; WhatsApp -->
+      <div class="pt-6 border-t border-swiss space-y-4">
+        <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20perfil%20y%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto."
+          target="_blank" rel="noopener noreferrer"
+          class="w-full inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#ff5500] text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-slate-950 transition-colors shadow-lg">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Enviar WhatsApp a Arturo (722 449 5978)</span>
+        </a>
+
+        <div class="flex items-center justify-center gap-6 font-mono text-xs text-slate-500">
+          <a href="https://www.instagram.com/reyesarturo_o/" target="_blank" rel="noopener noreferrer"
+            class="hover:text-[#ff5500] flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg> Instagram
+          </a>
+          <span>&bull;</span>
+          <a href="https://www.facebook.com/reyes.arturo.37128" target="_blank" rel="noopener noreferrer"
+            class="hover:text-[#ff5500] flex items-center gap-1">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg> Facebook
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ==================== MODAL CINEMÁTICO AL CENTRO PARA TARJETAS ==================== -->
+  <div id="card-zoom-backdrop" class="card-zoom-backdrop" aria-hidden="true"></div>
+  <div id="card-zoom-modal-container" class="card-zoom-modal-container" data-lenis-prevent role="dialog"
+    aria-modal="true" aria-label="Detalle ampliado de la solución web">
+    <div class="card-zoom-modal-panel p-8 sm:p-12 relative" data-lenis-prevent>
+      <button id="card-zoom-close-btn" type="button" aria-label="Cerrar vista"
+        class="absolute top-5 right-5 w-10 h-10 rounded-full border border-swiss text-slate-700 hover:text-[#ff5500] hover:border-[#ff5500] transition-colors flex items-center justify-center bg-white/90 backdrop-blur-sm z-20 shadow-sm">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+      <div id="card-zoom-content" class="space-y-6">
+        <!-- El contenido de la tarjeta seleccionada se inyecta de forma reactiva -->
+      </div>
+      <div
+        class="pt-6 mt-8 border-t border-swiss flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs">
+        <span class="text-slate-400 uppercase tracking-widest text-[11px]">// VISTA EXPANDIDA EN ALTA DEFINICIÓN</span>
+        <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20un%20proyecto%20con%20esta%20tecnolog%C3%ADa."
+          target="_blank" rel="noopener noreferrer"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#ff5500] text-white font-bold uppercase tracking-tight-swiss hover:bg-slate-950 transition-colors">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>Cotizar solución por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <main>
-    <!-- ==================== HERO SECTION (EDITORIAL BLANCO PURO 3D) ==================== -->
-    <section id="hero" class="hero-spatial-container relative pt-16 pb-20 md:pt-24 md:pb-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
+    <!-- ==================== HERO SECTION (EDITORIAL BLANCO PURO 3D &amp; DUAL COPY) ==================== -->
+    <section id="hero"
+      class="hero-spatial-container relative pt-16 pb-20 md:pt-24 md:pb-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
 
       <!-- Top Meta Bar del Canvas -->
       <div
         class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 sm:pb-10 border-b border-swiss text-xs font-mono text-slate-500">
         <div class="flex items-center gap-3">
-          <span class="text-[#ff5500] font-bold">[ 001 // SPATIAL CANVAS 3D ]</span>
+          <span class="text-[#ff5500] font-bold">[ 001 // DIGITAL GROWTH CANVAS ]</span>
           <span class="hidden md:inline text-slate-300">|</span>
-          <span class="uppercase">PARALLAX ESPACIAL EN TIEMPO REAL</span>
+          <span class="view-negocios uppercase">PÁGINAS WEB DE ALTA CONVERSIÓN &amp; VENTAS</span>
+          <span class="view-tech uppercase">PARALLAX ESPACIAL EN TIEMPO REAL</span>
         </div>
         <div class="flex items-center gap-2 text-slate-700">
           <i data-lucide="compass" class="w-3.5 h-3.5 text-[#ff5500] animate-spin"></i>
-          <span class="font-semibold text-xs">Interactúa con el mouse o desliza en móvil</span>
+          <span class="view-negocios font-semibold text-xs">Páginas modernas con IA &amp; Código de Alto Rendimiento</span>
+          <span class="view-tech font-semibold text-xs">Interactúa con el mouse o desliza en móvil</span>
         </div>
       </div>
 
-      <!-- Monumental Typography Layer con Profundidad 3D -->
+      <!-- Monumental Typography Layer con Profundidad 3D (Dual) -->
       <div class="hero-parallax-layer py-10 sm:py-12 md:py-16 overflow-visible" data-depth="40">
         <div class="interactive-char-block w-full">
-          <h1 id="hero-wave-heading"
-            class="font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
-            Tecnología<br>
-            <span class="text-slate-400">Sin Fricción</span><br>
-            Para Escalar.
+          <!-- Título Modo Negocios -->
+          <h1
+            class="hero-wave-heading view-negocios font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
+            Páginas Web<br>
+            <span class="text-[#ff5500]">Que Venden</span><br>
+            &amp; Atraen Clientes
+          </h1>
+
+          <!-- Título Modo Tech -->
+          <h1
+            class="hero-wave-heading view-tech font-display font-black text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter-swiss leading-[0.92] sm:leading-[0.88] text-slate-950 uppercase break-words">
+            Sistemas Web<br>
+            <span class="text-slate-400">Robustos</span><br>
+            &amp; Escalables.
           </h1>
         </div>
       </div>
 
-      <!-- Bottom Grid con Propuesta de Valor, Métricas y CTAs en Capa 3D -->
+      <!-- Bottom Grid con Propuesta de Valor, Métricas y CTAs en Capa 3D (Dual) -->
       <div class="hero-parallax-layer grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10 border-t border-swiss items-end"
         data-depth="20">
 
-        <!-- Copy de Posicionamiento -->
-        <div class="lg:col-span-6 space-y-4">
+        <!-- Copy de Posicionamiento Modo Negocios -->
+        <div class="view-negocios lg:col-span-5 space-y-4">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 border border-swiss text-xs font-mono text-slate-700 bg-[#f8fafc]">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>CREACIÓN DE PÁGINAS WEB</span>
+          </div>
+          <p class="text-lg sm:text-xl text-slate-600 font-normal tracking-snug-swiss leading-relaxed max-w-xl">
+            Ayudo a <strong>negocios, médicos, restaurantes y empresas</strong> a tener una página web moderna,
+            ultra rápida para tener más clientes.
+          </p>
+        </div>
+
+        <!-- Copy de Posicionamiento Modo Tech -->
+        <div class="view-tech lg:col-span-5 space-y-4">
           <div
             class="inline-flex items-center gap-2 px-3 py-1 border border-swiss text-xs font-mono text-slate-700 bg-[#f8fafc]">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-            <span>PROGRAMADOR EN LUNTECH &bull; DISPONIBILIDAD SELECTA</span>
+            <span>INGENIERO DE SOFTWARE &bull; BACKEND &amp; FRONTEND</span>
           </div>
-          <p
-            class="text-lg sm:text-xl text-slate-600 font-normal tracking-snug-swiss leading-relaxed max-w-xl">
-            Hola, soy <strong>Arturo Reyes Germán</strong>. Transformo requerimientos técnicos complejos en software comercial
-            moderno, rápido y concebido para convertir visitantes en clientes de alto valor.
+          <p class="text-lg sm:text-xl text-slate-600 font-normal tracking-snug-swiss leading-relaxed max-w-xl">
+            Hola, soy <strong>Arturo Reyes Germán</strong>. Desarrollo y optimizo sistemas web a medida, interfaces
+            reactivas y arquitecturas eficientes con <strong>Laravel, PHP, Livewire, Tailwind CSS</strong> y bases de
+            datos relacionales.
           </p>
         </div>
 
-        <!-- Métricas Rápidas en Rejilla Suiza -->
+        <!-- Métricas Rápidas Modo Negocios -->
         <div
-          class="lg:col-span-3 grid grid-cols-2 gap-4 font-mono text-xs border-y lg:border-y-0 lg:border-l border-swiss py-6 lg:py-0 lg:pl-8">
+          class="view-negocios lg:col-span-3 grid grid-cols-2 gap-4 font-mono text-xs border-y lg:border-y-0 lg:border-l border-swiss py-6 lg:py-0 lg:pl-8">
           <div>
-            <span class="text-slate-400 block text-[10px] uppercase">VELOCIDAD</span>
-            <span class="text-2xl font-display font-bold text-slate-950">&lt; 1s</span>
-            <span class="text-slate-500 block text-[11px] mt-0.5">Carga Inicial</span>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] font-semibold uppercase">ENTREGA RÁPIDA</span>
+            <span class="text-xl font-display font-bold text-slate-950">5 - 7 Días</span>
+            <span class="text-slate-500 block text-[11px] mt-0.5">Tu web lista</span>
           </div>
           <div>
-            <span class="text-slate-400 block text-[10px] uppercase">ESPACIAL</span>
-            <span class="text-2xl font-display font-bold text-[#ff5500]">3D True</span>
-            <span class="text-slate-500 block text-[11px] mt-0.5">60fps Parallax</span>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] font-semibold uppercase">ENFOQUE</span>
+            <span class="text-xl font-display font-bold text-[#ff5500]">WhatsApp</span>
+            <span class="text-slate-500 block text-[11px] mt-0.5">Ventas directas</span>
           </div>
         </div>
 
-        <!-- Botones de Acción Inmediata -->
-        <div class="lg:col-span-3 flex flex-col gap-3">
-          <a href="mailto:arturo.reyes.dev@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%0A%0AQuiero%20evaluar%20un%20proyecto%20web%20para%20mi%20negocio.%0A-%20Nombre:%0A-%20Empresa:%0A-%20Presupuesto%20estimado:"
-            class="inline-flex items-center justify-center gap-3 px-6 py-4 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-[#ff5500] transition-colors shadow-sm">
+        <!-- Métricas Rápidas Modo Tech -->
+        <div
+          class="view-tech lg:col-span-3 grid grid-cols-2 gap-4 font-mono text-xs border-y lg:border-y-0 lg:border-l border-swiss py-6 lg:py-0 lg:pl-8">
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] font-semibold uppercase">ESPECIALIDAD</span>
+            <span class="text-xl font-display font-bold text-slate-950">Laravel</span>
+            <span class="text-slate-500 block text-[11px] mt-0.5">&amp; Livewire</span>
+          </div>
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] font-semibold uppercase">ENFOQUE</span>
+            <span class="text-xl font-display font-bold text-[#ff5500]">Full Stack</span>
+            <span class="text-slate-500 block text-[11px] mt-0.5">Robustez &amp; UI</span>
+          </div>
+        </div>
+
+        <!-- Botones de Acción Modo Negocios -->
+        <div class="view-negocios lg:col-span-4 flex flex-col gap-3 relative z-30 pointer-events-auto">
+          <a id="hero-btn-whatsapp"
+            href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio.%20%C2%BFMe%20puedes%20dar%20informes%20y%20paquetes?"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-[#ff5500] text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-slate-950 transition-colors shadow-lg text-center font-bold rounded-xl cursor-pointer">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Cotizar mi Web por WhatsApp</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+
+          <a id="hero-btn-servicios"
+            href="#servicios"
+            class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-swiss bg-white text-slate-900 font-mono text-xs uppercase tracking-tight-swiss hover:border-[#ff5500] hover:text-[#ff5500] transition-colors text-center rounded-xl cursor-pointer">
+            <i data-lucide="layers" class="w-4 h-4 text-[#ff5500]"></i>
+            <span>Ver Paquetes &amp; Soluciones</span>
+          </a>
+
+          <!-- Micro-Trust Badges de Conversión -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1 text-[10px] font-mono text-slate-500 dark:text-slate-400">
+            <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3 h-3 text-[#ff5500]"></i> Entrega express 3-5 días</span>
+            <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3 h-3 text-emerald-500"></i> Sin rentas mensuales</span>
+          </div>
+        </div>
+
+        <!-- Botones de Acción Modo Tech -->
+        <div class="view-tech lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 relative z-30 pointer-events-auto">
+          <a id="hero-tech-btn-mail"
+            href="mailto:arturoreyesgerman@gmail.com?subject=Contacto%20Profesional%20-%20Arturo%20Reyes&body=Hola%20Arturo,%0A%0AQuiero%20platicar%20sobre%20una%20oportunidad%20o%20proyecto:%0A-%20Nombre:%0A-%20Empresa/Organizaci%C3%B3n:%0A-%20Detalles:"
+            class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss hover:bg-[#ff5500] transition-colors shadow-sm text-center rounded-xl cursor-pointer">
             <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>Escríbeme por correo</span>
+            <span class="truncate">arturoreyesgerman@gmail.com</span>
             <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
           </a>
 
-          <a href="https://wa.me/?text=Hola%20Arturo,%20vi%20tu%20sitio%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta%20para%20un%20proyecto."
+          <a id="hero-tech-btn-wa"
+            href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20perfil%20web%20y%20me%20gustar%C3%ADa%20hacerte%20una%20consulta."
             target="_blank" rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-3 px-6 py-4 border border-swiss bg-white text-slate-900 font-mono text-xs uppercase tracking-tight-swiss hover:border-[#ff5500] hover:text-[#ff5500] transition-colors">
+            class="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 border border-swiss bg-white text-slate-900 font-mono text-xs uppercase tracking-tight-swiss hover:border-[#ff5500] hover:text-[#ff5500] transition-colors text-center rounded-xl cursor-pointer">
             <i data-lucide="message-circle" class="w-4 h-4 text-emerald-500"></i>
-            <span>WhatsApp Directo</span>
+            <span>WhatsApp: 722 449 5978</span>
           </a>
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== TRAYECTORIA / LUNTECH ==================== -->
-    <section id="experiencia" class="py-20 md:py-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-        <div class="lg:col-span-4">
-          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 01. TRAYECTORIA ]</span>
-          <h2
-            class="font-display font-black text-3xl sm:text-4xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
-            Experiencia en producción
-          </h2>
-          <p class="font-sans text-sm text-slate-600 mt-4 leading-relaxed">
-            La solidez técnica no se improvisa: se construye resolviendo problemas diarios en software empresarial activo.
-          </p>
-        </div>
-
-        <div class="lg:col-span-8 spatial-card-wrapper">
-          <div class="spatial-card p-8 sm:p-12 relative overflow-hidden">
-            <div class="card-glare"></div>
-            <div class="card-elevated-content">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-8 border-b border-swiss">
-                <div>
-                  <span class="font-mono text-xs text-slate-400 uppercase tracking-widest">EMPRESA ACTUAL</span>
-                  <h3 class="font-display font-bold text-2xl text-slate-950 tracking-tight-swiss mt-1">
-                    LunTech
-                  </h3>
-                </div>
-                <div class="text-left sm:text-right">
-                  <span class="font-mono text-xs text-emerald-600 font-semibold">[ ROL ACTIVO ]</span>
-                  <p class="font-mono text-xs text-slate-500 mt-0.5">Ingeniero en Desarrollo de Software</p>
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
-                <div class="space-y-3">
-                  <span class="font-mono text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                    <span class="w-1.5 h-1.5 bg-[#ff5500] rounded-full"></span> 01 // DESARROLLO
-                  </span>
-                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                    Implementación de módulos robustos, lógica orientada a negocio y resolución de casos de uso complejos.
-                  </p>
-                </div>
-                <div class="space-y-3">
-                  <span class="font-mono text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                    <span class="w-1.5 h-1.5 bg-[#ff5500] rounded-full"></span> 02 // ARQUITECTURA
-                  </span>
-                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                    Diseño de código limpio, mantenible y libre de deuda técnica bajo estándares internacionales.
-                  </p>
-                </div>
-                <div class="space-y-3">
-                  <span class="font-mono text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                    <span class="w-1.5 h-1.5 bg-[#ff5500] rounded-full"></span> 03 // VANGUARDIA
-                  </span>
-                  <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
-                    Adopción de IA para optimizar tiempos de entrega de software sin comprometer la seguridad ni la calidad.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ==================== STACK TECNOLÓGICO & ARQUITECTURA (3D SPATIAL MATRIX) ==================== -->
+    <!-- ==================== STACK TECNOLÓGICO &amp; BENEFICIOS (3D SPATIAL MATRIX) ==================== -->
     <section id="stack" class="py-20 md:py-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <!-- Encabezado Modo Negocios -->
+      <div class="view-negocios flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 02. ARSENAL TECNOLÓGICO & ARQUITECTURA ]</span>
+          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 01. ¿QUÉ INCLUYE TU
+            PÁGINA WEB? ]</span>
           <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
-            Stack en Producción Activa
+            Todo lo que tu Negocio Necesita para Crecer
           </h2>
         </div>
         <p class="font-mono text-xs uppercase tracking-tight-swiss text-slate-500 max-w-md">
-          Ecosistema moderno, tipado estricto y estándares de ingeniería utilizados diariamente en sistemas comerciales escalables.
+          Diseño moderno, velocidad extrema y optimizado para que los clientes te encuentren y te manden whatsapp al
+          instante si es que tu pagina lo requiere.
         </p>
       </div>
 
-      <!-- Métricas / Principios Core de Arquitectura (Barra Superior) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div class="p-4 border border-swiss bg-[#f8fafc] font-mono text-xs">
-          <span class="text-slate-400 block text-[10px] uppercase">POLÍTICA DE TIPADO</span>
-          <span class="text-slate-950 font-bold mt-1 block">TypeScript Strict</span>
-          <span class="text-emerald-600 text-[11px]">&bull; Zero Any Policy</span>
+      <!-- Encabezado Modo Tech -->
+      <div class="view-tech flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 01. ARSENAL
+            TECNOLÓGICO &amp; ARQUITECTURA ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+            Tecnologías de Alto Rendimiento
+          </h2>
         </div>
-        <div class="p-4 border border-swiss bg-[#f8fafc] font-mono text-xs">
-          <span class="text-slate-400 block text-[10px] uppercase">CORE WEB VITALS</span>
-          <span class="text-slate-950 font-bold mt-1 block">Sub-100ms TTI</span>
-          <span class="text-emerald-600 text-[11px]">&bull; 60 FPS Render</span>
+        <p class="font-mono text-xs uppercase tracking-tight-swiss text-slate-500 max-w-md">
+          Ecosistema moderno, tipado estricto y estándares de ingeniería aplicados a sitios web y plataformas
+          comerciales de máxima conversión.
+        </p>
+      </div>
+
+      <!-- Métricas / Principios Core de Arquitectura (Barra Superior - Modo Negocios) -->
+      <div class="view-negocios grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div
+          class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-[#ff5500] transition-all duration-300 group font-mono text-xs flex flex-col justify-between space-y-3 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider">// 01. RENDIMIENTO</span>
+            <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-[#ff5500] flex items-center justify-center group-hover:bg-[#ff5500] group-hover:text-white transition-colors">
+              <i data-lucide="zap" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">VELOCIDAD MÁXIMA</span>
+            <span class="text-slate-950 dark:text-white font-display font-black text-xl mt-0.5 block">Carga &lt; 1 Seg</span>
+          </div>
+          <div class="pt-2 border-t border-swiss flex items-center gap-1.5 text-[#ff5500] font-bold text-[11px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span>
+            <span>Google PageSpeed 95+</span>
+          </div>
         </div>
-        <div class="p-4 border border-swiss bg-[#f8fafc] font-mono text-xs">
-          <span class="text-slate-400 block text-[10px] uppercase">PATRÓN DE DISEÑO</span>
-          <span class="text-slate-950 font-bold mt-1 block">Clean Architecture</span>
-          <span class="text-slate-600 text-[11px]">&bull; SOLID & Modular</span>
+
+        <div
+          class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-[#ff5500] transition-all duration-300 group font-mono text-xs flex flex-col justify-between space-y-3 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider">// 02. ALCANCE</span>
+            <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-[#ff5500] flex items-center justify-center group-hover:bg-[#ff5500] group-hover:text-white transition-colors">
+              <i data-lucide="map-pin" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">PRESENCIA LOCAL</span>
+            <span class="text-slate-950 dark:text-white font-display font-black text-xl mt-0.5 block">Ubicación &amp; Contacto</span>
+          </div>
+          <div class="pt-2 border-t border-swiss flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-bold text-[11px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span>
+            <span>Clientes Lerma y Toluca</span>
+          </div>
         </div>
-        <div class="p-4 border border-swiss bg-[#f8fafc] font-mono text-xs">
-          <span class="text-slate-400 block text-[10px] uppercase">DISPONIBILIDAD CORE</span>
-          <span class="text-slate-950 font-bold mt-1 block">Resiliencia & ACID</span>
-          <span class="text-[#ff5500] text-[11px]">&bull; Webhooks & Queues</span>
+
+        <div
+          class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-[#ff5500] transition-all duration-300 group font-mono text-xs flex flex-col justify-between space-y-3 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider">// 03. VENTAS</span>
+            <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-[#ff5500] flex items-center justify-center group-hover:bg-[#ff5500] group-hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">CONVERSIÓN DIRECTA</span>
+            <span class="text-slate-950 dark:text-white font-display font-black text-xl mt-0.5 block">Botones WhatsApp</span>
+          </div>
+          <div class="pt-2 border-t border-swiss flex items-center gap-1.5 text-[#ff5500] font-bold text-[11px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span>
+            <span>Mensajes a 1 Clic</span>
+          </div>
+        </div>
+
+        <div
+          class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 hover:border-[#ff5500] transition-all duration-300 group font-mono text-xs flex flex-col justify-between space-y-3 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <span class="text-slate-600 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider">// 04. GARANTÍA</span>
+            <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-[#ff5500] flex items-center justify-center group-hover:bg-[#ff5500] group-hover:text-white transition-colors">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div>
+            <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">ENTREGA DE PROYECTO</span>
+            <span class="text-slate-950 dark:text-white font-display font-black text-xl mt-0.5 block">Diseño &amp; Desarrollo Web</span>
+          </div>
+          <div class="pt-2 border-t border-swiss flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-bold text-[11px]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span>
+            <span>Apoyo opcional para publicación</span>
+          </div>
         </div>
       </div>
 
-      <!-- Grid de 4 Bloques Espaciales 3D -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Métricas / Principios Core de Arquitectura (Barra Superior - Modo Tech) -->
+      <div class="view-tech grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+        <div class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:border-[#ff5500] font-mono text-xs space-y-2">
+          <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">BACKEND &amp; LENGUAJES</span>
+          <span class="text-slate-950 dark:text-white font-display font-bold text-lg block">PHP &amp; Laravel</span>
+          <span class="text-[#ff5500] text-[11px] font-semibold">&bull; Livewire, C# &amp; JS</span>
+        </div>
+        <div class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:border-[#ff5500] font-mono text-xs space-y-2">
+          <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">ESTILOS &amp; DISEÑO</span>
+          <span class="text-slate-950 dark:text-white font-display font-bold text-lg block">Tailwind CSS</span>
+          <span class="text-[#ff5500] text-[11px] font-semibold">&bull; Grid, Flexbox, SASS</span>
+        </div>
+        <div class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:border-[#ff5500] font-mono text-xs space-y-2">
+          <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">BASES DE DATOS</span>
+          <span class="text-slate-950 dark:text-white font-display font-bold text-lg block">MySQL &amp; MariaDB</span>
+          <span class="text-slate-600 dark:text-slate-400 text-[11px]">&bull; SQL Server &amp; ACID</span>
+        </div>
+        <div class="p-5 border border-swiss bg-white dark:bg-[#070709] rounded-2xl shadow-md hover:border-[#ff5500] font-mono text-xs space-y-2">
+          <span class="text-slate-600 dark:text-slate-400 block text-[10px] uppercase font-bold">CONTROL &amp; DEVOPS</span>
+          <span class="text-slate-950 dark:text-white font-display font-bold text-lg block">Docker &amp; Git</span>
+          <span class="text-[#ff5500] text-[11px] font-semibold">&bull; GitHub &amp; GitLab</span>
+        </div>
+      </div>
 
-        <!-- Bloque 1: Frontend & Experiencia -->
+      <!-- Grid de 4 Bloques Espaciales 3D (Modo Negocios - Enfocado 100% a Ventas y Resultados) -->
+      <div class="view-negocios grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Bloque 1: Velocidad Extrema -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+          <article data-cursor-text="Ver detalles ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
             <div class="card-glare"></div>
-            <div class="card-elevated-content space-y-6">
+            <div class="card-elevated-content space-y-4">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 01 // FRONTEND ARCHITECTURE ]</span>
-                <span class="font-mono text-[10px] uppercase px-2 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc]">UI / UX 60FPS</span>
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 01 // VELOCIDAD &amp; RENDIMIENTO ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">CARGA
+                  &lt; 1 SEG</span>
               </div>
-              <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Frontend Reactivo & Editorial
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Carga Ultra Rápida &amp; Sin Caídas
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Interfaces construidas con tipado preventivo, micro-interacciones espaciales y componentes desacoplados con rendimiento de primer nivel.
+                Tu página abre al instante en cualquier celular. Si un sitio tarda en cargar, los clientes se van con la competencia; con nosotros tus visitantes entran sin esperar.
               </p>
-              
-              <!-- Badges de Tecnologías con micro-hover -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> TypeScript
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> React / Next.js
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span> Tailwind CSS
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> GSAP + ScrollTrigger
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span> Lenis Smooth Scroll
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> HTML5 Semántico & A11y
-                </span>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Carga Inmediata</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-slate-950 dark:bg-white"></span> Google PageSpeed 95+</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Cero Esperas</span>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
-              <span>Especialidad: Single Page Applications & Landing Pages</span>
-              <span class="text-emerald-600 font-semibold">[ 100% WCAG AA ]</span>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver beneficios completos &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ RETENCIÓN DE CLIENTES ]</span>
+            </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ 01 // RENDIMIENTO &amp; VELOCIDAD ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">MÁXIMA RETENCIÓN DE VISITANTES</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Velocidad Inmediata para No Perder Ninguna Venta
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Estudios de Google demuestran que más del 50% de los usuarios abandonan una página web si tarda más de 3 segundos en abrir. Optimizamos cada elemento para que tu sitio responda al instante en redes 4G/5G y redes Wi-Fi locales.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// NAVEGACIÓN INSTANTÁNEA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Apertura en &lt; 1 Segundo</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Los clientes acceden al menú, catálogo o información de tu negocio inmediatamente sin pantallas congeladas.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// IMÁGENES LIGERAS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Compresión Fotográfica</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Tus fotos de productos, platillos o instalaciones se ven nítidas pero consumen el mínimo de datos móviles.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// CÓDIGO LIMPIO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Cero Elementos Inútiles</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Páginas construidas desde cero sin plantillas pesadas ni código lento que arruine la experiencia.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </article>
+        </div>
+
+        <!-- Bloque 2: Diseño Adaptativo a Celulares -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Ver detalles ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 02 // DISEÑO Y PRESTIGIO ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">100%
+                  MÓVIL</span>
+              </div>
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Diseño Moderno &amp; Adaptado a Celulares
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                El 85% de tus clientes te buscarán desde su teléfono. Tu página lucirá impecable en celular, tablet y computadora, transmitiendo confianza y profesionalismo.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Diseño en Celular</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-slate-950 dark:bg-white"></span> Estilo Suizo 3D</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Imagen Profesional</span>
+              </div>
+            </div>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver beneficios completos &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ IMAGEN DE MARCA ]</span>
+            </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ 02 // DISEÑO Y EXPERIENCIA DE USUARIO ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">EXPERIENCIA MÓVIL DE LUJO</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Una Imagen Impecable que Transmite Confianza Instantánea
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Una página desordenada o antigua ahuyenta a los clientes. Diseñamos sitios visualmente atractivos, estructurados y fáciles de leer para que tu negocio sobresalga de la competencia local.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// RESPONSIVIDAD REAL</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Adaptabilidad Celular</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Textos legibles sin necesidad de hacer zoom, botones grandes y menús cómodos para usar con el pulgar.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MODO DÍA Y NOCHE</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Apariencia Dual</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Tu web se ajusta al tema preferido por tus clientes para una lectura agradable a cualquier hora.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// ESTRUCTURA CLARA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Secciones Estratégicas</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Servicios, precios, ubicación y testimonios presentados de forma limpia y directa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </article>
+        </div>
+
+        <!-- Bloque 3: Conversión Directa a WhatsApp -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Ver detalles ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 03 // VENTAS DIRECTAS ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">WHATSAPP
+                  DIRECTO</span>
+              </div>
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Conexión Directa a WhatsApp &amp; Llamadas
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Convertimos visitantes en clientes reales. Integramos botones estratégicos para que con un solo toque te manden mensaje a tu WhatsApp o te marquen por teléfono.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> WhatsApp a 1 Clic</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-slate-950 dark:bg-white"></span> Mensaje Prellenado</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Llamada Directa</span>
+              </div>
+            </div>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver beneficios completos &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ RESPUESTA RÁPIDA ]</span>
+            </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ 03 // GENERACIÓN DE CLIENTES ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">CONTACTO INMEDIATO SIN BARRERAS</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    WhatsApp Integrado para Cerrar Ventas al Momento
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Olvídate de formularios largos que nadie llena. Hoy en día los clientes quieren una respuesta rápida en WhatsApp. Diseñamos la web para que cada interesado te contacte en segundos.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// BOTÓN FLOTANTE</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Acceso Siempre Visible</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      El botón de contacto acompaña al cliente en todo su recorrido sin estorbar la lectura.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MENSAJE INTELIGENTE</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Texto Preconfigurado</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      El mensaje llega a tu celular especificando el servicio que le interesó al cliente.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MAPAS Y REDES</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Redes Sociales &amp; Teléfono</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Integración con tu Facebook, Instagram y llamadas directas con un solo toque.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </article>
+        </div>
+
+        <!-- Bloque 4: Ubicación &amp; Todo Incluido -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Ver detalles ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 04 // LOCALIZACIÓN &amp; PAQUETE ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">TODO
+                  LISTO</span>
+              </div>
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Ubicación de tu Negocio &amp; Todo Incluido
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Facilitamos que tus clientes en Lerma, Toluca o Metepec encuentren tu negocio con una interfaz atractiva. Nos enfocamos en diseñar tu sitio y, si lo deseas, te guiamos sin costo en la elección de tu hosting.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Mapa Interactivo</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-slate-950 dark:bg-white"></span> Diseñada a la Medida</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Apoyo en Publicación</span>
+              </div>
+            </div>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver beneficios completos &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ DISEÑO LISTO ]</span>
+            </div>
+
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ 04 // DISEÑO WEB A TU MEDIDA ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-orange-500/10 px-3 py-1 rounded-full font-bold">100% PERSONALIZADO</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Diseño Exclusivo para Destacar tu Negocio
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Me encargo completamente del diseño y desarrollo visual de tu sitio web. Si decides publicar tu página en internet, te asesoro recomendándote la mejor opción de dominio y hosting, y te ayudo a dejarla en línea.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MAPA INTERACTIVO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Dirección &amp; Ruta</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Tus clientes pueden ver tu ubicación exacta y trazar la ruta en su teléfono para visitar tu local.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// DISEÑO MODERNO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Tu Estilo Unico</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Estructura limpia y adaptada a celular o computadora para transmitir máxima confianza.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] dark:bg-white/5 rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// APOYO EN SUBIDA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Orientación Opcional</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Si requieres subirla, te asesoro con la compra de tu hosting y realizo la instalación por ti.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Grid de 4 Bloques Espaciales 3D (Modo Tech - Arsenal de Ingeniería) -->
+      <div class="view-tech grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Bloque 1: Backend &amp; Lenguajes -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 01 // BACKEND &amp; LENGUAJES ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">ROBUSTEZ
+                  &amp; APIS</span>
+              </div>
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Arquitectura Backend &amp; APIs REST
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Desarrollo y optimización de sistemas web a medida, lógica transaccional y servicios backend escalables.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> PHP &amp; Laravel</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-violet-600"></span> Livewire</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> C# &amp; JavaScript</span>
+              </div>
+            </div>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver arquitectura completa &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ MVC &amp; ELOQUENT ]</span>
             </div>
           </article>
         </div>
 
-        <!-- Bloque 2: Backend, Lógica & APIs -->
+        <!-- Bloque 2: Estilos &amp; Diseño Tech -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
             <div class="card-glare"></div>
-            <div class="card-elevated-content space-y-6">
+            <div class="card-elevated-content space-y-4">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 02 // BACKEND & INTEGRATIONS ]</span>
-                <span class="font-mono text-[10px] uppercase px-2 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc]">ALTO RENDIMIENTO</span>
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 02 // ESTILOS &amp; DISEÑO ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">RESPONSIVE
+                  &amp; UI</span>
               </div>
-              <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Servicios & APIs de Negocio
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Interfaces Dinámicas &amp; Responsive Design
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Desarrollo de endpoints seguros, integración de pasarelas transaccionales y arquitecturas de microservicios con manejo de fallos y colas.
+                Maquetación moderna, diseño adaptativo a todo dispositivo y componentes interactivos de alta estética.
               </p>
-
-              <!-- Badges de Tecnologías -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Node.js & Express
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-violet-600"></span> PHP & Arquitectura Modular
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> RESTful APIs & JSON:API
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Webhooks & Asynchronous Jobs
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-500"></span> Python & Data Scripting
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> JWT & RBAC Auth
-                </span>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span> Tailwind CSS</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span> Bootstrap &amp; SASS</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> CSS Grid &amp; Flexbox</span>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
-              <span>Especialidad: Integraciones comerciales & pagos</span>
-              <span class="text-emerald-600 font-semibold">[ LATENCIA < 80ms ]</span>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver arquitectura completa &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ 100% RESPONSIVE ]</span>
             </div>
           </article>
         </div>
 
-        <!-- Bloque 3: Bases de Datos & Cloud -->
+        <!-- Bloque 3: Bases de Datos Tech -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
             <div class="card-glare"></div>
-            <div class="card-elevated-content space-y-6">
+            <div class="card-elevated-content space-y-4">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 03 // DATA & DEVOPS ]</span>
-                <span class="font-mono text-[10px] uppercase px-2 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc]">INFRAESTRUCTURA</span>
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 03 // BASES DE DATOS ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">INTEGRIDAD
+                  ACID</span>
               </div>
-              <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Persistencia & Entornos
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Bases de Datos Relacionales
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Diseño relacional consistente, optimización de queries e indexación y automatización de despliegues en servidores de producción.
+                Diseño de esquemas, optimización de consultas y modelado relacional en MySQL, MariaDB y SQL Server.
               </p>
-
-              <!-- Badges de Tecnologías -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span> PostgreSQL
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-orange-600"></span> MySQL & MariaDB
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span> Redis (Caché & Sesiones)
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Docker & Containers
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Git & GitHub Actions (CI/CD)
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Linux & Nginx / Apache
-                </span>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span> MySQL &amp; MariaDB</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-red-600"></span> SQL Server</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Eloquent ORM</span>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
-              <span>Especialidad: Integridad ACID y despliegues estables</span>
-              <span class="text-emerald-600 font-semibold">[ 99.9% UPTIME ]</span>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver arquitectura completa &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ ALTA INTEGRIDAD ]</span>
             </div>
           </article>
         </div>
 
-        <!-- Bloque 4: Principios de Calidad & Ingeniería -->
+        <!-- Bloque 4: Infraestructura Tech -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-7 sm:p-9 h-full flex flex-col justify-between relative overflow-hidden group">
             <div class="card-glare"></div>
-            <div class="card-elevated-content space-y-6">
+            <div class="card-elevated-content space-y-4">
               <div class="flex items-center justify-between">
-                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 04 // ENGINEERING STANDARDS ]</span>
-                <span class="font-mono text-[10px] uppercase px-2 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc]">CALIDAD DE CÓDIGO</span>
+                <span class="font-mono text-xs text-[#ff5500] font-bold">[ 04 // INFRAESTRUCTURA &amp; CONTROL ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] dark:bg-white/5 rounded-full">DEVOPS
+                  &amp; ÁGIL</span>
               </div>
-              <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Metodología & Buenas Prácticas
+              <h3
+                class="font-display font-black text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 uppercase group-hover:text-[#ff5500] transition-colors">
+                Docker, Git &amp; Control de Versiones
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Cada línea de código se rige por mantenibilidad a largo plazo, seguridad en capas y documentación técnica clara para el equipo.
+                Contenedores para despliegues consistentes, control estricto de versiones en GitHub/GitLab y metodología ágil.
               </p>
-
-              <!-- Badges de Principios -->
-              <div class="flex flex-wrap gap-2 pt-2">
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> Clean Code & SOLID
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Seguridad OWASP Top 10
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Automatización & Pruebas
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span> Auditorías Lighthouse 95+
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span> Documentación OpenAPI
-                </span>
-                <span class="tech-pill">
-                  <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span> Figma a Código Pixel-Perfect
-                </span>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Docker</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Git &amp; GitHub</span>
+                <span class="tech-pill"><span class="w-1.5 h-1.5 rounded-full bg-[#ff5500]"></span> GitLab &amp; Agile</span>
               </div>
             </div>
-            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
-              <span>Especialidad: Software libre de deuda técnica</span>
-              <span class="text-emerald-600 font-semibold">[ ZERO TECHNICAL DEBT ]</span>
+            <div
+              class="card-elevated-content pt-5 mt-5 border-t border-swiss font-mono text-xs text-slate-500 flex justify-between items-center">
+              <span class="text-[#ff5500] font-semibold flex items-center gap-1">Ver infraestructura completa &rarr;</span>
+              <span class="text-[#ff5500] font-bold">[ ENTORNO SEGURO ]</span>
             </div>
           </article>
         </div>
@@ -563,83 +1248,242 @@
       </div>
     </section>
 
-    <!-- ==================== SERVICIOS (SWISS BENTO 3D) ==================== -->
+    <!-- ==================== SERVICIOS &amp; PAQUETES (SWISS BENTO 3D) ==================== -->
     <section id="servicios" class="py-20 md:py-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+      <!-- Encabezado Modo Negocios -->
+      <div class="view-negocios flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 03. CAPACIDADES ]</span>
-          <h2
-            class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
-            Servicios de Ingeniería
+          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 02. PAQUETES WEB
+            COMERCIALES ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+            Paquetes Claros, Rápidos y Efectivos
           </h2>
         </div>
         <p class="font-mono text-xs uppercase tracking-tight-swiss text-slate-500 max-w-xs">
-          Componentes semánticos, diseño editorial y optimización de conversión.
+          Sin mensualidades forzosas. Páginas listas para vender con entrega en 5 a 7 días.
         </p>
       </div>
 
-      <!-- Bento Grid con Tarjetas 3D Tilt Blancas -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Encabezado Modo Tech -->
+      <div class="view-tech flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 02. SOLUCIONES WEB &amp;
+            ARQUITECTURA ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+            Servicios de Desarrollo
+          </h2>
+        </div>
+        <p class="font-mono text-xs uppercase tracking-tight-swiss text-slate-500 max-w-xs">
+          Componentes a medida, arquitectura limpia y optimización de conversión.
+        </p>
+      </div>
 
-        <!-- Servicio 1 -->
+      <!-- Bento Grid Modo Negocios (Paquetes Comerciales) -->
+      <div class="view-negocios grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Paquete 1: Landing Page Comercial -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Cotizar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-6">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-slate-400 font-bold">[ PLAN 01 ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-emerald-500/30 text-[#ff5500] bg-emerald-500/10 rounded-full font-bold">MÁS
+                  POPULAR</span>
+              </div>
+              <div>
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                  Landing Page de Alta Conversión
+                </h3>
+                <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para negocios, consultorios y
+                  servicios</p>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Página web de 1 sección fluida diseñada específicamente para capturar clientes en Lerma y Toluca y
+                enviarlos a tu WhatsApp.
+              </p>
+              <div class="space-y-2 pt-2 border-t border-swiss font-mono text-xs text-slate-700">
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Botón WhatsApp flotante con
+                  mensaje predefinido</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Mapa interactivo de ubicación y horarios
+                </div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Asesoría opcional para contratar hosting y subir sitio</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Entrega express: 3 a 5 días
+                </div>
+              </div>
+            </div>
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+              <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20me%20interesa%20el%20Plan%20Landing%20Page%20para%20mi%20negocio.%20%C2%BFMe%20das%20m%C3%A1s%20detalles?"
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-3 bg-[#ff5500] text-white font-mono text-xs uppercase tracking-tight-swiss font-bold hover:bg-slate-950 transition-colors shadow-md">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Cotizar Landing Page</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Paquete 2: Sitio Corporativo / Menú Digital -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Cotizar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-6">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-slate-400 font-bold">[ PLAN 02 ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] rounded-full font-bold">CATÁLOGO
+                  / RESTAURANTE</span>
+              </div>
+              <div>
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                  Sitio Web Catálogo / Menú Digital
+                </h3>
+                <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para restaurantes, cafeterías, tiendas y
+                  marcas</p>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Sitio multi-sección con exhibición de productos, menú con fotos, galería de instalaciones y enlace para
+                pedidos directos.
+              </p>
+              <div class="space-y-2 pt-2 border-t border-swiss font-mono text-xs text-slate-700">
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Hasta 5 páginas o secciones
+                  (Inicio, Menú, Nosotros, Contacto)</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Catálogo o Menú digital
+                  interactivo con fotos</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Código QR personalizado para
+                  mesas o flyers</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Sección de ubicación y datos de contacto</div>
+              </div>
+            </div>
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+              <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20me%20interesa%20el%20Plan%20Cat%C3%A1logo%20/%20Men%C3%BA%20Digital.%20%C2%BFMe%20das%20informaci%C3%B3n?"
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-3 bg-slate-950 text-white font-mono text-xs uppercase tracking-tight-swiss font-bold hover:bg-[#ff5500] transition-colors shadow-md">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Cotizar Catálogo / Menú</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Paquete 3: Sistema Web / Cotizador a Medida -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Cotizar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-6">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-xs text-slate-400 font-bold">[ PLAN 03 ]</span>
+                <span
+                  class="font-mono text-[10px] uppercase px-2.5 py-0.5 border border-swiss text-slate-500 bg-[#f8fafc] rounded-full font-bold">A
+                  MEDIDA</span>
+              </div>
+              <div>
+                <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
+                  Sistema Web Pro / Automatización
+                </h3>
+                <p class="text-xs font-mono text-[#ff5500] font-bold mt-1">Para clínicas, inventarios, cobros y
+                  operaciones</p>
+              </div>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Plataforma web con panel administrativo privado, control de citas, usuarios, base de datos y reportes
+                automáticos.
+              </p>
+              <div class="space-y-2 pt-2 border-t border-swiss font-mono text-xs text-slate-700">
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Panel de administración privado
+                  con contraseña</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Base de datos segura MySQL +
+                  Laravel</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Reportes descargables en PDF y
+                  Excel</div>
+                <div class="flex items-center gap-2 text-[#ff5500] font-bold">&check; Soporte técnico y capacitación
+                  incluida</div>
+              </div>
+            </div>
+            <div class="card-elevated-content pt-6 mt-6 border-t border-swiss">
+              <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20necesito%20un%20Sistema%20Web%20o%20Plataforma%20a%20medida%20para%20mi%20empresa."
+                target="_blank" rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-3 border border-swiss text-slate-900 font-mono text-xs uppercase tracking-tight-swiss font-bold hover:border-[#ff5500] hover:text-[#ff5500] transition-colors">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Cotizar Sistema a Medida</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- Bento Grid Modo Tech (Capacidades Técnicas) -->
+      <div class="view-tech grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Servicio 1: Sistemas Web &amp; Backend con Laravel -->
+        <div class="spatial-card-wrapper">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <span class="font-mono text-xs text-slate-400">[ CAPACIDAD 01 ]</span>
               <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Webs & Landing Pages de Alta Conversión
+                Sistemas Web &amp; Backend con Laravel
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Páginas de aterrizaje diseñadas con la precisión de la tipografía suiza. Jerarquía visual quirúrgica para
-                convertir visitantes en prospectos calificados.
+                Desarrollo integral de plataformas a medida, portales administrativos, arquitecturas MVC robustas y APIs
+                RESTful conectadas a bases de datos relacionales.
               </p>
             </div>
-            <div class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
-              <div class="flex items-center gap-2">&rarr; Mobile First & Ultra Fast</div>
-              <div class="flex items-center gap-2">&rarr; Conexión a Correo & WhatsApp</div>
+            <div
+              class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
+              <div class="flex items-center gap-2">&rarr; Arquitectura MVC &amp; Eloquent ORM</div>
+              <div class="flex items-center gap-2">&rarr; APIs RESTful &amp; Lógica Transaccional</div>
             </div>
           </article>
         </div>
 
-        <!-- Servicio 2 -->
+        <!-- Servicio 2: Interfaces Reactivas con Tailwind &amp; Livewire -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <span class="font-mono text-xs text-slate-400">[ CAPACIDAD 02 ]</span>
               <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Desarrollo de Software a Medida
+                Interfaces Reactivas &amp; Responsive UI
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Herramientas internas, portales de administración y sistemas automatizados creados para eliminar tareas
-                manuales en tu operación.
+                Diseño y maquetación de interfaces responsivas pixel-perfect con Tailwind CSS y componentes Livewire que
+                ofrecen una experiencia fluida sin recargar la página.
               </p>
             </div>
-            <div class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
-              <div class="flex items-center gap-2">&rarr; Arquitectura Escalable</div>
-              <div class="flex items-center gap-2">&rarr; Integración de Bases de Datos</div>
+            <div
+              class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
+              <div class="flex items-center gap-2">&rarr; Componentes Livewire Dinámicos</div>
+              <div class="flex items-center gap-2">&rarr; Diseño Mobile First con Tailwind CSS</div>
             </div>
           </article>
         </div>
 
-        <!-- Servicio 3 -->
+        <!-- Servicio 3: Optimización, Seguridad &amp; Reportes -->
         <div class="spatial-card-wrapper">
-          <article class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
+          <article data-cursor-text="Explorar ↗"
+            class="spatial-card p-8 flex flex-col justify-between h-full relative overflow-hidden">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-6">
               <span class="font-mono text-xs text-slate-400">[ CAPACIDAD 03 ]</span>
               <h3 class="font-display font-black text-2xl tracking-tight-swiss text-slate-950 uppercase">
-                Modernización & Rediseño UI/UX
+                Mantenimiento, Seguridad &amp; Reportes
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed">
-                Transformación de plataformas obsoletas a experiencias fluidas con animaciones basadas en scroll, Lenis
-                suave y contraste refinado.
+                Mantenimiento preventivo y correctivo, resolución de fallas en sistemas existentes, implementación de
+                roles y permisos (RBAC) y automatización de reportes PDF y Excel.
               </p>
             </div>
-            <div class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
-              <div class="flex items-center gap-2">&rarr; Scroll Suave Instantáneo</div>
-              <div class="flex items-center gap-2">&rarr; Rendimiento 60fps</div>
+            <div
+              class="card-elevated-content pt-8 mt-8 border-t border-swiss font-mono text-xs text-slate-500 space-y-2">
+              <div class="flex items-center gap-2">&rarr; Control de Roles y Permisos (RBAC)</div>
+              <div class="flex items-center gap-2">&rarr; Automatización de Reportes PDF y Excel</div>
             </div>
           </article>
         </div>
@@ -651,127 +1495,540 @@
     <section id="proyectos" class="py-20 md:py-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
-          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 04. CASOS MODELO ]</span>
-          <h2
-            class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
-            Soluciones Implementadas
+          <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 03. CASOS DE ÉXITO &amp;
+            TRAYECTORIA ]</span>
+          <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+            Experiencia &amp; Proyectos
           </h2>
         </div>
-        <span class="font-mono text-xs text-slate-400 uppercase">[ RETORNO / IMPACTO DIRECTO ]</span>
+        <p class="font-mono text-xs uppercase tracking-tight-swiss text-slate-500 max-w-xs">
+          Soluciones implementadas en startups, sector salud, consultoría y desarrollos full stack propios.
+        </p>
       </div>
 
-      <!-- Proyectos Lista Editorial 3D -->
+      <!-- Proyectos y Experiencia Lista Editorial 3D -->
       <div class="space-y-6">
 
-        <!-- Proyecto 01 -->
+        <!-- Proyecto 01: Startup Tecnológica -->
         <div class="spatial-card-wrapper">
-          <div class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden">
+          <div data-cursor-text="Ver Proyecto ↗"
+            class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden cursor-pointer">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-3 max-w-2xl">
-              <div class="flex items-center gap-4 font-mono text-xs text-slate-400">
-                <span>01 // SAAS & ANALYTICS</span>
+              <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="text-[#ff5500] font-bold">01 // STARTUP TECNOLÓGICA &bull; 2022</span>
                 <span>&bull;</span>
-                <span>JAVASCRIPT SPA + TAILWIND</span>
+                <span>LARAVEL &bull; MYSQL &bull; GITHUB</span>
               </div>
               <h3
                 class="font-display font-bold text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
-                Panel Operativo & Métricas en Vivo
+                Sistema Integral de Gestión de Empleados &amp; Métricas
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed font-sans">
-                Dashboard de visualización de indicadores críticos en tiempo real. Reducción de tiempos de procesamiento y
-                generación automatizada de reportes.
+                Colaboración directa con el Líder de Proyecto desarrollando módulos para control de horarios, registro
+                de entradas/salidas, monitoreo de llamadas, tableros estadísticos y generación de reportes operativos.
               </p>
             </div>
             <div
               class="card-elevated-content flex lg:flex-col items-baseline lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-swiss">
               <span
-                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">-45%</span>
-              <span class="font-mono text-xs text-slate-500 uppercase">Tiempo Manual</span>
+                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">100%</span>
+              <span class="font-mono text-xs text-slate-500 uppercase">Automatización</span>
             </div>
+
+            <!-- Contenido Extendido de Pantalla Completa para Modal -->
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ CASO 01 //
+                      STARTUP TECNOLÓGICA 2022 ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-emerald-500/10 px-3 py-1 rounded-full font-bold">ROL:
+                    DESARROLLADOR WEB BACKEND</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Sistema Integral de Gestión de Empleados
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Desarrollo integral de una plataforma interna en entorno ágil de startup bajo la supervisión directa
+                    del Líder de Proyecto. El software centralizó la administración del personal y la generación de
+                    indicadores de productividad.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// CONTROL DE ASISTENCIA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Horarios y Marcajes</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Módulos de registro preciso para entradas, salidas, tolerancias y control de retardos diarios con
+                      validaciones de servidor.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MONITOREO OPERATIVO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Métricas &amp; Llamadas</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Registro y seguimiento de volumen de llamadas por agente, tiempos promedio de atención y tableros
+                      estadísticos en tiempo real.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// REPORTES DE DIRECCIÓN</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Informes Operativos</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Exportación de métricas de rendimiento y asistencia para la toma de decisiones por parte de la
+                      directiva.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss rounded-2xl bg-white space-y-3 font-mono text-xs">
+                  <span class="text-slate-400 uppercase tracking-widest block font-bold">// STACK TECNOLÓGICO
+                    EMPLEADO</span>
+                  <div class="flex flex-wrap gap-2 text-slate-700">
+                    <span class="tech-pill">Laravel</span>
+                    <span class="tech-pill">MySQL</span>
+                    <span class="tech-pill">Git</span>
+                    <span class="tech-pill">GitHub</span>
+                    <span class="tech-pill">Scrum</span>
+                  </div>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
 
-        <!-- Proyecto 02 -->
+        <!-- Proyecto 02: Hospital Municipal de Xonacatlán -->
         <div class="spatial-card-wrapper">
-          <div class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden">
+          <div data-cursor-text="Ver Proyecto ↗"
+            class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden cursor-pointer">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-3 max-w-2xl">
-              <div class="flex items-center gap-4 font-mono text-xs text-slate-400">
-                <span>02 // COMERCIAL & FUNNEL</span>
+              <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="text-[#ff5500] font-bold">02 // SECTOR SALUD &bull; 2019</span>
                 <span>&bull;</span>
-                <span>GSAP + WHATSAPP API</span>
+                <span>PHP &bull; LARAVEL &bull; JAVASCRIPT &bull; MYSQL</span>
               </div>
               <h3
                 class="font-display font-bold text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
-                Embudo Comercial de Conversión Directa
+                Optimización de Software Hospitalario &amp; Reportes Clínicos
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed font-sans">
-                Landing page con arquitectura suiza y respuesta en menos de 800ms. Canalización de prospectos con
-                intención de compra directo a chat.
+                Hospital Municipal de Xonacatlán: Mantenimiento preventivo y correctivo del software institucional,
+                implementación de módulo de roles y permisos y automatización de reportes clínicos y administrativos en
+                PDF y Excel.
               </p>
             </div>
             <div
               class="card-elevated-content flex lg:flex-col items-baseline lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-swiss">
               <span
-                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">+70%</span>
-              <span class="font-mono text-xs text-slate-500 uppercase">Cierres de Venta</span>
+                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">PDF/XLS</span>
+              <span class="font-mono text-xs text-slate-500 uppercase">Automatizados</span>
             </div>
+
+            <!-- Contenido Extendido de Pantalla Completa para Modal -->
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ CASO 02 //
+                      HOSPITAL MUNICIPAL DE XONACATLÁN ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-emerald-500/10 px-3 py-1 rounded-full font-bold">ROL:
+                    DESARROLLADOR WEB CON LARAVEL</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Software Institucional, Seguridad &amp; Reportes
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Mantenimiento preventivo, correctivo y optimización integral del software institucional
+                    hospitalario. Colaboración estrecha con personal médico y administrativo para adaptar el software a
+                    las necesidades diarias del hospital.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// SEGURIDAD &amp; PRIVACIDAD</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Roles y Permisos (RBAC)</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Protección estricta de la información médica con permisos diferenciados para médicos, enfermeros y
+                      personal administrativo.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// AUTOMATIZACIÓN DE DATOS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Reportes PDF &amp; Excel</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Generación automatizada de reportes clínicos e historiales con un solo clic, reduciendo horas de
+                      trabajo administrativo en papel.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// MANTENIMIENTO ACTIVO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">PHP, Laravel &amp; MySQL</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Depuración de consultas en la base de datos MySQL, resolución de errores en módulos existentes y
+                      mejoras de rendimiento.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss rounded-2xl bg-white space-y-3 font-mono text-xs">
+                  <span class="text-slate-400 uppercase tracking-widest block font-bold">// TECNOLOGÍAS
+                    UTILIZADAS</span>
+                  <div class="flex flex-wrap gap-2 text-slate-700">
+                    <span class="tech-pill">PHP</span>
+                    <span class="tech-pill">Laravel</span>
+                    <span class="tech-pill">JavaScript</span>
+                    <span class="tech-pill">MySQL</span>
+                    <span class="tech-pill">Librerías PDF &amp; Excel</span>
+                  </div>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
 
-        <!-- Proyecto 03 -->
+        <!-- Proyecto 03: Proyectos Independientes &amp; Consultoría -->
         <div class="spatial-card-wrapper">
-          <div class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden">
+          <div data-cursor-text="Ver Proyecto ↗"
+            class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden cursor-pointer">
             <div class="card-glare"></div>
             <div class="card-elevated-content space-y-3 max-w-2xl">
-              <div class="flex items-center gap-4 font-mono text-xs text-slate-400">
-                <span>03 // INFRAESTRUCTURA & API</span>
+              <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="text-[#ff5500] font-bold">03 // CONSULTORÍA &amp; PROYECTOS &bull; 2023 – PRESENTE</span>
                 <span>&bull;</span>
-                <span>NODE / PHP + WEBHOOKS</span>
+                <span>LARAVEL &bull; TAILWIND CSS &bull; APIS REST</span>
               </div>
               <h3
                 class="font-display font-bold text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
-                Motor de Sincronización & Transacciones
+                Desarrollo a Medida &amp; Optimización de Sistemas Web
               </h3>
               <p class="text-sm text-slate-600 leading-relaxed font-sans">
-                Microservicio backend para sincronización de inventario, pasarelas de cobro y notificaciones automáticas
-                tolerante a fallos.
+                Desarrollo y optimización de sistemas web utilizando Laravel, identificando y resolviendo fallas
+                técnicas, mejorando la eficiencia de módulos existentes e implementando interfaces responsivas con
+                Tailwind CSS y APIs RESTful.
               </p>
             </div>
             <div
               class="card-elevated-content flex lg:flex-col items-baseline lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-swiss">
               <span
-                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">99.9%</span>
-              <span class="font-mono text-xs text-slate-500 uppercase">Uptime Continuo</span>
+                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">Full</span>
+              <span class="font-mono text-xs text-slate-500 uppercase">Stack Dev</span>
             </div>
+
+            <!-- Contenido Extendido de Pantalla Completa para Modal -->
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ CASO 03 //
+                      CONSULTORÍA INDEPENDIENTE ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-emerald-500/10 px-3 py-1 rounded-full font-bold">ROL:
+                    DESARROLLADOR WEB BACKEND &amp; FRONTEND</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Desarrollo Web &amp; Arquitecturas Escalables
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Creación y optimización de sistemas a la medida de las necesidades operativas del cliente.
+                    Participación activa en sesiones de planificación técnica y definición de requerimientos, aportando
+                    soluciones de arquitectura escalables.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// RESOLUCIÓN TÉCNICA</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Optimización de Módulos</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Identificación y resolución de fallas técnicas críticas en aplicaciones existentes, mejorando
+                      tiempos de respuesta y estabilidad.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// INTERFACES DINÁMICAS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Tailwind CSS &amp; UX</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Implementación de interfaces modernas, 100% adaptables a cualquier dispositivo móvil y con
+                      navegación intuitiva.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// INTEGRACIÓN DE
+                      SERVICIOS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">APIs RESTful</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Consumo y exposición de endpoints JSON seguros para comunicar servicios frontend y backend de
+                      manera desacoplada.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss rounded-2xl bg-white space-y-3 font-mono text-xs">
+                  <span class="text-slate-400 uppercase tracking-widest block font-bold">// COMPETENCIAS CLAVE
+                    APLICADAS</span>
+                  <div class="flex flex-wrap gap-2 text-slate-700">
+                    <span class="tech-pill">Laravel</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                    <span class="tech-pill">APIs REST</span>
+                    <span class="tech-pill">MySQL</span>
+                    <span class="tech-pill">Planificación de Requerimientos</span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- Proyecto 04: Clon de Instagram -->
+        <div class="spatial-card-wrapper">
+          <div data-cursor-text="Ver Proyecto ↗"
+            class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden cursor-pointer">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-3 max-w-2xl">
+              <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="text-[#ff5500] font-bold">04 // PROYECTO PERSONAL &bull; FULL STACK</span>
+                <span>&bull;</span>
+                <span>LARAVEL &bull; LIVEWIRE &bull; TAILWIND &bull; MYSQL</span>
+              </div>
+              <h3
+                class="font-display font-bold text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
+                Clon de Instagram (Backend &amp; Frontend)
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Desarrollo de aplicación web completa utilizando Laravel y MySQL: migraciones, seeders, relaciones
+                Eloquent, modelos y controladores, con interfaz reactiva y moderna mediante Tailwind CSS y componentes
+                Livewire.
+              </p>
+            </div>
+            <div
+              class="card-elevated-content flex lg:flex-col items-baseline lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-swiss">
+              <span
+                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">SPA</span>
+              <span class="font-mono text-xs text-slate-500 uppercase">Reactivo</span>
+            </div>
+
+            <!-- Contenido Extendido de Pantalla Completa para Modal -->
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ PROYECTO
+                      PERSONAL // FULL STACK ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-emerald-500/10 px-3 py-1 rounded-full font-bold">LARAVEL
+                    + LIVEWIRE</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Clon Completo de Red Social (Instagram)
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Implementación profunda de la arquitectura web con Laravel. Interacción reactiva en publicaciones,
+                    comentarios, follows y likes sin recargas del navegador mediante componentes Livewire.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// ELOQUENT &amp; ORM</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Relaciones Complejas</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Modelado de datos con relaciones polimórficas, uno a muchos y muchos a muchos (usuarios, posts,
+                      comentarios, seguidores).
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// COMPONENTES REACTIVOS</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Livewire en Tiempo Real</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Actualización instantánea de interacciones sociales y feeds de contenido dinámicos con eventos
+                      emitidos entre componentes.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// DISEÑO MODERNO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Tailwind CSS</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Recreación pixel-perfect de la interfaz visual con soporte responsive completo y carga optimizada
+                      de imágenes.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss rounded-2xl bg-white space-y-3 font-mono text-xs">
+                  <span class="text-slate-400 uppercase tracking-widest block font-bold">// STACK EMPLEADO</span>
+                  <div class="flex flex-wrap gap-2 text-slate-700">
+                    <span class="tech-pill">Laravel</span>
+                    <span class="tech-pill">Livewire</span>
+                    <span class="tech-pill">Tailwind CSS</span>
+                    <span class="tech-pill">MySQL</span>
+                    <span class="tech-pill">Eloquent ORM</span>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
+        <!-- Proyecto 05: Portal de Búsqueda de Empleo -->
+        <div class="spatial-card-wrapper">
+          <div data-cursor-text="Ver Proyecto ↗"
+            class="spatial-card p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8 group relative overflow-hidden cursor-pointer">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content space-y-3 max-w-2xl">
+              <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-slate-400">
+                <span class="text-[#ff5500] font-bold">05 // PROYECTO PERSONAL &bull; PLATAFORMA WEB</span>
+                <span>&bull;</span>
+                <span>LARAVEL &bull; LIVEWIRE &bull; FACTORIES &bull; MYSQL</span>
+              </div>
+              <h3
+                class="font-display font-bold text-2xl sm:text-3xl tracking-tight-swiss text-slate-950 group-hover:text-[#ff5500] transition-colors">
+                Portal de Búsqueda &amp; Publicación de Empleo
+              </h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-sans">
+                Plataforma web enfocada en la publicación y filtrado de vacantes laborales personalizadas. Backend
+                robusto con Laravel (Eloquent ORM, Tinker, Factories y Migrations) y frontend dinámico con Livewire.
+              </p>
+            </div>
+            <div
+              class="card-elevated-content flex lg:flex-col items-baseline lg:items-end justify-between border-t lg:border-t-0 pt-4 lg:pt-0 border-swiss">
+              <span
+                class="font-display font-black text-3xl sm:text-4xl text-slate-950 tracking-tighter-swiss">Live</span>
+              <span class="font-mono text-xs text-slate-500 uppercase">Search</span>
+            </div>
+
+            <!-- Contenido Extendido de Pantalla Completa para Modal -->
+            <template class="modal-rich-data">
+              <div class="space-y-8">
+                <div class="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-swiss">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ff5500] animate-pulse"></span>
+                    <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">[ PROYECTO
+                      PERSONAL // BOLSA DE TRABAJO ]</span>
+                  </div>
+                  <span
+                    class="font-mono text-xs text-[#ff5500] bg-emerald-500/10 px-3 py-1 rounded-full font-bold">FILTRADO
+                    REACTIVO</span>
+                </div>
+
+                <div>
+                  <h3
+                    class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase">
+                    Portal de Empleo con Filtrado en Tiempo Real
+                  </h3>
+                  <p class="text-base sm:text-lg text-slate-600 mt-4 leading-relaxed font-sans max-w-3xl">
+                    Plataforma para reclutamiento y postulación a vacantes de trabajo. Desarrollada para brindar una
+                    experiencia de búsqueda instantánea por categorías, ubicación y salarios sin demoras de recarga.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// FILTRADO REACTIVO</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Livewire Filters</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Búsqueda reactiva con enlaces bidireccionales de datos (data-binding) que actualizan los
+                      resultados al momento de escribir o seleccionar filtros.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// GESTIÓN DE VACANTES</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Panel de Reclutador</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Módulo para creación, edición, estado de vacantes y recepción de postulaciones de candidatos con
+                      almacenamiento de datos en MySQL.
+                    </p>
+                  </div>
+                  <div class="p-6 border border-swiss bg-[#f8fafc] rounded-2xl space-y-3">
+                    <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// HERRAMIENTAS LARAVEL</span>
+                    <h4 class="font-display font-bold text-lg text-slate-950">Tinker, Factories &amp; Seeds</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                      Población de cientos de vacantes de prueba con factories y verificación ágil de modelos y
+                      relaciones mediante la consola Tinker.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="p-6 border border-swiss rounded-2xl bg-white space-y-3 font-mono text-xs">
+                  <span class="text-slate-400 uppercase tracking-widest block font-bold">// STACK EMPLEADO</span>
+                  <div class="flex flex-wrap gap-2 text-slate-700">
+                    <span class="tech-pill">Laravel</span>
+                    <span class="tech-pill">Livewire</span>
+                    <span class="tech-pill">MySQL</span>
+                    <span class="tech-pill">Eloquent ORM</span>
+                    <span class="tech-pill">Factories &amp; Tinker</span>
+                  </div>
+                </div>
+              </div>
+            </template>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- ==================== METODOLOGÍA (EDITORIAL 01-04 3D) ==================== -->
+    <!-- ==================== METODOLOGÍA &amp; PROCESO (EDITORIAL 01-04 3D) ==================== -->
     <section id="proceso" class="py-20 md:py-28 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
-      <div class="max-w-2xl mb-16">
-        <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 05. METODOLOGÍA ]</span>
-        <h2
-          class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
-          Proceso Predecible
+      <!-- Encabezado Modo Negocios -->
+      <div class="view-negocios max-w-2xl mb-16">
+        <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 04. PROCESO SENCILLO
+          EN 4 PASOS ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+          De la Idea a Clientes en WhatsApp
+        </h2>
+        <p class="text-sm text-slate-600 mt-2 font-sans">
+          Tú no te preocupas por nada técnico. Diseñamos con herramientas de IA y programamos a la medida para
+          entregarte rápido.
+        </p>
+      </div>
+
+      <!-- Encabezado Modo Tech -->
+      <div class="view-tech max-w-2xl mb-16">
+        <span class="font-mono text-xs uppercase tracking-tight-swiss text-[#ff5500] font-bold">[ 04. METODOLOGÍA &amp;
+          INGENIERÍA ]</span>
+        <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tighter-swiss uppercase mt-4 text-slate-950">
+          Proceso Estructurado
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Pasos Modo Negocios -->
+      <div class="view-negocios grid grid-cols-1 md:grid-cols-4 gap-6">
 
         <div class="spatial-card-wrapper">
           <div class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
             <div class="card-glare"></div>
             <div class="card-elevated-content">
-              <span class="font-mono text-4xl font-black text-slate-300">01</span>
-              <h3
-                class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
-                Diagnóstico</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Revisión técnica de objetivos, alcance y plazos de entrega sin ambigüedades.
+              <span class="font-mono text-4xl font-black text-[#ff5500]">01</span>
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                1. Platicamos por WhatsApp
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Me cuentas de qué es tu negocio, tus productos, tu logotipo y qué quieres lograr con tu página web.
               </p>
             </div>
           </div>
@@ -782,11 +2039,11 @@
             <div class="card-glare"></div>
             <div class="card-elevated-content">
               <span class="font-mono text-4xl font-black text-slate-300">02</span>
-              <h3
-                class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
-                Diseño Suizo</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Estructuración con rejilla estricta, jerarquía tipográfica limpia y flujo de conversión.
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                2. Diseño con IA &amp; Código
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Generamos propuestas visuales modernas con IA y construimos el sitio web con código ultra rápido.
               </p>
             </div>
           </div>
@@ -797,11 +2054,73 @@
             <div class="card-glare"></div>
             <div class="card-elevated-content">
               <span class="font-mono text-4xl font-black text-slate-300">03</span>
-              <h3
-                class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
-                Ingeniería</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Programación precisa con Lenis, GSAP, HTML5 semántico y estándares WCAG.
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                3. Revisión &amp; Ajustes
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Te muestro la página web en un enlace de prueba para que la navegues en tu celular y afinemos detalles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spatial-card-wrapper">
+          <div class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content">
+              <span class="font-mono text-4xl font-black text-[#ff5500]">04</span>
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                4. Lanzamiento &amp; Ventas
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Te entregamos tu sitio web completamente diseñado. Si deseas publicar tu página, te recomendamos el hosting adecuado y te ayudamos a subirla.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pasos Modo Tech -->
+      <div class="view-tech grid grid-cols-1 md:grid-cols-4 gap-6">
+
+        <div class="spatial-card-wrapper">
+          <div class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content">
+              <span class="font-mono text-4xl font-black text-slate-300">01</span>
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                Planificación &amp; Requerimientos</h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Sesiones técnicas para definir alcances, arquitectura escalable y objetivos operativos sin ambigüedades.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spatial-card-wrapper">
+          <div class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content">
+              <span class="font-mono text-4xl font-black text-slate-300">02</span>
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                Modelado &amp; Arquitectura</h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Diseño relacional en MySQL / SQL Server, control de roles (RBAC) y definición estructurada de APIs REST.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="spatial-card-wrapper">
+          <div class="spatial-card p-8 h-full flex flex-col justify-between relative overflow-hidden">
+            <div class="card-glare"></div>
+            <div class="card-elevated-content">
+              <span class="font-mono text-4xl font-black text-slate-300">03</span>
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                Desarrollo Ágil</h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Programación limpia con Laravel, Tailwind CSS, Livewire, control de versiones con Git y Docker.
               </p>
             </div>
           </div>
@@ -812,11 +2131,10 @@
             <div class="card-glare"></div>
             <div class="card-elevated-content">
               <span class="font-mono text-4xl font-black text-slate-300">04</span>
-              <h3
-                class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
-                Despliegue</h3>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                Puesta en servidor, configuración de dominios y documentación completa.
+              <h3 class="font-display font-bold text-lg uppercase tracking-tight-swiss text-slate-950 mt-6 mb-2">
+                Despliegue &amp; Soporte</h3>
+              <p class="text-xs text-slate-600 leading-relaxed font-sans">
+                Automatización de reportes (PDF/Excel), puesta en producción en servidor y soporte continuo.
               </p>
             </div>
           </div>
@@ -825,46 +2143,176 @@
       </div>
     </section>
 
+    <!-- ==================== SECCIÓN DE PREGUNTAS FRECUENTES (FAQ ACCORDION) ==================== -->
+    <section id="faq" class="py-20 px-5 sm:px-8 max-w-7xl mx-auto border-b border-swiss">
+      <div class="space-y-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <span class="font-mono text-xs font-bold text-[#ff5500] uppercase">// PREGUNTAS FRECUENTES</span>
+            <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tight-swiss text-slate-950 uppercase mt-2">
+              Resuelve tus Dudas al Instante
+            </h2>
+          </div>
+          <p class="text-sm text-slate-600 max-w-md font-sans">
+            Todo lo que necesitas saber antes de solicitar tu propuesta visual y comenzar tu sitio web.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans">
+          <details class="group p-6 border border-swiss bg-white dark:bg-[#070709] rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-slate-950 dark:text-white group-open:text-[#ff5500]">
+              <span>¿Tengo que pagar mensualidades por el diseño de mi página?</span>
+              <span class="ml-4 flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ff5500]">
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-swiss pt-4">
+              <strong>No.</strong> Mi servicio de diseño y desarrollo web se cobra como un pago único. No hay mensualidades forzosas ni cobros ocultos por mi parte.
+            </p>
+          </details>
+
+          <details class="group p-6 border border-swiss bg-white dark:bg-[#070709] rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-slate-950 dark:text-white group-open:text-[#ff5500]">
+              <span>¿Qué pasa si aún no tengo Dominio ni Hosting?</span>
+              <span class="ml-4 flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ff5500]">
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-swiss pt-4">
+              Te asesoro sin costo recomendándote los mejores proveedores (como Hostinger o GoDaddy). Tú compras tu propio servicio a tu nombre y yo me encargo de subir e instalar tu página.
+            </p>
+          </details>
+
+          <details class="group p-6 border border-swiss bg-white dark:bg-[#070709] rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-slate-950 dark:text-white group-open:text-[#ff5500]">
+              <span>¿En cuánto tiempo queda lista mi página web?</span>
+              <span class="ml-4 flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ff5500]">
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-swiss pt-4">
+              Para una Landing Page el tiempo de entrega es de <strong>3 a 5 días hábiles</strong> a partir de que me compartas la información de tu negocio. Para catálogos o sistemas personalizados, el tiempo estimado es de 5 a 10 días.
+            </p>
+          </details>
+
+          <details class="group p-6 border border-swiss bg-white dark:bg-[#070709] rounded-2xl transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-slate-950 dark:text-white group-open:text-[#ff5500]">
+              <span>¿Cómo van a contactarme mis clientes?</span>
+              <span class="ml-4 flex-shrink-0 transition-transform duration-300 group-open:rotate-180 text-[#ff5500]">
+                <i data-lucide="chevron-down" class="w-5 h-5"></i>
+              </span>
+            </summary>
+            <p class="mt-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed border-t border-swiss pt-4">
+              Integramos un botón flotante directo a tu WhatsApp con un mensaje preconfigurado (ej: <em>"Hola, vi tu página web y quiero más información"</em>), además de botones de llamada directa y mapa interactivo.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ==================== FINAL CTA / CONVERSIÓN ==================== -->
     <section id="contacto" class="py-24 md:py-36 px-5 sm:px-8 max-w-7xl mx-auto">
       <div class="spatial-card-wrapper">
-        <div
-          class="spatial-card spatial-card-dark p-8 sm:p-16 lg:p-20 text-center relative overflow-hidden shadow-2xl">
+        <div class="spatial-card spatial-card-dark contact-hero-card p-8 sm:p-16 lg:p-20 text-center relative overflow-hidden shadow-2xl">
           <div class="card-glare"></div>
           <div class="card-elevated-content">
-            <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">
-              [ 06. CONTACTO DIRECTO // SIN INTERMEDIARIOS ]
-            </span>
 
-            <h2 class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tighter-swiss uppercase mt-6 mb-6 text-white">
-              ¿Listo para construir?
-            </h2>
+            <!-- Contenido Modo Negocios -->
+            <div class="view-negocios space-y-4">
+              <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">
+                [ 05. COTIZACIÓN INMEDIATA // NEGOCIOS ]
+              </span>
 
-            <p
-              class="text-slate-400 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-10 font-sans">
-              Conversemos sobre tu negocio. Recibirás una estimación técnica realista y una propuesta con entregables
-              claros.
-            </p>
+              <h2
+                class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tighter-swiss uppercase mt-4 mb-4 text-white">
+                Haz que más clientes encuentren tu negocio hoy.
+              </h2>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="mailto:arturoreyesgerman@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%0A%0AQuiero%20cotizar%20un%20proyecto.%20Aqu%C3%AD%20est%C3%A1n%20los%20detalles:%0A-%20Nombre:%0A-%20Empresa/Proyecto:%0A-%20Presupuesto%20estimado:"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-slate-950 font-mono text-xs uppercase tracking-tight-swiss hover:bg-[#ff5500] hover:text-white transition-colors shadow-sm">
-                <i data-lucide="mail" class="w-4 h-4"></i>
-                <span>Iniciar por correo</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-              </a>
+              <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-4 font-sans">
+                Escríbeme por WhatsApp, platiquemos sobre lo que necesitas y te armo una propuesta sin ningún
+                compromiso.
+              </p>
 
-              <a href="https://wa.me/?text=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20un%20proyecto%20web%20contigo."
-                target="_blank" rel="noopener noreferrer"
-                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 border border-slate-700 font-mono text-xs uppercase tracking-tight-swiss hover:border-[#ff5500] hover:text-[#ff5500] transition-colors text-white">
-                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-                <span>Mensaje por WhatsApp</span>
-              </a>
+              <div
+                class="inline-flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-slate-400 mb-8 pb-4 border-b border-slate-800">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#ff5500]"></i>
+                  Lerma, San Mateo Atenco, Toluca &amp; Metepec</span>
+                <span>&bull;</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  WhatsApp: 722 449 5978</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20quiero%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio.%20%C2%BFMe%20das%20informaci%C3%B3n?"
+                  target="_blank" rel="noopener noreferrer"
+                  class="btn-contacto-wa w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#ff5500] text-white font-mono text-xs uppercase tracking-tight-swiss shadow-lg font-bold">
+                  <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  <span>Enviar WhatsApp Directo</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="mailto:arturoreyesgerman@gmail.com?subject=Cotizaci%C3%B3n%20de%20P%C3%A1gina%20Web&body=Hola%20Arturo,%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                  class="btn-contacto-mail w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 font-mono text-xs uppercase tracking-tight-swiss text-white font-bold">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                  <span>Enviar por Correo</span>
+                </a>
+              </div>
+
+              <p class="font-mono text-[11px] text-slate-500 mt-6">
+                RESPUESTA RÁPIDA &bull; ATENCIÓN PERSONALIZADA POR ARTURO REYES
+              </p>
             </div>
 
-            <p class="font-mono text-[11px] text-slate-500 mt-8">
-              RESPUESTA EN MENOS DE 24 HORAS HÁBILES &bull; LUNES A VIERNES
-            </p>
+            <!-- Contenido Modo Tech -->
+            <div class="view-tech space-y-4">
+              <span class="font-mono text-xs uppercase tracking-widest text-[#ff5500] font-bold">
+                [ 05. CONTACTO DIRECTO // INGENIERÍA DE SOFTWARE ]
+              </span>
+
+              <h2
+                class="font-display font-black text-4xl sm:text-6xl lg:text-7xl tracking-tighter-swiss uppercase mt-4 mb-4 text-white">
+                ¿Listo para construir o colaborar?
+              </h2>
+
+              <p class="text-slate-300 max-w-xl mx-auto text-sm sm:text-base leading-relaxed mb-4 font-sans">
+                Ingeniero en Desarrollo y Gestión de Software con sólida experiencia en soluciones web robustas,
+                arquitectura backend en Laravel e interfaces modernas.
+              </p>
+
+              <div
+                class="inline-flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-slate-400 mb-8 pb-4 border-b border-slate-800">
+                <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-[#ff5500]"></i>
+                  Lerma, Edo. Méx., México</span>
+                <span>&bull;</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  722 449 5978</span>
+                <span>&bull;</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-400"></i>
+                  arturoreyesgerman@gmail.com</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="mailto:arturoreyesgerman@gmail.com?subject=Propuesta%20de%20Proyecto%20-%20Arturo%20Reyes&body=Hola%20Arturo,%0A%0AQuiero%20platicar%20sobre%20un%20proyecto%20o%20vacante:%0A-%20Nombre:%0A-%20Empresa/Organizaci%C3%B3n:%0A-%20Detalles:"
+                  class="btn-contacto-tech-mail w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-slate-950 font-mono text-xs uppercase tracking-tight-swiss shadow-sm font-bold">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                  <span>Enviar correo directo</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20perfil%20web%20y%20me%20gustar%C3%ADa%20conversar."
+                  target="_blank" rel="noopener noreferrer"
+                  class="btn-contacto-tech-wa w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 border border-slate-700 font-mono text-xs uppercase tracking-tight-swiss text-white font-bold">
+                  <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                  <span>WhatsApp: 722 449 5978</span>
+                </a>
+              </div>
+
+              <p class="font-mono text-[11px] text-slate-500 mt-6">
+                DISPONIBLE PARA PROYECTOS, CONSULTORÍA &amp; OPORTUNIDADES PROFESIONALES
+              </p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -876,18 +2324,45 @@
     <div
       class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 font-mono text-xs text-slate-500">
 
-      <div class="flex items-center gap-3">
+      <div class="flex flex-wrap items-center gap-3">
         <span class="font-bold text-slate-950">ARTURO REYES GERMÁN</span>
+        <span>/</span>
+        <span class="view-negocios text-slate-600">CREACIÓN DE PÁGINAS WEB &bull; LERMA Y TOLUCA</span>
+        <span class="view-tech text-slate-600">INGENIERO DE SOFTWARE &bull; FULL STACK DEV</span>
         <span>/</span>
         <span>© <span id="current-year"></span></span>
       </div>
 
       <div class="flex flex-wrap items-center gap-6 uppercase tracking-tight-swiss">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#ff5500] transition-colors">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-          class="hover:text-[#ff5500] transition-colors">LinkedIn</a>
-        <a href="#hero" class="hover:text-[#ff5500] transition-colors flex items-center gap-1">
+        <a href="mailto:arturoreyesgerman@gmail.com"
+          class="hover:text-[#ff5500] transition-colors flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>
+          <span>Correo</span>
+        </a>
+        <a href="https://wa.me/527224495978?text=Hola%20Arturo,%20vi%20tu%20perfil%20web%20y%20me%20gustar%C3%ADa%20conversar."
+          target="_blank" rel="noopener noreferrer"
+          class="hover:text-[#ff5500] transition-colors flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-500"></i>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/reyesarturo_o/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[#ff5500] transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-pink-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/reyes.arturo.37128" target="_blank" rel="noopener noreferrer"
+          class="hover:text-[#ff5500] transition-colors flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+          </svg>
+          <span>Facebook</span>
+        </a>
+        <a href="#hero" class="hover:text-[#ff5500] transition-colors flex items-center gap-1 ml-2">
           <span>Subir</span> &uarr;
         </a>
       </div>

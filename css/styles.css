@@ -23,6 +23,7 @@ html.lenis body {
 
 /* 2. Fondos Editorial Suizo con Profundidad 3D (Light & Dark) */
 body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #ffffff;
   color: #0f172a;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
@@ -33,39 +34,39 @@ body {
 }
 
 html.dark body {
-  background-color: #090d16;
+  background-color: #000000 !important; /* Negro Puro AMOLED */
   color: #f1f5f9;
 }
 
-/* 3. Bordes Tajantes de Precisión Suiza (Light & Dark) */
+/* 3. Bordes Tajantes de Precisión Suiza (Light & Dark AMOLED) */
 .border-swiss {
   border-color: #e2e8f0;
   transition: border-color 0.3s ease;
 }
 
 html.dark .border-swiss {
-  border-color: #1e293b;
+  border-color: #1e1e24 !important; /* Borde de alta nitidez sobre negro AMOLED */
 }
 
-/* Soporte Dark Mode para Header, Aside, Cards & Drawer */
+/* Soporte Dark Mode AMOLED Integral de Alto Contraste */
 html.dark header {
-  background-color: rgba(9, 13, 22, 0.98) !important;
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  border-color: #1e1e24 !important;
 }
 
 html.dark aside {
-  background-color: #0b111e !important;
+  background-color: #070709 !important;
+  border-color: #1e1e24 !important;
   color: #94a3b8 !important;
 }
 
 html.dark aside .text-slate-900,
+html.dark aside .text-slate-800,
 html.dark aside .text-slate-700 {
-  color: #e2e8f0 !important;
+  color: #f1f5f9 !important;
 }
 
-html.dark .bg-\[\#f8fafc\] {
-  background-color: #0d1526 !important;
-}
-
+/* ==================== SISTEMA TIPOGRÁFICO DE ALTO CONTRASTE EN MODO OSCURO ==================== */
 html.dark .text-slate-950 {
   color: #ffffff !important;
 }
@@ -74,34 +75,169 @@ html.dark .text-slate-900 {
   color: #f8fafc !important;
 }
 
-html.dark .text-slate-700,
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
 html.dark .text-slate-600 {
-  color: #94a3b8 !important;
+  color: #cbd5e1 !important;
 }
 
 html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
   color: #64748b !important;
 }
 
-html.dark .spatial-card {
-  background-color: #0c1322;
-  border-color: #1e293b;
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+html.dark strong {
+  color: #ffffff !important;
 }
 
-html.dark .spatial-card:hover {
-  border-color: #ff5500;
-  box-shadow: 0 25px 50px -12px rgba(255, 85, 0, 0.25), 0 10px 25px -5px rgba(0, 0, 0, 0.8);
+/* Fondos y contenedores adaptados */
+html.dark .bg-\[\#f8fafc\] {
+  background-color: #0c0c0f !important;
+  border-color: #1e1e24 !important;
+}
+
+html.dark .bg-white {
+  background-color: #09090c !important;
+  border-color: #1e1e24 !important;
+}
+
+html.dark .spatial-card {
+  background-color: #09090c !important;
+  border-color: #1c1c22 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.05) inset;
 }
 
 html.dark .tech-pill {
-  background-color: #0d1526;
-  border-color: #1e293b;
-  color: #e2e8f0;
+  background-color: #121216 !important;
+  border-color: #22222a !important;
+  color: #f1f5f9 !important;
 }
 
 html.dark footer {
-  background-color: #090d16 !important;
+  background-color: #000000 !important;
+  border-color: #1e1e24 !important;
+}
+
+/* ==================== BOTONES E INTERACCIONES EN MODO OSCURO (MÁXIMA VISIBILIDAD) ==================== */
+/* Botón Contacto en Header */
+html.dark header a.bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
+}
+
+html.dark header a.bg-slate-950:hover {
+  background-color: #ff5500 !important;
+  color: #ffffff !important;
+}
+
+/* Botones Selector de Tema (Sol / Luna) */
+html.dark #theme-toggle-btn,
+html.dark #mobile-theme-toggle-btn {
+  background-color: #121216 !important;
+  border-color: #27272a !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark #theme-toggle-btn:hover,
+html.dark #mobile-theme-toggle-btn:hover {
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+}
+
+/* Botón Hamburguesa Móvil */
+html.dark #mobile-menu-btn {
+  background-color: #121216 !important;
+  border-color: #27272a !important;
+  color: #ffffff !important;
+}
+
+/* Botones Principales del Hero */
+html.dark #hero a.bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark #hero a.bg-slate-950:hover {
+  background-color: #ff5500 !important;
+  color: #ffffff !important;
+  border-color: #ff5500 !important;
+}
+
+html.dark #hero a.border-swiss {
+  background-color: #121216 !important;
+  color: #ffffff !important;
+  border-color: #27272a !important;
+}
+
+html.dark #hero a.border-swiss:hover {
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+}
+
+/* Badge de Estado en Hero */
+html.dark #hero .bg-\[\#f8fafc\] {
+  background-color: #121216 !important;
+  border-color: #27272a !important;
+  color: #e2e8f0 !important;
+}
+
+/* Números decorativos de la sección Metodología */
+html.dark #proceso .text-slate-300 {
+  color: #222228 !important;
+}
+
+/* Botones y elementos dentro de modales */
+html.dark #close-about-btn,
+html.dark #card-zoom-close-btn {
+  background-color: #18181b !important;
+  border-color: #3f3f46 !important;
+  color: #ffffff !important;
+}
+
+html.dark #close-about-btn:hover,
+html.dark #card-zoom-close-btn:hover {
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+}
+
+/* Tarjetas y cajas interiores en modales */
+html.dark .about-modal-panel .bg-\[\#f8fafc\],
+html.dark .card-zoom-modal-panel .bg-\[\#f8fafc\] {
+  background-color: #0d0d11 !important;
+  border-color: #222228 !important;
+}
+
+html.dark .about-modal-panel .bg-white,
+html.dark .card-zoom-modal-panel .bg-white {
+  background-color: #0a0a0d !important;
+  border-color: #1e1e24 !important;
+}
+
+/* Botones de acción en Drawer Móvil */
+html.dark #mobile-menu-drawer a.bg-\[\#f8fafc\] {
+  background-color: #121216 !important;
+  border-color: #27272a !important;
+  color: #ffffff !important;
+}
+
+html.dark #mobile-menu-drawer a.border-swiss {
+  background-color: #121216 !important;
+  border-color: #27272a !important;
+  color: #e2e8f0 !important;
 }
 
 /* 4. Canvas del Hero con Perspectiva 3D */
@@ -115,62 +251,273 @@ html.dark footer {
   will-change: transform;
 }
 
-/* 5. Tarjetas 3D Tilt Espaciales en Blanco Puro */
+/* 5. Tarjetas 3D Espaciales Cinemáticas de Vanguardia */
 .spatial-card-wrapper {
-  perspective: 900px;
+  perspective: 1200px;
   transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
 }
 
 .spatial-card {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid rgba(226, 232, 240, 0.88);
+  border-radius: 20px;
   transform-style: preserve-3d;
-  box-shadow: 0 6px 24px -4px rgba(15, 23, 42, 0.06), 0 2px 8px -2px rgba(15, 23, 42, 0.03);
-  transition: border-color 0.2s ease, box-shadow 0.25s ease;
-  will-change: transform, box-shadow;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.06), 0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  transition: background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+              border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  pointer-events: auto;
+  width: 100%;
 }
 
-.spatial-card:hover {
-  border-color: #ff5500;
-  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.14), 0 12px 28px -8px rgba(255, 85, 0, 0.18);
+/* Transiciones fluidas y sincrónicas en todos los textos, píldoras y bordes internos */
+.spatial-card h2,
+.spatial-card h3,
+.spatial-card h4,
+.spatial-card p,
+.spatial-card span,
+.spatial-card a,
+.spatial-card i,
+.spatial-card svg,
+.spatial-card .tech-pill,
+.spatial-card .border-swiss,
+.spatial-card [class*="bg-\[\#f8fafc\]"] {
+  transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+              background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+              border-color 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Efecto Hover: Naranja Suave, Cremoso, Cálido y Sofisticado (Light Mode) */
+.spatial-card:hover,
+.spatial-card.is-hovered,
+.spatial-card-wrapper:hover .spatial-card,
+.spatial-card-wrapper.is-hovered .spatial-card {
+  background-color: #fa6928 !important;
+  border-color: rgba(250, 105, 40, 0.85) !important;
+  box-shadow: 0 26px 60px -12px rgba(250, 105, 40, 0.38), 0 10px 24px -6px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Contraste editorial y legibilidad perfecta con la tarjeta coloreada */
+.spatial-card:hover h2,
+.spatial-card:hover h3,
+.spatial-card:hover h4,
+.spatial-card:hover .text-slate-950,
+.spatial-card:hover .text-slate-900,
+.spatial-card.is-hovered h2,
+.spatial-card.is-hovered h3,
+.spatial-card.is-hovered h4,
+.spatial-card.is-hovered .text-slate-950,
+.spatial-card.is-hovered .text-slate-900,
+.spatial-card-wrapper:hover .spatial-card h2,
+.spatial-card-wrapper:hover .spatial-card h3,
+.spatial-card-wrapper:hover .spatial-card h4,
+.spatial-card-wrapper:hover .spatial-card .text-slate-950,
+.spatial-card-wrapper:hover .spatial-card .text-slate-900,
+.spatial-card-wrapper.is-hovered .spatial-card h2,
+.spatial-card-wrapper.is-hovered .spatial-card h3,
+.spatial-card-wrapper.is-hovered .spatial-card h4,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-950,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-900 {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.spatial-card:hover p,
+.spatial-card:hover .text-slate-700,
+.spatial-card:hover .text-slate-600,
+.spatial-card:hover .text-slate-500,
+.spatial-card.is-hovered p,
+.spatial-card.is-hovered .text-slate-700,
+.spatial-card.is-hovered .text-slate-600,
+.spatial-card.is-hovered .text-slate-500,
+.spatial-card-wrapper:hover .spatial-card p,
+.spatial-card-wrapper:hover .spatial-card .text-slate-700,
+.spatial-card-wrapper:hover .spatial-card .text-slate-600,
+.spatial-card-wrapper:hover .spatial-card .text-slate-500,
+.spatial-card-wrapper.is-hovered .spatial-card p,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-700,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-600,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-500 {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+.spatial-card:hover .font-mono,
+.spatial-card:hover span,
+.spatial-card.is-hovered .font-mono,
+.spatial-card.is-hovered span,
+.spatial-card-wrapper:hover .spatial-card .font-mono,
+.spatial-card-wrapper:hover .spatial-card span,
+.spatial-card-wrapper.is-hovered .spatial-card .font-mono,
+.spatial-card-wrapper.is-hovered .spatial-card span {
+  color: #ffffff !important;
+}
+
+.spatial-card:hover .text-[#ff5500],
+.spatial-card:hover .text-emerald-600,
+.spatial-card:hover .text-emerald-500,
+.spatial-card.is-hovered .text-[#ff5500],
+.spatial-card.is-hovered .text-emerald-600,
+.spatial-card.is-hovered .text-emerald-500,
+.spatial-card-wrapper:hover .spatial-card .text-[#ff5500],
+.spatial-card-wrapper:hover .spatial-card .text-emerald-600,
+.spatial-card-wrapper:hover .spatial-card .text-emerald-500,
+.spatial-card-wrapper.is-hovered .spatial-card .text-[#ff5500],
+.spatial-card-wrapper.is-hovered .spatial-card .text-emerald-600,
+.spatial-card-wrapper.is-hovered .spatial-card .text-emerald-500 {
+  color: #ffffff !important;
+}
+
+.spatial-card:hover .text-slate-400,
+.spatial-card:hover .text-slate-300,
+.spatial-card.is-hovered .text-slate-400,
+.spatial-card.is-hovered .text-slate-300,
+.spatial-card-wrapper:hover .spatial-card .text-slate-400,
+.spatial-card-wrapper:hover .spatial-card .text-slate-300,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-400,
+.spatial-card-wrapper.is-hovered .spatial-card .text-slate-300 {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.spatial-card:hover i,
+.spatial-card:hover svg,
+.spatial-card.is-hovered i,
+.spatial-card.is-hovered svg,
+.spatial-card-wrapper:hover .spatial-card i,
+.spatial-card-wrapper:hover .spatial-card svg,
+.spatial-card-wrapper.is-hovered .spatial-card i,
+.spatial-card-wrapper.is-hovered .spatial-card svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.spatial-card:hover .border-swiss,
+.spatial-card.is-hovered .border-swiss,
+.spatial-card-wrapper:hover .spatial-card .border-swiss,
+.spatial-card-wrapper.is-hovered .spatial-card .border-swiss {
+  border-color: rgba(255, 255, 255, 0.26) !important;
+}
+
+/* Pastillas de tecnología y cajas de metadatos en estado hover */
+.spatial-card:hover .tech-pill,
+.spatial-card.is-hovered .tech-pill,
+.spatial-card-wrapper:hover .spatial-card .tech-pill,
+.spatial-card-wrapper.is-hovered .spatial-card .tech-pill {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06) !important;
+}
+
+.spatial-card:hover .tech-pill span.rounded-full,
+.spatial-card.is-hovered .tech-pill span.rounded-full,
+.spatial-card-wrapper:hover .spatial-card .tech-pill span.rounded-full,
+.spatial-card-wrapper.is-hovered .spatial-card .tech-pill span.rounded-full {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.7) !important;
+}
+
+.spatial-card:hover [class*="bg-\[\#f8fafc\]"],
+.spatial-card.is-hovered [class*="bg-\[\#f8fafc\]"],
+.spatial-card-wrapper:hover .spatial-card [class*="bg-\[\#f8fafc\]"],
+.spatial-card-wrapper.is-hovered .spatial-card [class*="bg-\[\#f8fafc\]"] {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  color: #ffffff !important;
+}
+
+/* Tarjeta espacial modo oscuro nativa / footer */
 .spatial-card.spatial-card-dark {
-  background-color: #020617;
-  border-color: #1e293b;
-  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.1);
+  background-color: #060608;
+  border-color: #1a1a20;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9), 0 0 1px 1px rgba(255, 255, 255, 0.05) inset;
 }
 
-.spatial-card.spatial-card-dark:hover {
-  border-color: #ff5500;
-  box-shadow: 0 35px 70px -15px rgba(255, 85, 0, 0.3), 0 15px 35px -10px rgba(0, 0, 0, 0.7);
+/* Hover en Modo Oscuro AMOLED: Naranja cálido y luminoso con resplandor elegante */
+.spatial-card.spatial-card-dark:hover,
+.spatial-card.spatial-card-dark.is-hovered,
+.spatial-card-wrapper:hover .spatial-card.spatial-card-dark,
+.spatial-card-wrapper.is-hovered .spatial-card.spatial-card-dark,
+html.dark .spatial-card:hover,
+html.dark .spatial-card.is-hovered,
+html.dark .spatial-card-wrapper:hover .spatial-card,
+html.dark .spatial-card-wrapper.is-hovered .spatial-card {
+  background-color: #eb6026 !important;
+  border-color: rgba(235, 96, 38, 0.9) !important;
+  box-shadow: 0 28px 70px -14px rgba(235, 96, 38, 0.44), 0 0 30px rgba(235, 96, 38, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.2) inset !important;
 }
 
-/* 6. Capa de contenido flotante interno Z con elevación pronunciada */
+html.dark .spatial-card:hover *,
+html.dark .spatial-card.is-hovered *,
+html.dark .spatial-card-wrapper:hover .spatial-card *,
+html.dark .spatial-card-wrapper.is-hovered .spatial-card * {
+  color: #ffffff !important;
+}
+
+html.dark .spatial-card:hover .text-slate-400,
+html.dark .spatial-card:hover .text-slate-300,
+html.dark .spatial-card.is-hovered .text-slate-400,
+html.dark .spatial-card.is-hovered .text-slate-300 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Enlaces del Menú en Modo Oscuro */
+html.dark .menu-item-editorial {
+  color: #cbd5e1 !important;
+}
+
+html.dark .menu-item-editorial:hover {
+  color: #ffffff !important;
+}
+
+html.dark #open-about-btn {
+  color: #ff5500 !important;
+}
+
+/* 6. Capa de contenido flotante interno Z con elevación suave */
 .card-elevated-content {
   transform: translateZ(32px);
   transform-style: preserve-3d;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none; /* Asegura que la tarjeta padre reciba el hover en cualquier rincón */
 }
 
-.spatial-card:hover .card-elevated-content {
-  transform: translateZ(46px);
+.card-elevated-content a,
+.card-elevated-content button {
+  pointer-events: auto; /* Mantener clics en botones/enlaces interiores */
 }
 
-/* 7. Reflejo de luz 3D (Glare) sobre blanco con disipación prolongada */
+.spatial-card:hover .card-elevated-content,
+.spatial-card.is-hovered .card-elevated-content,
+.spatial-card-wrapper:hover .card-elevated-content,
+.spatial-card-wrapper.is-hovered .card-elevated-content {
+  transform: translateZ(44px);
+}
+
+/* 7. Reflejo de luz 3D (Glare) con disipación sedosa */
 .card-glare {
   position: absolute;
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 85, 0, 0.16), transparent 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 120, 45, 0.14), transparent 70%);
   opacity: 0;
-  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   mix-blend-mode: multiply;
 }
 
-.spatial-card.spatial-card-dark .card-glare {
+.spatial-card.spatial-card-dark .card-glare,
+html.dark .spatial-card .card-glare {
   mix-blend-mode: screen;
 }
 
@@ -213,7 +560,12 @@ html.dark footer {
   display: inline-block;
   position: relative;
   will-change: transform, color;
-  transition: color 0.12s ease;
+  transition: color 0.18s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.char-node.is-painted {
+  color: #ff5500 !important;
+  text-shadow: 0 0 16px rgba(255, 85, 0, 0.45) !important;
 }
 
 /* 10. Pastillas de Tecnologías con Sombra y Elevación */
@@ -253,33 +605,192 @@ html.dark footer {
   box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.06);
 }
 
-/* 12. Bolita Naranja Seguidora del Mouse */
+/* 12. Auroras de Luz Cinemática Ambiental (Optimización 60fps por GPU) */
+.ambient-glow-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  contain: strict;
+  transform: translateZ(0); /* Capa aislada en GPU sin repaints */
+}
+
+.ambient-glow-orb-wrapper {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.ambient-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Esfera Naranja Principal Luminosa - Radiante, brillante y con presencia viva */
+.ambient-glow-orb-1 {
+  top: -160px;
+  right: -120px;
+  width: 920px;
+  height: 920px;
+  background: radial-gradient(circle at 45% 45%, rgba(255, 95, 0, 0.65) 0%, rgba(255, 125, 25, 0.42) 28%, rgba(255, 160, 65, 0.22) 50%, rgba(255, 190, 110, 0.08) 68%, transparent 82%);
+  opacity: 1;
+  filter: blur(8px) saturate(1.45);
+  mix-blend-mode: normal;
+  animation: float-orb-1 25s ease-in-out infinite alternate;
+}
+
+.ambient-glow-orb-2 {
+  top: 35%;
+  left: -160px;
+  width: 680px;
+  height: 680px;
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.16) 0%, rgba(99, 102, 241, 0.06) 45%, transparent 75%);
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  animation: float-orb-2 30s ease-in-out infinite alternate;
+}
+
+.ambient-glow-orb-3 {
+  bottom: -160px;
+  right: 8%;
+  width: 760px;
+  height: 760px;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 110, 0, 0.55) 0%, rgba(255, 140, 30, 0.32) 34%, rgba(245, 158, 11, 0.14) 56%, transparent 78%);
+  opacity: 1;
+  filter: blur(8px) saturate(1.4);
+  mix-blend-mode: normal;
+  animation: float-orb-1 32s ease-in-out infinite alternate-reverse;
+}
+
+/* Adaptación para Modo Oscuro AMOLED: Resplandor fotónico cálido, intenso y elegante */
+html.dark .ambient-glow-orb {
+  mix-blend-mode: screen;
+}
+
+html.dark .ambient-glow-orb-1 {
+  background: radial-gradient(circle at 45% 45%, rgba(255, 105, 0, 0.58) 0%, rgba(245, 95, 20, 0.35) 28%, rgba(255, 140, 45, 0.14) 52%, rgba(255, 160, 75, 0.04) 68%, transparent 80%);
+  opacity: 1;
+  filter: blur(6px) saturate(1.4);
+}
+
+html.dark .ambient-glow-orb-2 {
+  background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.14) 0%, rgba(99, 102, 241, 0.04) 45%, transparent 75%);
+  opacity: 0.85;
+}
+
+html.dark .ambient-glow-orb-3 {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 110, 15, 0.48) 0%, rgba(235, 95, 25, 0.26) 34%, rgba(245, 158, 11, 0.08) 56%, transparent 78%);
+  opacity: 1;
+  filter: blur(6px) saturate(1.35);
+}
+
+@keyframes float-orb-1 {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-30px, 40px, 0); }
+  100% { transform: translate3d(20px, -30px, 0); }
+}
+
+@keyframes float-orb-2 {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(40px, -35px, 0); }
+  100% { transform: translate3d(-20px, 30px, 0); }
+}
+
+/* Viñeteado cinematográfico ultra suave en los bordes del visor */
+.cinematic-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99997;
+  background: radial-gradient(circle at center, transparent 72%, rgba(15, 23, 42, 0.04) 100%);
+  transition: opacity 0.5s ease;
+}
+
+html.dark .cinematic-vignette {
+  background: radial-gradient(circle at center, transparent 70%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* 13. Bolita Naranja Seguidora del Mouse & Píldora con Texto Dinámico */
 .cursor-ball {
   position: fixed;
   top: 0;
   left: 0;
   width: 14px;
   height: 14px;
+  min-width: 14px;
   background-color: #ff5500;
-  border-radius: 50%;
-  pointer-events: none;
+  border: 1.5px solid transparent;
+  border-radius: 50px;
+  pointer-events: none !important;
+  user-select: none !important;
   z-index: 99999;
   opacity: 0;
   box-shadow: 0 0 16px rgba(255, 85, 0, 0.6);
-  transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-    height 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    min-width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
     background-color 0.2s ease,
-    border 0.2s ease,
+    border-color 0.2s ease,
+    border-radius 0.2s ease,
+    box-shadow 0.2s ease,
     opacity 0.2s ease;
-  will-change: transform;
+  will-change: transform, width, height, opacity;
+}
+
+.cursor-ball-text {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0 12px;
+  pointer-events: none;
+  user-select: none;
 }
 
 .cursor-ball.is-hover {
   width: 40px;
   height: 40px;
+  min-width: 40px;
   background-color: rgba(255, 85, 0, 0.15);
-  border: 1.5px solid #ff5500;
+  border-color: #ff5500;
   box-shadow: 0 0 24px rgba(255, 85, 0, 0.4);
+}
+
+/* Píldora expandida con texto al pasar sobre proyectos o elementos clave */
+.cursor-ball.is-text-active {
+  width: auto !important;
+  min-width: 105px;
+  height: 32px !important;
+  background-color: #0b0f19 !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 255, 255, 0.25) !important;
+}
+
+html.dark .cursor-ball.is-text-active {
+  background-color: #050508 !important;
+  border-color: #ffffff !important;
+}
+
+.cursor-ball.is-text-active .cursor-ball-text {
+  color: #ffffff !important;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -307,9 +818,9 @@ html.dark footer {
 }
 
 html.dark #mobile-menu-drawer {
-  background-color: #0b111e !important;
-  border-color: #1e293b !important;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  background-color: #050507 !important;
+  border-color: #16161a !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
 }
 
 html.dark #mobile-menu-drawer .mobile-nav-link {
@@ -325,5 +836,579 @@ html.dark #mobile-menu-drawer .mobile-nav-link:hover {
   opacity: 1;
   pointer-events: auto;
 }
+
+/* 14. Modal Editorial "Sobre Mí" (Estilo Monolog) */
+.about-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 99990;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.about-modal-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 580px;
+  background-color: #ffffff;
+  z-index: 99995;
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.25);
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 85, 0, 0.35) transparent;
+}
+
+.about-modal-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about-modal-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.about-modal-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 85, 0, 0.25);
+  border-radius: 10px;
+}
+
+html.dark .about-modal-panel {
+  background-color: #050507;
+  border-left: 1px solid #16161a;
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.85);
+}
+
+.about-modal-panel.is-open {
+  transform: translateX(0%);
+}
+
+/* 15. Modal Cinemático Flotante Gran Formato (Teatro / Pantalla Grande) */
+.card-zoom-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(9, 13, 22, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 99990;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-zoom-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-zoom-modal-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99995;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  pointer-events: none;
+  opacity: 0;
+  cursor: pointer; /* Indica que al hacer clic fuera se cierra */
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-zoom-modal-container.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card-zoom-modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 960px; /* Pantalla Grande / Gran Formato */
+  max-height: 88vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  cursor: default; /* El cursor dentro del panel vuelve a ser normal */
+  background-color: #ffffff;
+  border: 1.5px solid rgba(255, 85, 0, 0.35);
+  border-radius: 32px;
+  box-shadow: 0 50px 120px -20px rgba(255, 85, 0, 0.25), 0 30px 80px -15px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.9) inset;
+  will-change: transform, opacity;
+}
+
+html.dark .card-zoom-modal-panel {
+  background-color: #060608;
+  border-color: rgba(255, 85, 0, 0.45);
+  border-radius: 32px;
+  box-shadow: 0 50px 140px -20px rgba(255, 85, 0, 0.35), 0 40px 90px -15px rgba(0, 0, 0, 1), 0 0 1px 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+/* Scrollbar invisible o ultra fina para el modal grande */
+.card-zoom-modal-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.card-zoom-modal-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card-zoom-modal-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 85, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* 16. Estilo refinado para tech-pills */
+.tech-pill {
+  border-radius: 9999px !important;
+}
+
+/* Cursor interactivo sobre tarjetas ampliables */
+.spatial-card {
+  cursor: pointer;
+}
+
+/* ==================== 17. NAVBAR 3D FLOATING ISLAND (GLASS & PERSPECTIVE) ==================== */
+header {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+html.dark header {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.navbar-3d-island {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 9999px;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.08), 
+              0 2px 6px rgba(0, 0, 0, 0.02), 
+              0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  transform: translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+html.dark .navbar-3d-island {
+  background: rgba(10, 10, 14, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.95), 
+              0 0 0 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+.navbar-3d-island.is-scrolled {
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.16), 
+              0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+}
+
+html.dark .navbar-3d-island.is-scrolled {
+  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.98), 
+              0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+}
+
+/* Nav items 3D capsule */
+.nav-item-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.65rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: #475569;
+  border-radius: 9999px;
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: translateZ(0);
+  will-change: transform, box-shadow;
+  white-space: nowrap;
+}
+
+@media (min-width: 1440px) {
+  .nav-item-3d {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+
+html.dark .nav-item-3d {
+  color: #cbd5e1;
+}
+
+.nav-item-3d:hover {
+  color: #ff5500 !important;
+  background: rgba(255, 85, 0, 0.09);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 14px -3px rgba(255, 85, 0, 0.22);
+}
+
+html.dark .nav-item-3d:hover {
+  background: rgba(255, 85, 0, 0.16) !important;
+  color: #ff5500 !important;
+  box-shadow: 0 6px 18px -2px rgba(255, 85, 0, 0.35) !important;
+}
+
+.nav-item-3d:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Brand badge 3D */
+.brand-badge-3d {
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.group:hover .brand-badge-3d {
+  transform: translateY(-1.5px) rotate(-3deg) scale(1.06);
+}
+
+/* CTA 3D Button */
+.cta-btn-3d {
+  box-shadow: 0 8px 18px -4px rgba(15, 23, 42, 0.3);
+  transform: translateZ(0);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, box-shadow;
+  white-space: nowrap;
+}
+
+.cta-btn-3d:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 24px -4px rgba(255, 85, 0, 0.45);
+}
+
+.cta-btn-3d:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Theme switch 3D */
+.theme-btn-3d {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+  white-space: nowrap;
+}
+
+html.dark .theme-btn-3d {
+  background: #141418 !important;
+}
+
+/* ==================== 18. SISTEMA DUAL: MODO NEGOCIOS VS MODO TECH ==================== */
+/* Toggle Switch 3D en Navbar */
+.dual-switch-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  border-radius: 9999px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) inset;
+  backdrop-filter: blur(8px);
+}
+
+html.dark .dual-switch-container {
+  background: rgba(18, 18, 24, 0.9);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5) inset;
+}
+
+.dual-switch-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.38rem 0.85rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: #64748b;
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+html.dark .dual-switch-btn {
+  color: #94a3b8;
+}
+
+.dual-switch-btn:hover {
+  color: #0f172a;
+}
+
+html.dark .dual-switch-btn:hover {
+  color: #ffffff;
+}
+
+.dual-switch-btn.is-active {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+html.dark .dual-switch-btn.is-active {
+  background: #ff5500;
+  color: #ffffff;
+  box-shadow: 0 2px 12px rgba(255, 85, 0, 0.45);
+}
+
+/* Visibilidad condicional según el modo activo */
+body[data-view="negocios"] .view-tech {
+  display: none !important;
+}
+
+body[data-view="tech"] .view-negocios {
+  display: none !important;
+}
+
+/* ==========================================================================
+   14. PROTECCIÓN DE TARJETA DE CONTACTO Y BOTONES DE ALTA CONVERSIÓN
+   ========================================================================== */
+
+/* Garantizar interacción táctil y clics en botones de la capa 3D Parallax del Hero */
+.hero-parallax-layer a,
+.hero-parallax-layer button {
+  position: relative !important;
+  z-index: 50 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* La tarjeta final de contacto NUNCA debe teñirse completamente de naranja en hover.
+   Mantiene su estética de bloque obsidiana de lujo para que los botones resalten con fuerza */
+.spatial-card.contact-hero-card,
+.spatial-card.contact-hero-card:hover,
+.spatial-card.contact-hero-card.is-hovered,
+.spatial-card-wrapper:hover .spatial-card.contact-hero-card,
+.spatial-card-wrapper.is-hovered .spatial-card.contact-hero-card,
+html.dark .spatial-card.contact-hero-card,
+html.dark .spatial-card.contact-hero-card:hover,
+html.dark .spatial-card.contact-hero-card.is-hovered,
+html.dark .spatial-card-wrapper:hover .spatial-card.contact-hero-card,
+html.dark .spatial-card-wrapper.is-hovered .spatial-card.contact-hero-card {
+  background-color: #07070a !important;
+  border: 1px solid #1e1e26 !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 1px 1px rgba(255, 255, 255, 0.06) inset !important;
+}
+
+/* Resplandor sutil perimetral naranja en hover sin invadir el interior */
+.spatial-card.contact-hero-card:hover,
+.spatial-card.contact-hero-card.is-hovered,
+.spatial-card-wrapper:hover .spatial-card.contact-hero-card,
+.spatial-card-wrapper.is-hovered .spatial-card.contact-hero-card {
+  border-color: rgba(255, 85, 0, 0.55) !important;
+  box-shadow: 0 30px 80px -12px rgba(255, 85, 0, 0.35), 0 0 40px rgba(255, 85, 0, 0.12), 0 0 1px 1px rgba(255, 255, 255, 0.12) inset !important;
+}
+
+/* Preservar la jerarquía tipográfica sin que todo se vuelva blanco plano */
+.spatial-card.contact-hero-card:hover h2,
+.spatial-card.contact-hero-card.is-hovered h2 {
+  color: #ffffff !important;
+}
+
+.spatial-card.contact-hero-card:hover p,
+.spatial-card.contact-hero-card.is-hovered p {
+  color: #cbd5e1 !important;
+}
+
+.spatial-card.contact-hero-card:hover .text-\[\#ff5500\],
+.spatial-card.contact-hero-card.is-hovered .text-\[\#ff5500\] {
+  color: #ff5500 !important;
+}
+
+/* Botón WhatsApp de Contacto: Naranja brillante con relieve y brillo */
+.btn-contacto-wa {
+  background-color: #ff5500 !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1.5px solid transparent !important;
+  box-shadow: 0 8px 24px -2px rgba(255, 85, 0, 0.6), 0 0 1px 1px rgba(255, 255, 255, 0.25) inset !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  z-index: 40 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+.btn-contacto-wa * {
+  color: #ffffff !important;
+}
+
+.btn-contacto-wa:hover {
+  background-color: #ffffff !important;
+  color: #07070a !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 16px 36px -6px rgba(255, 85, 0, 0.7), 0 0 24px rgba(255, 255, 255, 0.5) !important;
+  border-color: #ffffff !important;
+}
+
+.btn-contacto-wa:hover * {
+  color: #07070a !important;
+}
+
+/* Botón Correo de Contacto: Cristal satinado con borde nítido */
+.btn-contacto-mail {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  z-index: 40 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+.btn-contacto-mail * {
+  color: #f1f5f9 !important;
+}
+
+.btn-contacto-mail:hover {
+  background-color: rgba(255, 85, 0, 0.16) !important;
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(255, 85, 0, 0.25), 0 0 16px rgba(255, 85, 0, 0.3) !important;
+}
+
+.btn-contacto-mail:hover * {
+  color: #ff5500 !important;
+}
+
+/* Botones Modo Tech en Tarjeta de Contacto */
+.btn-contacto-tech-mail {
+  border-radius: 14px !important;
+  position: relative !important;
+  z-index: 40 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-contacto-tech-mail:hover {
+  background-color: #ff5500 !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 14px 32px rgba(255, 85, 0, 0.5) !important;
+}
+
+.btn-contacto-tech-mail:hover * {
+  color: #ffffff !important;
+}
+
+.btn-contacto-tech-wa {
+  border-radius: 14px !important;
+  position: relative !important;
+  z-index: 40 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-contacto-tech-wa:hover {
+  background-color: rgba(255, 85, 0, 0.15) !important;
+  border-color: #ff5500 !important;
+  color: #ff5500 !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(255, 85, 0, 0.3) !important;
+}
+
+/* ==========================================================================
+   15. PROTECCIÓN DE TARJETAS DE PAQUETES (#servicios)
+   Evitar que la tarjeta se pinte de naranja sólido en hover para preservar
+   el contraste de las letras naranjas, precios y botones.
+   ========================================================================== */
+#servicios .spatial-card,
+#servicios .spatial-card:hover,
+#servicios .spatial-card.is-hovered,
+#servicios .spatial-card-wrapper:hover .spatial-card,
+#servicios .spatial-card-wrapper.is-hovered .spatial-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06) !important;
+}
+
+html.dark #servicios .spatial-card,
+html.dark #servicios .spatial-card:hover,
+html.dark #servicios .spatial-card.is-hovered,
+html.dark #servicios .spatial-card-wrapper:hover .spatial-card,
+html.dark #servicios .spatial-card-wrapper.is-hovered .spatial-card {
+  background-color: #07070a !important;
+  border-color: #1e1e26 !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Estado Hover con resplandor perimetral naranja en el borde sin alterar el fondo interno */
+#servicios .spatial-card:hover,
+#servicios .spatial-card.is-hovered,
+#servicios .spatial-card-wrapper:hover .spatial-card,
+#servicios .spatial-card-wrapper.is-hovered .spatial-card {
+  border-color: #ff5500 !important;
+  box-shadow: 0 22px 50px -10px rgba(255, 85, 0, 0.28), 0 0 1px 1px rgba(255, 85, 0, 0.4) inset !important;
+}
+
+/* Preservar la visibilidad de los elementos y tipografías naranjas */
+#servicios .spatial-card:hover .text-\[\#ff5500\],
+#servicios .spatial-card.is-hovered .text-\[\#ff5500\],
+#servicios .spatial-card-wrapper:hover .spatial-card .text-\[\#ff5500\],
+#servicios .spatial-card-wrapper.is-hovered .spatial-card .text-\[\#ff5500\] {
+  color: #ff5500 !important;
+}
+
+#servicios .spatial-card:hover h3,
+#servicios .spatial-card:hover h4,
+#servicios .spatial-card:hover .text-slate-950,
+#servicios .spatial-card.is-hovered .text-slate-950 {
+  color: #0f172a !important;
+}
+
+html.dark #servicios .spatial-card:hover h3,
+html.dark #servicios .spatial-card:hover h4,
+html.dark #servicios .spatial-card:hover .text-slate-950,
+html.dark #servicios .spatial-card.is-hovered .text-slate-950 {
+  color: #ffffff !important;
+}
+
+#servicios .spatial-card:hover p,
+#servicios .spatial-card:hover .text-slate-600,
+#servicios .spatial-card:hover .text-slate-700 {
+  color: #475569 !important;
+}
+
+html.dark #servicios .spatial-card:hover p,
+html.dark #servicios .spatial-card:hover .text-slate-600,
+html.dark #servicios .spatial-card:hover .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
 
 
