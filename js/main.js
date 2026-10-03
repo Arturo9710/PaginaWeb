@@ -676,7 +676,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const cardZoomContainer = document.getElementById("card-zoom-modal-container");
   const cardZoomContent = document.getElementById("card-zoom-content");
   const cardZoomCloseBtn = document.getElementById("card-zoom-close-btn");
-  const zoomableCards = document.querySelectorAll("#stack .spatial-card, #servicios .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper");
+  const zoomableCards = document.querySelectorAll("#stack .spatial-card, #servicios .spatial-card, #proyectos .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper, #proyectos .spatial-card-wrapper");
 
   function openCardZoom(sourceCard) {
     if (!cardZoomContainer || !cardZoomBackdrop || !cardZoomContent || !sourceCard) return;
@@ -783,7 +783,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Delegar apertura de modal de forma infalible sin bloquear clics de botones o enlaces de cotización
   document.addEventListener("click", (e) => {
-    const trigger = e.target.closest("#stack .spatial-card, #servicios .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper");
+    const trigger = e.target.closest("#stack .spatial-card, #servicios .spatial-card, #proyectos .spatial-card, #stack .spatial-card-wrapper, #servicios .spatial-card-wrapper, #proyectos .spatial-card-wrapper");
     if (!trigger) return;
 
     // Si el usuario hizo clic en un enlace (<a>), botón (<button>) o elemento interactivo, permitir acción natural
